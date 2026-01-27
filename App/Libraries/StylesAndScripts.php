@@ -20,6 +20,30 @@ if (!class_exists('\\BBFSEPlugin\\App\\Libraries\\StylesAndScripts')) {
 
 
         /**
+         * Enqueue styles and scripts.
+         *
+         * @since 0.0.1
+         * @return void
+         */
+        public function enqueueStylesAndScripts()
+        {
+            /**
+             * Filter that this plugin should enqueue Bootstrap CSS, icons, JS or not.
+             * 
+             * @since 0.0.1
+             * @param bool $enqueueStylesScripts Mark `true` to enqueue them, `false` to do not enqueue.
+             */
+            $enqueueStylesScripts = apply_filters('bbfse_plugin_enqueue_styles_scripts', true);
+            if (true === $enqueueStylesScripts) {
+                wp_enqueue_style('bbfse-plugin-bootstrap-css');
+                wp_enqueue_style('bbfse-plugin-bootstrap-icons');
+                wp_enqueue_script('bbfse-plugin-bootstrap-js');
+            }
+            unset($enqueueStylesScripts);
+        }// enqueueStylesAndScripts
+
+
+        /**
          * Manually register hooks.
          * 
          * @since 0.0.1
@@ -28,6 +52,7 @@ if (!class_exists('\\BBFSEPlugin\\App\\Libraries\\StylesAndScripts')) {
         {
             // register stylesheets and scripts
             add_action('init', [$this, 'registerStylesAndScripts']);
+            add_action('wp_enqueue_scripts', [$this, 'enqueueStylesAndScripts']);
         }// manualRegisterHooks
 
 
