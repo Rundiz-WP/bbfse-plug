@@ -16,6 +16,12 @@
  * @package bbfse-plugin
  */
 
+
+if (!defined('ABSPATH')) {
+    exit();
+}
+
+
 // define this plugin main file path.
 if (!defined('BBFSEPLUGIN_FILE')) {
     define('BBFSEPLUGIN_FILE', __FILE__);
