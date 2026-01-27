@@ -92,7 +92,7 @@ function GroupEdit({ attributes, setAttributes, clientId }) {
         }
     }, [className, setAttributes]);
 
-    // Check if valid Bootstrap column class is present.
+    // Check if valid Bootstrap column class is present. Accepted if value is 'col', 'col-[number or any]'
     const hasColumnClass = className && className.toLowerCase().includes('col');
 
     const blockProps = useBlockProps({

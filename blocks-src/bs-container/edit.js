@@ -93,7 +93,7 @@ function GroupEdit({ attributes, setAttributes, clientId }) {
         }
     }, [className, setAttributes]);
 
-    // Check if valid Bootstrap container class is present.
+    // Check if valid Bootstrap container class is present. Accepted if value is 'container', 'container-fluid', 'container-[anything]'.
     const hasContainerClass = className && className.toLowerCase().includes('container');
 
     const blockProps = useBlockProps({
