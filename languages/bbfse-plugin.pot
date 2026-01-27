@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-27T15:07:41+07:00\n"
+"POT-Creation-Date: 2026-01-28T02:23:21+07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: bbfse-plugin\n"
@@ -81,6 +81,166 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
+#: blocks/bs-button/index.js:1
+#: blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1
+msgid "Key"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1
+msgid "Value"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1
+msgid "Remove"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1
+msgid "Add attribute"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Default"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Please add an href value when using <a>."
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Please ensure the CSS class list contains the Bootstrap class \"btn\"."
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1
+msgid "Button Settings"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/bs-navbar-container/index.js:1
+msgid "Tag Name"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Button text/HTML"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "You can use text or HTML, e.g. <i class=\"bi bi-save\"></i> Save"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Link Attributes"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgctxt "HTML attribute"
+msgid "Href"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Required when using <a>."
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgctxt "HTML attribute"
+msgid "Role"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Tab index"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Button Attributes"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgctxt "HTML attribute"
+msgid "Autofocus"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgctxt "HTML attribute"
+msgid "Disabled"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Form ID"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "ID of the form this button is associated with."
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Learn more"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Form enctype"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Form method"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Form novalidate"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Form target"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Target for form submission, e.g. _blank."
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgctxt "Button name"
+msgid "Name"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgctxt "Button type"
+msgid "Type"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+msgid "Data and Aria Attributes"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1
+msgid "Data attributes"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1
+msgid "Aria attributes"
+msgstr ""
+
 #: blocks/bs-column/index.js:1
 #: blocks/bs-container/index.js:1
 #: blocks/bs-row/index.js:1
@@ -102,53 +262,7 @@ msgid "Please add a Bootstrap container class (e.g. \"container\", \"container-f
 msgstr ""
 
 #: blocks/bs-navbar-container/index.js:1
-#: blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1
-msgid "Key"
-msgstr ""
-
-#: blocks/bs-navbar-container/index.js:1
-#: blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1
-msgid "Value"
-msgstr ""
-
-#: blocks/bs-navbar-container/index.js:1
-#: blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1
-msgid "Remove"
-msgstr ""
-
-#: blocks/bs-navbar-container/index.js:1
-#: blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1
-msgid "Add attribute"
-msgstr ""
-
-#: blocks/bs-navbar-container/index.js:1
 msgid "Navbar Settings"
-msgstr ""
-
-#: blocks/bs-navbar-container/index.js:1
-msgid "Tag Name"
-msgstr ""
-
-#: blocks/bs-navbar-container/index.js:1
-#: blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1
-msgid "Data attributes"
-msgstr ""
-
-#: blocks/bs-navbar-container/index.js:1
-#: blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1
-msgid "Aria attributes"
 msgstr ""
 
 #: blocks/bs-navbar-container/index.js:1
@@ -291,10 +405,6 @@ msgstr ""
 
 #: blocks/bs-navbar-responsive-wrapper/index.js:2
 msgid "Offcanvas body Class"
-msgstr ""
-
-#: blocks/bs-navbar-toggler-button/index.js:1
-msgid "Button Settings"
 msgstr ""
 
 #: blocks/bs-navbar-toggler-button/index.js:1
@@ -442,11 +552,12 @@ msgstr ""
 msgid "Add label…"
 msgstr ""
 
-#: blocks/bs-column/block.json
+#: blocks/bs-button/block.json
 msgctxt "block description"
-msgid "Render Bootstrap column. This block is in the BBFSE plugin."
+msgid "Render Bootstrap button. This block is in the BBFSE plugin."
 msgstr ""
 
+#: blocks/bs-button/block.json
 #: blocks/bs-column/block.json
 #: blocks/bs-container/block.json
 #: blocks/bs-navbar-container/block.json
@@ -458,6 +569,26 @@ msgstr ""
 #: blocks/bs-search/block.json
 msgctxt "block keyword"
 msgid "bootstrap"
+msgstr ""
+
+#: blocks/bs-button/block.json
+msgctxt "block keyword"
+msgid "button"
+msgstr ""
+
+#: blocks/bs-button/block.json
+msgctxt "block keyword"
+msgid "link"
+msgstr ""
+
+#: blocks/bs-button/block.json
+msgctxt "block title"
+msgid "Bootstrap button"
+msgstr ""
+
+#: blocks/bs-column/block.json
+msgctxt "block description"
+msgid "Render Bootstrap column. This block is in the BBFSE plugin."
 msgstr ""
 
 #: blocks/bs-column/block.json
