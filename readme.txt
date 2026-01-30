@@ -28,6 +28,7 @@ Blocks:
 * Navbar toggler button (for responsive toggler)
 * Navbar responsive wrapper (collapse, offcanvas)
 * Navbar navigation (display menu items)
+* Button (link, or button)
 
 Tested up to PHP 8.5.
 
