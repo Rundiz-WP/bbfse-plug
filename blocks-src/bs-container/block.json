@@ -5,6 +5,14 @@
         "tagName": {
             "type": "string",
             "default": "div"
+        },
+        "dataAttributes": {
+            "type": "object",
+            "default": {}
+        },
+        "ariaAttributes": {
+            "type": "object",
+            "default": {}
         }
     },
     "category": "design",

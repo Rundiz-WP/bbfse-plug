@@ -18,13 +18,16 @@ import {
 
 import {
     Notice,
-    SelectControl
+    SelectControl,
+    __experimentalToolsPanel as ToolsPanel,
+    __experimentalToolsPanelItem as ToolsPanelItem
 } from '@wordpress/components';
 
 import { useRef, useEffect } from '@wordpress/element';
 
 import { useSelect } from '@wordpress/data';
 
+import KeyValueControl from '../../assets/js/blocks/shared/keyValueControl.js';
 
 /**
  * Render inspector controls for the block.
@@ -70,6 +73,8 @@ function GroupEdit({ attributes, setAttributes, clientId }) {
     const {
         tagName: TagName = 'div',
         className,
+        dataAttributes,
+        ariaAttributes,
     } = attributes;
 
     const { hasInnerBlocks } = useSelect(
@@ -94,6 +99,8 @@ function GroupEdit({ attributes, setAttributes, clientId }) {
 
     // Check if valid Bootstrap column class is present. Accepted if value is 'col', 'col-[number or any]'
     const hasColumnClass = className && className.toLowerCase().includes('col');
+
+    const isObjectEmpty = (obj) => Object.keys(obj || {}).length === 0;
 
     const blockProps = useBlockProps({
         ref,
@@ -132,6 +139,40 @@ function GroupEdit({ attributes, setAttributes, clientId }) {
                     </div>
                 </InspectorControls>
             )}
+            <InspectorControls>
+                <ToolsPanel
+                    label={__('Data and Aria Attributes', 'bbfse-plugin')}
+                    resetAll={() => setAttributes({
+                        dataAttributes: {},
+                        ariaAttributes: {},
+                    })}
+                >
+                    <ToolsPanelItem
+                        hasValue={() => !isObjectEmpty(dataAttributes)}
+                        label={__('Data attributes', 'bbfse-plugin')}
+                        onDeselect={() => setAttributes({ dataAttributes: {} })}
+                        isShownByDefault
+                    >
+                        <KeyValueControl
+                            label={__('Data attributes', 'bbfse-plugin') + ' '}
+                            value={dataAttributes}
+                            onChange={(value) => setAttributes({ dataAttributes: value })}
+                        />
+                    </ToolsPanelItem>
+                    <ToolsPanelItem
+                        hasValue={() => !isObjectEmpty(ariaAttributes)}
+                        label={__('Aria attributes', 'bbfse-plugin')}
+                        onDeselect={() => setAttributes({ ariaAttributes: {} })}
+                        isShownByDefault
+                    >
+                        <KeyValueControl
+                            label={__('Aria attributes', 'bbfse-plugin') + ' '}
+                            value={ariaAttributes}
+                            onChange={(value) => setAttributes({ ariaAttributes: value })}
+                        />
+                    </ToolsPanelItem>
+                </ToolsPanel>
+            </InspectorControls>
             <TagName {...innerBlocksProps} />
         </>
     );

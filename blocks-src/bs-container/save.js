@@ -8,6 +8,8 @@
 
 import { useInnerBlocksProps, useBlockProps } from '@wordpress/block-editor';
 
+import attributesToProps from '../../assets/js/blocks/shared/attributesToProps.js';
+
 /**
  * Save component for Bootstrap container block.
  * Outputs simple wrapper with user chosen tag.
@@ -16,9 +18,12 @@ import { useInnerBlocksProps, useBlockProps } from '@wordpress/block-editor';
  * @param {Object} props.attributes Block attributes.
  * @return {JSX.Element} The saved element.
  */
-export default function save({ attributes: { tagName: Tag = 'div' } }) {
+export default function save({ attributes: { tagName: Tag = 'div', dataAttributes, ariaAttributes } }) {
     // No hardcoded class. relying on attributes.className which WP handles automatically.
-    const blockProps = useBlockProps.save({});
+    const blockProps = useBlockProps.save({
+        ...attributesToProps(dataAttributes, 'data-'),
+        ...attributesToProps(ariaAttributes, 'aria-'),
+    });
 
     const innerBlocksProps = useInnerBlocksProps.save(blockProps);
 
