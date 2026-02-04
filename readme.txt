@@ -29,6 +29,7 @@ Blocks:
 * Navbar responsive wrapper (collapse, offcanvas)
 * Navbar navigation (display menu items)
 * Button (link, or button)
+* Comment form
 
 Tested up to PHP 8.5.
 

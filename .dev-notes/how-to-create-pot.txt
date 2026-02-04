@@ -1,5 +1,6 @@
 Use this command:
-`wp i18n make-pot . --exclude="assets/vendor,App/vendor,blocks-src,languages,node_modules,node_tasks,*.css,*.svg,*.eot,*.woff,*.woff2,*.ttf,*.html,*.txt,*.pot"`
+`wp i18n make-pot . --exclude="assets/vendor,App/vendor,blocks-src,languages,node_modules,node_tasks,*.css,*.svg,*.eot,*.woff,*.woff2,*.ttf,*.txt,*.pot"`
+Or via command `npm run makePot`
 And check the result.
 
 Convert to JSON to make block i18n supported.
