@@ -74,7 +74,7 @@ $commentFormArgs = [
         . '<textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true" required></textarea>'
         . '</div>',
     'comment_notes_before' => sprintf(
-        '<p class="form-text text-muted">%s%s</p>',
+        '<div class="form-text text-body-secondary mb-3">%s%s</div>',
         sprintf(
             '<span id="email-notes">%s</span>',
             esc_html__('Your email address will not be published.', 'bbfse-plugin')
@@ -82,6 +82,7 @@ $commentFormArgs = [
         ' ' . wp_required_field_message()
     ),
     'comment_notes_after' => '',
+    'submit_field' => '<div class="mb-3">%1$s %2$s</div>',
 ];
 unset($buttonClassName, $fields);
 
