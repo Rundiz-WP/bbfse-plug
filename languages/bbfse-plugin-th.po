@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap Basic FSE Plugin 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bbfse-plugin\n"
-"POT-Creation-Date: 2026-01-31T03:19:10+07:00\n"
-"PO-Revision-Date: 2026-01-31 03:19+0700\n"
+"POT-Creation-Date: 2026-02-04T20:31:28+07:00\n"
+"PO-Revision-Date: 2026-02-04 20:34+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -52,6 +52,30 @@ msgstr "(ไม่มีไตเติล)"
 #, php-format
 msgid "The views file was not found (%s)."
 msgstr "ไม่พบไฟล์ views (%s)."
+
+#: blocks/bs-comment-form/render.php:45
+msgid "Name"
+msgstr "ชื่อ"
+
+#: blocks/bs-comment-form/render.php:49
+msgid "Email"
+msgstr "อีเมล"
+
+#: blocks/bs-comment-form/render.php:53
+msgid "Website"
+msgstr "เว็บไซต์"
+
+#: blocks/bs-comment-form/render.php:63
+msgid "Save my name, email, and website in this browser for the next time I comment."
+msgstr "บันทึกชื่อ อีเมล และเว็บไซต์ของฉันลงในเบราว์เซอร์นี้สำหรับการแสดงความคิดเห็นครั้งต่อไป."
+
+#: blocks/bs-comment-form/render.php:73 blocks/bs-comment-form/index.js:1
+msgid "Comment"
+msgstr "ความคิดเห็น"
+
+#: blocks/bs-comment-form/render.php:80
+msgid "Your email address will not be published."
+msgstr "ที่อยู่อีเมลของคุณจะไม่ถูกเผยแพร่."
 
 #: blocks/bs-navbar-navigation/render.php:43 blocks/bs-navbar-navigation/render.php:56
 msgid "This navigation is empty."
@@ -253,6 +277,26 @@ msgid ""
 msgstr ""
 "โปรดเพิ่มคลาสคอลัมน์ของ Bootstrap (เช่น \"col\", \"col-md-6\") ในช่อง \"คลาส CSS เพิ่มเติม\" "
 "ภายใต้การตั้งค่าขั้นสูง."
+
+#: blocks/bs-comment-form/index.js:1
+msgid "Comment Form Settings"
+msgstr "การตั้งค่าฟอร์มแสดงความคิดเห็น"
+
+#: blocks/bs-comment-form/index.js:1
+msgid "Button class"
+msgstr "คลาสปุ่ม"
+
+#: blocks/bs-comment-form/index.js:1
+msgid "Replace submit button class, e.g. btn btn-outline-primary"
+msgstr "เปลี่ยนคลาสของปุ่มส่งข้อมูล. เช่น btn btn-outline-primary"
+
+#: blocks/bs-comment-form/index.js:1
+msgid "Leave a Reply"
+msgstr "แสดงคำตอบกลับ"
+
+#: blocks/bs-comment-form/index.js:1
+msgid "Post Comment"
+msgstr "แสดงความคิดเห็น"
 
 #: blocks/bs-container/index.js:1
 msgid ""
@@ -561,10 +605,11 @@ msgctxt "block description"
 msgid "Render Bootstrap button. This block is in the BBFSE plugin."
 msgstr "แสดงผลปุ่ม Bootstrap. บล็อกนี้อยู่ในปลั๊กอิน BBFSE."
 
-#: blocks/bs-button/block.json blocks/bs-column/block.json blocks/bs-container/block.json
-#: blocks/bs-navbar-container/block.json blocks/bs-navbar-navigation/block.json
-#: blocks/bs-navbar-responsive-wrapper/block.json blocks/bs-navbar-toggler-button/block.json
-#: blocks/bs-pagination/block.json blocks/bs-row/block.json blocks/bs-search/block.json
+#: blocks/bs-button/block.json blocks/bs-column/block.json blocks/bs-comment-form/block.json
+#: blocks/bs-container/block.json blocks/bs-navbar-container/block.json
+#: blocks/bs-navbar-navigation/block.json blocks/bs-navbar-responsive-wrapper/block.json
+#: blocks/bs-navbar-toggler-button/block.json blocks/bs-pagination/block.json
+#: blocks/bs-row/block.json blocks/bs-search/block.json
 msgctxt "block keyword"
 msgid "bootstrap"
 msgstr "bootstrap"
@@ -609,6 +654,26 @@ msgstr "ตัวหุ้ม"
 msgctxt "block title"
 msgid "Bootstrap layout column"
 msgstr "คอลัมน์เลย์เอาต์ Bootstrap"
+
+#: blocks/bs-comment-form/block.json
+msgctxt "block description"
+msgid "Display post comment form in Bootstrap style. This block is in the BBFSE plugin."
+msgstr "แสดงแบบฟอร์มแสดงความคิดเห็นในสไตล์ Bootstrap. บล็อกนี้อยู่ในปลั๊กอิน BBFSE."
+
+#: blocks/bs-comment-form/block.json
+msgctxt "block keyword"
+msgid "comment"
+msgstr "ความคิดเห็น"
+
+#: blocks/bs-comment-form/block.json
+msgctxt "block keyword"
+msgid "form"
+msgstr "ฟอร์ม"
+
+#: blocks/bs-comment-form/block.json
+msgctxt "block title"
+msgid "Bootstrap comment form"
+msgstr "แบบฟอร์มแสดงความคิดเห็น Bootstrap"
 
 #: blocks/bs-container/block.json
 msgctxt "block description"
