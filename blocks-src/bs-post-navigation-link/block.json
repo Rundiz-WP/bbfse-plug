@@ -61,12 +61,7 @@
     "render": "file:./render.php",
     "supports": {
         "html": false,
-        "className": true,
-        "color": false,
-        "typography": false,
-        "spacing": false,
-        "__experimentalBorder": false,
-        "dimensions": false
+        "className": true
     },
     "textdomain": "bbfse-plugin",
     "title": "Bootstrap post navigation link",
