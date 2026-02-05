@@ -2,22 +2,22 @@
 /**
  * Bootstrap Basic FSE Plugin - Bootstrap search form block.
  * 
- * @package bbfse-plugin
+ * @package bbfse-plug
  * @since 0.0.1
  * @license http://opensource.org/licenses/MIT MIT
  */
 
 
-namespace BBFSEPlugin\App\Controllers\Blocks;
+namespace BBFSEPlug\App\Controllers\Blocks;
 
 
-if (!class_exists('\\BBFSEPlugin\\App\\Controllers\\Blocks\\BsSearch')) {
+if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Blocks\\BsSearch')) {
     /**
      * Bootstrap search class.
      * 
      * @since 0.0.1
      */
-    class BsSearch implements \BBFSEPlugin\App\Controllers\ControllerInterface
+    class BsSearch implements \BBFSEPlug\App\Controllers\ControllerInterface
     {
 
 
@@ -35,7 +35,7 @@ if (!class_exists('\\BBFSEPlugin\\App\\Controllers\\Blocks\\BsSearch')) {
          */
         public function registerBlock()
         {
-            register_block_type(dirname(BBFSEPLUGIN_FILE) . '/blocks/' . static::BLOCK_NAME . '/block.json');
+            register_block_type(dirname(BBFSEPLUG_FILE) . '/blocks/' . static::BLOCK_NAME . '/block.json');
         }// registerBlocks
 
 
@@ -61,9 +61,9 @@ if (!class_exists('\\BBFSEPlugin\\App\\Controllers\\Blocks\\BsSearch')) {
         {
             if (function_exists('wp_set_script_translations')) {
                 wp_set_script_translations(
-                    'bbfse-plugin-blocks-' . static::BLOCK_NAME . '-script', 
-                    'bbfse-plugin', 
-                    plugin_dir_path(BBFSEPLUGIN_FILE) . 'languages'
+                    'bbfse-plug-blocks-' . static::BLOCK_NAME . '-script', 
+                    'bbfse-plug', 
+                    plugin_dir_path(BBFSEPLUG_FILE) . 'languages'
                 );
             }
         }// setTranslation

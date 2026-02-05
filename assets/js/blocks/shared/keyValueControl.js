@@ -1,7 +1,7 @@
 /**
  * Key value controls for common use in blocks.
  * 
- * @package bbfse-plugin
+ * @package bbfse-plug
  * @since 0.0.1
  */
 
@@ -68,12 +68,12 @@ export default function KeyValueControl ({ label, value, onChange }) {
             {localAttributes.map((attr, index) => (
                 <div key={index} style={{ display: 'flex', marginBottom: '5px', gap: '5px' }}>
                     <TextControl
-                        placeholder={__('Key', 'bbfse-plugin')}
+                        placeholder={__('Key', 'bbfse-plug')}
                         value={attr.key}
                         onChange={(val) => updateAttribute(index, 'key', val)}
                     />
                     <TextControl
-                        placeholder={__('Value', 'bbfse-plugin')}
+                        placeholder={__('Value', 'bbfse-plug')}
                         value={attr.val}
                         onChange={(val) => updateAttribute(index, 'val', val)}
                     />
@@ -83,12 +83,12 @@ export default function KeyValueControl ({ label, value, onChange }) {
                         variant="secondary"
                         icon="trash"
                         onClick={() => removeAttribute(index)}
-                        label={__('Remove', 'bbfse-plugin')}
+                        label={__('Remove', 'bbfse-plug')}
                     />
                 </div>
             ))}
             <Button variant="secondary" onClick={addAttribute} isSmall>
-                {__('Add attribute', 'bbfse-plugin')}
+                {__('Add attribute', 'bbfse-plug')}
             </Button>
         </div>
     );

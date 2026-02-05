@@ -41,7 +41,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\Loader')) {
 
             if (is_array($file_list)) {
                 foreach ($file_list as $file) {
-                    $this_file_classname = '\\BBFSEPlug$1' . str_replace([$this_plugin_dir, '.php', '/'], ['', '', '\\'], $file);
+                    $this_file_classname = '\\BBFSEPlug' . str_replace([$this_plugin_dir, '.php', '/'], ['', '', '\\'], $file);
                     if (class_exists($this_file_classname)) {
                         $TestClass = new \ReflectionClass($this_file_classname);
                         if (
@@ -127,7 +127,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\Loader')) {
 
             if (is_array($file_list) && !empty($file_list)) {
                 foreach ($file_list as $file) {
-                    $this_file_classname = '\\BBFSEPlug$1' . str_replace([$this_plugin_dir, '.php', '/'], ['', '', '\\'], $file);
+                    $this_file_classname = '\\BBFSEPlug' . str_replace([$this_plugin_dir, '.php', '/'], ['', '', '\\'], $file);
                     if (class_exists($this_file_classname)) {
                         $TestClass = new \ReflectionClass($this_file_classname);
                         if (

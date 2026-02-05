@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap Basic FSE Plugin 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bbfse-plug\n"
-"POT-Creation-Date: 2026-02-06T00:18:44+07:00\n"
-"PO-Revision-Date: 2026-02-06 00:19+0700\n"
+"POT-Creation-Date: 2026-02-06T00:52:02+07:00\n"
+"PO-Revision-Date: 2026-02-06 00:52+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -145,7 +145,11 @@ msgstr "ไม่พบไฟล์ views (%s)."
 msgid "Upload"
 msgstr "อัปโหลด"
 
-#: App/Libraries/RundizSettings.php:736
+#: App/Libraries/RundizSettings.php:736 assets/js/blocks/shared/keyValueControl.js:86
+#: blocks/bs-button/index.js:1 blocks/bs-column/index.js:1 blocks/bs-container/index.js:1
+#: blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1 blocks/bs-navbar-toggler-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
 msgid "Remove"
 msgstr "เอาออก"
 
@@ -253,6 +257,30 @@ msgstr "(ไม่มีไตเติล)"
 msgid "Search"
 msgstr "ค้นหา"
 
+#: assets/js/blocks/shared/keyValueControl.js:71 blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1
+#: blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1 blocks/bs-navbar-toggler-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
+msgid "Key"
+msgstr "Key"
+
+#: assets/js/blocks/shared/keyValueControl.js:76 blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1
+#: blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1 blocks/bs-navbar-toggler-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
+msgid "Value"
+msgstr "ค่า"
+
+#: assets/js/blocks/shared/keyValueControl.js:91 blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1
+#: blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1 blocks/bs-navbar-toggler-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
+msgid "Add attribute"
+msgstr "เพิ่มแอตทริบิวต์ aria"
+
 #: blocks/bs-button/index.js:1
 msgid "Default"
 msgstr "ค่าเริ่มต้น"
@@ -358,10 +386,6 @@ msgstr "ชื่อ"
 msgctxt "Button type"
 msgid "Type"
 msgstr "Type"
-
-#: blocks/bs-button/index.js:1
-msgid "Value"
-msgstr "ค่า"
 
 #: blocks/bs-button/index.js:1 blocks/bs-column/index.js:1 blocks/bs-container/index.js:1
 #: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1

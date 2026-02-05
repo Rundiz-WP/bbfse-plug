@@ -2,22 +2,22 @@
 /**
  * Bootstrap Basic FSE Plugin - Bootstrap navbar navigation block.
  * 
- * @package bbfse-plugin
+ * @package bbfse-plug
  * @since 0.0.1
  * @license http://opensource.org/licenses/MIT MIT
  */
 
 
-namespace BBFSEPlugin\App\Controllers\Blocks;
+namespace BBFSEPlug\App\Controllers\Blocks;
 
 
-if (!class_exists('\\BBFSEPlugin\\App\\Controllers\\Blocks\\BsNavbarNavigation')) {
+if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Blocks\\BsNavbarNavigation')) {
     /**
      * Bootstrap navbar navigation class.
      * 
      * @since 0.0.1
      */
-    class BsNavbarNavigation implements \BBFSEPlugin\App\Controllers\ControllerInterface
+    class BsNavbarNavigation implements \BBFSEPlug\App\Controllers\ControllerInterface
     {
 
 
@@ -35,7 +35,7 @@ if (!class_exists('\\BBFSEPlugin\\App\\Controllers\\Blocks\\BsNavbarNavigation')
          */
         public function registerBlock()
         {
-            register_block_type(dirname(BBFSEPLUGIN_FILE) . '/blocks/' . static::BLOCK_NAME . '/block.json');
+            register_block_type(dirname(BBFSEPLUG_FILE) . '/blocks/' . static::BLOCK_NAME . '/block.json');
         }// registerBlocks
 
 
@@ -61,9 +61,9 @@ if (!class_exists('\\BBFSEPlugin\\App\\Controllers\\Blocks\\BsNavbarNavigation')
         {
             if (function_exists('wp_set_script_translations')) {
                 wp_set_script_translations(
-                    'bbfse-plugin-blocks-' . static::BLOCK_NAME . '-script',
-                    'bbfse-plugin',
-                    plugin_dir_path(BBFSEPLUGIN_FILE) . 'languages'
+                    'bbfse-plug-blocks-' . static::BLOCK_NAME . '-script',
+                    'bbfse-plug',
+                    plugin_dir_path(BBFSEPLUG_FILE) . 'languages'
                 );
             }
         }// setTranslation

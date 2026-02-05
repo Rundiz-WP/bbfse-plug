@@ -1,7 +1,7 @@
 /**
  * Attributes to props for common use in blocks.
  * 
- * @package bbfse-plugin
+ * @package bbfse-plug
  * @since 0.0.1
  */
 
