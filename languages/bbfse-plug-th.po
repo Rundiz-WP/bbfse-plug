@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap Basic FSE Plugin 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bbfse-plug\n"
-"POT-Creation-Date: 2026-02-06T23:44:28+07:00\n"
-"PO-Revision-Date: 2026-02-06 23:46+0700\n"
+"POT-Creation-Date: 2026-02-07T00:55:24+07:00\n"
+"PO-Revision-Date: 2026-02-07 00:55+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -24,8 +24,7 @@ msgstr "Bootstrap Basic FSE plug"
 
 #. Description of the plugin
 #: bbfse-plug.php
-msgid ""
-"A plugin that contain blocks for Bootstrap Basic FSE theme. All blocks based on Bootstrap CSS."
+msgid "A plugin that contain blocks for Bootstrap Basic FSE theme. All blocks based on Bootstrap CSS."
 msgstr "ปลั๊กอินที่มีบล็อกสำหรับธีม Bootstrap Basic FSE. บล็อกทั้งหมดสร้างขึ้นจาก CSS ของ Bootstrap."
 
 #. Author of the plugin
@@ -58,8 +57,7 @@ msgstr "เพิ่ม CSS, JS และไอคอนของ Bootstrap ล�
 msgid "Enqueue Bootstrap"
 msgstr "เพิ่มคิว Bootstrap"
 
-#: App/Controllers/Admin/Appearance/PluginHelp.php:37
-#: App/Views/admin/Appearance/pluginHelp_v.php:16
+#: App/Controllers/Admin/Appearance/PluginHelp.php:37 App/Views/admin/Appearance/pluginHelp_v.php:16
 msgid "BBFSE Plug help"
 msgstr "ความช่วยเหลือของ BBFSE Plug"
 
@@ -83,6 +81,11 @@ msgstr "เวอร์ชัน WordPress ของคุณไม่ตรง�
 msgid "Unable to network activate, please activate per site only."
 msgstr "ไม่สามารถเปิดใช้งานผ่านเครือข่ายได้, โปรดเปิดใช้งานทีละไซต์เท่านั้น."
 
+#: App/Controllers/Admin/Plugins/Upgrader.php:42 App/Controllers/Admin/Plugins/Upgrader.php:233
+#: App/Controllers/Admin/Settings.php:71
+msgid "You do not have permission to access this page."
+msgstr "คุณไม่ได้รับอนุญาตให้เข้าถึงหน้านี้."
+
 #: App/Controllers/Admin/Plugins/Upgrader.php:56
 msgid "Please reload this page and try again."
 msgstr "โปรดรีเฟรชหน้านี้แล้วลองใหม่อีกครั้ง."
@@ -97,11 +100,10 @@ msgstr "สำเร็จแล้ว โปรดคลิกถัดไป�
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:104
 msgid ""
-"All manual update completed successfully. This page will be no longer available until there is "
-"next manual update."
+"All manual update completed successfully. This page will be no longer available until there is next "
+"manual update."
 msgstr ""
-"การอัปเดตด้วยตนเองทั้งหมดเสร็จสมบูรณ์แล้ว. "
-"หน้าเว็บนี้จะไม่สามารถใช้งานได้อีกต่อไปจนกว่าจะมีการอัปเดตด้วยตนเองครั้งต่อไป."
+"การอัปเดตด้วยตนเองทั้งหมดเสร็จสมบูรณ์แล้ว. หน้าเว็บนี้จะไม่สามารถใช้งานได้อีกต่อไปจนกว่าจะมีการอัปเดตด้วยตนเองครั้งต่อไป."
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:123
 msgid "Unable to run update, there is no update classes to run."
@@ -111,8 +113,8 @@ msgstr "ไม่สามารถดำเนินการอัปเดต
 #: App/Controllers/Admin/Plugins/Upgrader.php:173
 #, php-format
 msgid ""
-"The Bootstrap Basic FSE Plugin is just upgraded and need to be manually update. Please "
-"continue to the %1$splugin update page%2$s."
+"The Bootstrap Basic FSE Plugin is just upgraded and need to be manually update. Please continue to "
+"the %1$splugin update page%2$s."
 msgstr ""
 "ปลั๊กอิน Bootstrap Basic FSE เพิ่งได้รับการอัปเกรดและจำเป็นต้องอัปเดตด้วยตนเอง. โปรดดำเนินการต่อที่ "
 "%1$sหน้าอัปเดตปลั๊กอิน%2$s."
@@ -147,6 +149,10 @@ msgstr "จำเป็นต้องอัปเดตด้วยตนเอ
 #: App/Controllers/Admin/Settings.php:87
 msgid "The manual update is required, please tell administrator to update first."
 msgstr "จำเป็นต้องอัปเดตด้วยตนเอง โปรดแจ้งให้ผู้ดูแลระบบทำการอัปเดตก่อน."
+
+#: App/Controllers/Admin/Settings.php:130
+msgid "Settings saved."
+msgstr "บันทึกการตั้งค่าแล้ว."
 
 #: App/Libraries/BootstrapNavbarNavigationWalker.php:120
 msgid "Home"
@@ -215,8 +221,8 @@ msgstr "แบรนด์ของแถบนำทาง"
 #: App/Views/admin/Appearance/pluginHelp_v.php:59
 #, php-format
 msgid ""
-"To use %1$s, you can use WordPress core row block and add class %1$s to it. Then you can add "
-"site logo, site title into row."
+"To use %1$s, you can use WordPress core row block and add class %1$s to it. Then you can add site "
+"logo, site title into row."
 msgstr ""
 "ในการใช้ %1$s, คุณสามารถใช้บล็อกแถว (row) หลักของ WordPress และเพิ่มคลาส %1$s เข้าไป. "
 "จากนั้นคุณสามารถเพิ่มโลโก้เว็บไซต์และชื่อเว็บไซต์ลงในแถว (row) ได้."
@@ -284,8 +290,7 @@ msgstr "เรียกไปยัง %s"
 #. translators: %s PHP code.
 #: App/Views/admin/readsettings_v.php:25
 #, php-format
-msgid ""
-"Access this variable as global %s. This variable will be change, up to config in AppTrait."
+msgid "Access this variable as global %s. This variable will be change, up to config in AppTrait."
 msgstr "เข้าถึงตัวแปรนี้โดยใช้ global %s. ตัวแปรนี้จะเปลี่ยนแปลงไปตามการตั้งค่าใน AppTrait."
 
 #: App/Views/admin/readsettings_v.php:28
@@ -296,31 +301,31 @@ msgstr "ตอนนี้คุณสามารถใช้ตัวแปร
 msgid "Bootstrap Basic FSE Plugin settings"
 msgstr "ตั้งค่าปลั๊กอิน Bootstrap Basic FSE"
 
-#: blocks/bs-comment-form/render.php:52
+#: blocks/bs-comment-form/render.php:61
 msgid "Name"
 msgstr "ชื่อ"
 
-#: blocks/bs-comment-form/render.php:56
+#: blocks/bs-comment-form/render.php:65
 msgid "Email"
 msgstr "อีเมล"
 
-#: blocks/bs-comment-form/render.php:60
+#: blocks/bs-comment-form/render.php:69
 msgid "Website"
 msgstr "เว็บไซต์"
 
-#: blocks/bs-comment-form/render.php:70
+#: blocks/bs-comment-form/render.php:79
 msgid "Save my name, email, and website in this browser for the next time I comment."
 msgstr "บันทึกชื่อ อีเมล และเว็บไซต์ของฉันลงในเบราว์เซอร์นี้สำหรับการแสดงความคิดเห็นครั้งต่อไป."
 
-#: blocks/bs-comment-form/render.php:80 blocks/bs-comment-form/index.js:1
+#: blocks/bs-comment-form/render.php:89 blocks/bs-comment-form/index.js:1
 msgid "Comment"
 msgstr "ความคิดเห็น"
 
-#: blocks/bs-comment-form/render.php:87
+#: blocks/bs-comment-form/render.php:96
 msgid "Your email address will not be published."
 msgstr "ที่อยู่อีเมลของคุณจะไม่ถูกเผยแพร่."
 
-#: blocks/bs-navbar-navigation/render.php:52 blocks/bs-navbar-navigation/render.php:65
+#: blocks/bs-navbar-navigation/render.php:61 blocks/bs-navbar-navigation/render.php:74
 msgid "This navigation is empty."
 msgstr "เมนูนำทางนี้ว่างเปล่า"
 
@@ -340,21 +345,21 @@ msgstr "ก่อนหน้า"
 msgid "Pagination"
 msgstr "การแบ่งหน้า"
 
-#: blocks/bs-post-navigation-link/render.php:50
+#: blocks/bs-post-navigation-link/render.php:58
 msgctxt "label for next post link"
 msgid "Next"
 msgstr "ถัดไป"
 
-#: blocks/bs-post-navigation-link/render.php:50
+#: blocks/bs-post-navigation-link/render.php:58
 msgctxt "label for previous post link"
 msgid "Previous"
 msgstr "ก่อนหน้า"
 
-#: blocks/bs-post-navigation-link/render.php:55 blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-post-navigation-link/render.php:63 blocks/bs-navbar-navigation/index.js:1
 msgid "(no title)"
 msgstr "(ไม่มีไตเติล)"
 
-#: blocks/bs-search/render.php:27 blocks/bs-search/render.php:33 blocks/bs-search/render.php:82
+#: blocks/bs-search/render.php:39 blocks/bs-search/render.php:45 blocks/bs-search/render.php:94
 #: blocks/bs-search/index.js:1
 msgid "Search"
 msgstr "ค้นหา"
@@ -423,8 +428,7 @@ msgid "Title"
 msgstr "Title"
 
 #: blocks/bbfse-plug-div/index.js:1 blocks/bs-button/index.js:1 blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1 blocks/bs-post-navigation-link/index.js:1
-#: blocks/bs-row/index.js:1
+#: blocks/bs-container/index.js:1 blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
 msgid "Data and Aria Attributes"
 msgstr "แอตทริบิวต์ของ Data และ Aria"
 
@@ -543,8 +547,8 @@ msgstr "Type"
 
 #: blocks/bs-column/index.js:1
 msgid ""
-"Please add a Bootstrap column class (e.g. \"col\", \"col-md-6\") in the \"Additional CSS "
-"class(es)\" field under Advanced settings."
+"Please add a Bootstrap column class (e.g. \"col\", \"col-md-6\") in the \"Additional CSS class(es)"
+"\" field under Advanced settings."
 msgstr ""
 "โปรดเพิ่มคลาสคอลัมน์ของ Bootstrap (เช่น \"col\", \"col-md-6\") ในช่อง \"คลาส CSS เพิ่มเติม\" "
 "ภายใต้การตั้งค่าขั้นสูง."
@@ -574,8 +578,8 @@ msgid ""
 "Please add a Bootstrap container class (e.g. \"container\", \"container-fluid\") in the "
 "\"Additional CSS class(es)\" field under Advanced settings."
 msgstr ""
-"โปรดเพิ่ม container ของ Bootstrap (เช่น \"container\", \"container-fluid\") ในช่อง \"คลาส CSS "
-"เพิ่มเติม\" ภายใต้การตั้งค่าขั้นสูง."
+"โปรดเพิ่ม container ของ Bootstrap (เช่น \"container\", \"container-fluid\") ในช่อง \"คลาส CSS เพิ่มเติม\" "
+"ภายใต้การตั้งค่าขั้นสูง."
 
 #: blocks/bs-navbar-container/index.js:1
 msgid "Navbar Settings"
@@ -793,11 +797,10 @@ msgstr "จำนวนหน้าติดกัน"
 
 #: blocks/bs-pagination/index.js:1
 msgid ""
-"Specify how many links can appear before and after the current page number. Links to the "
-"first, current and last page are always visible."
+"Specify how many links can appear before and after the current page number. Links to the first, "
+"current and last page are always visible."
 msgstr ""
-"ระบุจำนวนลิงก์ที่สามารถปรากฏก่อนและหลังหมายเลขหน้าปัจจุบัน. ลิงก์ไปยังหน้าแรก หน้าปัจจุบัน "
-"และหน้าสุดท้ายจะแสดงอยู่เสมอ."
+"ระบุจำนวนลิงก์ที่สามารถปรากฏก่อนและหลังหมายเลขหน้าปัจจุบัน. ลิงก์ไปยังหน้าแรก หน้าปัจจุบัน และหน้าสุดท้ายจะแสดงอยู่เสมอ."
 
 #: blocks/bs-pagination/index.js:1
 msgid "Alignment"
@@ -881,8 +884,8 @@ msgstr "กรองตามการแยกประเภท"
 
 #: blocks/bs-post-navigation-link/index.js:1
 msgid ""
-"Only link to posts that have the same taxonomy terms as the current post. For example the same "
-"tags or categories."
+"Only link to posts that have the same taxonomy terms as the current post. For example the same tags "
+"or categories."
 msgstr "ลิงก์เฉพาะโพสต์ที่มีหมวดหมู่หรือคำจัดหมวดหมู่เดียวกันกับโพสต์ปัจจุบันเท่านั้น. ตัวอย่างเช่น แท็กหรือหมวดหมู่เดียวกัน."
 
 #: blocks/bs-search/index.js:1
@@ -1170,8 +1173,7 @@ msgstr "การแบ่งหน้าแบบ Bootstrap"
 
 #: blocks/bs-post-navigation-link/block.json
 msgctxt "block description"
-msgid ""
-"Displays the next or previous post link in Bootstrap style. This block is in the BBFSE plugin."
+msgid "Displays the next or previous post link in Bootstrap style. This block is in the BBFSE plugin."
 msgstr "แสดงลิงก์ไปยังโพสต์ถัดไปหรือโพสต์ก่อนหน้าในรูปแบบ Bootstrap. บล็อกนี้อยู่ในปลั๊กอิน BBFSE."
 
 #: blocks/bs-post-navigation-link/block.json

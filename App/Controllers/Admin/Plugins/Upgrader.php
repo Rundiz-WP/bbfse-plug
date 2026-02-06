@@ -39,7 +39,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
         {
             if (!current_user_can('update_plugins')) {
                 wp_die(
-                    esc_html(__('You do not have permission to access this page.')), 
+                    esc_html(__('You do not have permission to access this page.', 'bbfse-plug')), 
                     '', 
                     ['response' => 403]
                 );
@@ -230,7 +230,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
         public function displayManualUpdatePage()
         {
             if (!current_user_can('update_plugins')) {
-                wp_die(esc_html(__('You do not have permission to access this page.')));
+                wp_die(esc_html(__('You do not have permission to access this page.', 'bbfse-plug')));
             }
 
             $output = [];

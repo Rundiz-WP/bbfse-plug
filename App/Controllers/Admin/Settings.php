@@ -68,7 +68,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Settings')) {
         {
             // check permission.
             if (!current_user_can('manage_options')) {
-                wp_die(esc_html(__('You do not have permission to access this page.')));
+                wp_die(esc_html(__('You do not have permission to access this page.', 'bbfse-plug')));
             }
 
             if (get_transient('bbfse_plug_updated')) {
@@ -127,7 +127,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Settings')) {
                 $output['save_result'] = $this->saveOptions($options_values);
 
                 $output['form_result_class'] = 'notice-success';
-                $output['form_result_msg'] = __('Settings saved.');
+                $output['form_result_msg'] = __('Settings saved.', 'bbfse-plug');
             }// endif $_POST
 
             $output['settings_page'] = $RundizSettings->getSettingsPage($options_values);

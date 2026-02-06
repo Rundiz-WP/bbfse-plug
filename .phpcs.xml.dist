@@ -98,6 +98,6 @@
                 <element value="bbfse-plug" />
             </property>
         </properties>
-        <exclude name="WordPress.WP.I18n.MissingArgDomain"></exclude><!-- comment out this line if you want to use `__('WordPress core translation text')`, or `esc_html('Text')` -->
+        <!--exclude name="WordPress.WP.I18n.MissingArgDomain"></exclude--><!-- comment out this line if you want to use `__('WordPress core translation text')`, or `esc_html('Text')` -->
     </rule>
 </ruleset>

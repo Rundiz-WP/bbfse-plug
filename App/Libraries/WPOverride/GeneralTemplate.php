@@ -5,6 +5,8 @@
  * @package bbfse-plug
  * @since 0.0.1
  * @license http://opensource.org/licenses/MIT MIT
+ * 
+ * phpcs:disable WordPress.WP.I18n.MissingArgDomain
  */
 
 

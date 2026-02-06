@@ -28,17 +28,17 @@ if (!defined('ABSPATH')) {
              *              where key is unique name (use alpha-numeric, dash, underscore only) 
              *              and value is tab name.
              */
-            $bsfsePluginAdditionalTabs = apply_filters('bbfse_plug_help_tabpane', []);
-            if (is_array($bsfsePluginAdditionalTabs) || is_iterable($bsfsePluginAdditionalTabs)) {
-                foreach ($bsfsePluginAdditionalTabs as $key => $value) {
+            $bbfsePluginAdditionalTabs = apply_filters('bbfse_plug_help_tabpane', []);
+            if (is_array($bbfsePluginAdditionalTabs) || is_iterable($bbfsePluginAdditionalTabs)) {
+                foreach ($bbfsePluginAdditionalTabs as $bbfsePlugKey => $bbfsePlugValue) {
                     echo '<li>';
-                    echo '<a href="#' . sanitize_html_class($key) . '">';
-                    echo '<span class="tab-text">' . $value . '</span>';
+                    echo '<a href="#' . sanitize_html_class($bbfsePlugKey) . '">';
+                    echo '<span class="tab-text">' . esc_html($bbfsePlugValue) . '</span>';
                     echo '</a>';
                     echo '</li>' . PHP_EOL;
                 }// endforeach;
-                unset($key, $value);
-            }// endif; $bsfsePluginAdditionalTabs
+                unset($bbfsePlugKey, $bbfsePlugValue);
+            }// endif; $bbfsePluginAdditionalTabs
             ?> 
         </ul>
         <div class="tab-content">
@@ -87,9 +87,9 @@ if (!defined('ABSPATH')) {
                 ?></p>
             </div><!-- #tabs-01 -->
             <?php
-            if (is_array($bsfsePluginAdditionalTabs) || is_iterable($bsfsePluginAdditionalTabs)) {
-                foreach ($bsfsePluginAdditionalTabs as $key => $value) {
-                    echo '<div id="' . sanitize_html_class($key) . '">' . PHP_EOL;
+            if (is_array($bbfsePluginAdditionalTabs) || is_iterable($bbfsePluginAdditionalTabs)) {
+                foreach ($bbfsePluginAdditionalTabs as $bbfsePlugKey => $bbfsePlugValue) {
+                    echo '<div id="' . sanitize_html_class($bbfsePlugKey) . '">' . PHP_EOL;
                     /**
                      * Display help tab content in the "BBFSE Plug" plugin help page.
                      * 
@@ -98,13 +98,13 @@ if (!defined('ABSPATH')) {
                      * 
                      * @since 0.0.1
                      */
-                    do_action('bbfse_plug_help_tabcontent_' . $key);
+                    do_action('bbfse_plug_help_tabcontent_' . $bbfsePlugKey);
                     echo PHP_EOL;
                     echo '</div>' . PHP_EOL;
                 }// endforeach;
-                unset($key, $value);
-            }// endif; $bsfsePluginAdditionalTabs
-            unset($bsfsePluginAdditionalTabs);
+                unset($bbfsePlugKey, $bbfsePlugValue);
+            }// endif; $bbfsePluginAdditionalTabs
+            unset($bbfsePluginAdditionalTabs);
             ?> 
         </div><!-- .tab-content -->
     </div><!-- .rd-settings-tabs -->

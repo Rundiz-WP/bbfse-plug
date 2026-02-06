@@ -346,49 +346,49 @@ if (!function_exists('bbfse_plug_block_bsPagination_renderPagePrevious')) {
 
 
 // call to create pagination result in array format. -------------------------------------------------------------
-$showPreviousNext = (isset($attributes['showPreviousNext']) && is_bool($attributes['showPreviousNext']) ? $attributes['showPreviousNext'] : true);
-$pageResult = [];
-if (true === $showPreviousNext) {
-    $pageResult = array_merge(
-        $pageResult, 
+$bbfsePlugShowPreviousNext = (isset($attributes['showPreviousNext']) && is_bool($attributes['showPreviousNext']) ? $attributes['showPreviousNext'] : true);
+$bbfsePlugPageResult = [];
+if (true === $bbfsePlugShowPreviousNext) {
+    $bbfsePlugPageResult = array_merge(
+        $bbfsePlugPageResult, 
         bbfse_plug_block_bsPagination_renderPagePrevious(($attributes ?? []), ($content ?? ''), $block)
     );
-}// endif; $showPreviousNext previous page.
+}// endif; $bbfsePlugShowPreviousNext previous page.
 
 if (isset($attributes['showPageNumbers']) && true === $attributes['showPageNumbers']) {
-    $pageResult = array_merge(
-        $pageResult, 
+    $bbfsePlugPageResult = array_merge(
+        $bbfsePlugPageResult, 
         bbfse_plug_block_bsPagination_renderPageNumbers(($attributes ?? []), ($content ?? ''), $block)
     );
 }// endif; $showPageNumbers
 
-if (true === $showPreviousNext) {
-    $pageResult = array_merge(
-        $pageResult, 
+if (true === $bbfsePlugShowPreviousNext) {
+    $bbfsePlugPageResult = array_merge(
+        $bbfsePlugPageResult, 
         bbfse_plug_block_bsPagination_renderPageNext(($attributes ?? []), ($content ?? ''), $block)
     );
-}// endif; $showPreviousNext next page.
-unset($showPreviousNext);
+}// endif; $bbfsePlugShowPreviousNext next page.
+unset($bbfsePlugShowPreviousNext);
 // end call to create pagination result in array format. --------------------------------------------------------
 
-if (empty($pageResult)) {
+if (empty($bbfsePlugPageResult)) {
     // if page result is empty.
     // do nothing here.
-    unset($pageResult);
+    unset($bbfsePlugPageResult);
     return;
 } else {
     // if page result is not empty.
     // starting to build pagination HTML.
-    $output = bbfse_plug_block_bsPagination_generateOutputHTML(($attributes ?? []), ($content ?? ''), $block, $pageResult);
-    unset($pageResult);
+    $bbfsePlugOutput = bbfse_plug_block_bsPagination_generateOutputHTML(($attributes ?? []), ($content ?? ''), $block, $bbfsePlugPageResult);
+    unset($bbfsePlugPageResult);
 
     // get wrapper attributes.
-    $wrapper_attributes = get_block_wrapper_attributes();
+    $bbfsePlug_wrapper_attributes = get_block_wrapper_attributes();
 
     printf(
         '<nav %1$s aria-label="' . esc_attr__('Pagination', 'bbfse-plug') . '">%2$s</nav>',
-        $wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-        $output// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        $bbfsePlug_wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        $bbfsePlugOutput// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     );
-    unset($output, $wrapper_attributes);
+    unset($bbfsePlugOutput, $bbfsePlug_wrapper_attributes);
 }
