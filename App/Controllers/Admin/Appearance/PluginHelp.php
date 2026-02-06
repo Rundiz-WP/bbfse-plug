@@ -1,0 +1,100 @@
+<?php
+/**
+ * Plugin help page.
+ * 
+ * @package bbfse-plug
+ * @since 0.0.1
+ */
+
+
+namespace BBFSEPlug\App\Controllers\Admin\Appearance;
+
+
+if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Appearance\\PluginHelp')) {
+    /**
+     * Plugin help class.
+     * 
+     * @since 0.0.1
+     */
+    class PluginHelp implements \BBFSEPlug\App\Controllers\ControllerInterface
+    {
+
+
+        /**
+         * @var string The current admin page.
+         * @since 0.0.1
+         */
+        private $hookSuffix = '';
+
+
+        /**
+         * The plugin help sub menu.
+         *
+         * @since 0.0.1
+         */
+        public function bbfsePlugHelpMenu()
+        {
+            $hook_suffix = add_theme_page(__('BBFSE Plug help', 'bbfse-plug'), __('BBFSE Plug help', 'bbfse-plug'), 'edit_theme_options', 'bbfse-plug-help', [$this, 'bbfsePlugHelpPage']);
+            if (is_string($hook_suffix)) {
+                $this->hookSuffix = $hook_suffix;
+                add_action('load-' . $hook_suffix, [$this, 'callEnqueueHook']);
+            }
+            unset($hook_suffix);
+        }// bbfsePlugHelpMenu
+
+
+        /**
+         * Display help page.
+         *
+         * @since 0.0.1
+         */
+        public function bbfsePlugHelpPage()
+        {
+            $Loader = new \BBFSEPlug\App\Libraries\Loader();
+            $Loader->loadView('admin/Appearance/pluginHelp_v');
+            unset($Loader);
+        }// bbfsePlugHelpPage
+
+
+        /**
+         * Allow code/WordPress to call hook `admin_enqueue_scripts`
+         * 
+         * @link https://wordpress.stackexchange.com/a/76420/41315 Reference.
+         * @since 0.0.1
+         */
+        public function callEnqueueHook()
+        {
+            add_action('admin_enqueue_scripts', [$this, 'enqueueStylesScripts']);
+        }// callEnqueueHook
+
+
+        /**
+         * Enqueue scripts and styles here.
+         * 
+         * @since 0.0.1
+         * @param string $hook_suffix The current admin page.
+         */
+        public function enqueueStylesScripts(string $hook_suffix = '')
+        {
+            if ($hook_suffix !== $this->hookSuffix) {
+                return;
+            }
+
+            wp_enqueue_style('bbfse-plug-handle-rd-settings-tabs-css');
+            wp_enqueue_script('bbfse-plug-handle-rd-settings-tabs-js');
+        }// enqueueStylesScripts
+
+
+        /**
+         * {@inheritDoc}
+         * 
+         * @since 0.0.1
+         */
+        public function registerHooks()
+        {
+            add_action('admin_menu', [$this, 'bbfsePlugHelpMenu']);
+        }// registerHooks
+
+
+    }// PluginHelp
+}

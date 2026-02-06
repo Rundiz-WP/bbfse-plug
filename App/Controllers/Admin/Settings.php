@@ -146,9 +146,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Settings')) {
         public function registerHooks()
         {
             // currently, there is no settings to use.
-            //if (is_admin()) {
-                //add_action('admin_menu', [$this, 'pluginSettingsMenu']);
-            //}
+            //add_action('admin_menu', [$this, 'pluginSettingsMenu']);
         }// registerHooks
 
 
