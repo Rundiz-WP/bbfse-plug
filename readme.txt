@@ -42,6 +42,10 @@ Tested up to PHP 8.5.
 
 I try to update to the latest version and currently it is Bootstrap 5.
 
+= Does navbar work with WordPress navigation management? =
+
+Yes, it's working with WordPress navigation management in site editor. But it does not supported all WordPress core blocks.
+
 = I need help about how to use it? =
 
 If you have capability to edit theme option, you can access help page under Appearance menu in admin page.
@@ -53,5 +57,6 @@ If you have capability to edit theme option, you can access help page under Appe
 == Changelog ==
 
 = 0.0.1 =
-2026-xx-xx
+2026-02-06
+
 * The beginning.
