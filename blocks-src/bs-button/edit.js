@@ -70,7 +70,7 @@ export default function Edit({ attributes, setAttributes }) {
         ...ariaProps,
         ...(tagName === 'a' && href ? { href } : {}),
         ...(tagName === 'a' && linkRole ? { role: linkRole } : {}),
-        ...(tagName === 'a' && linkTabIndex ? { tabIndex: linkTabIndex } : {}),
+        ...(tagName === 'a' && Number.isInteger(linkTabIndex) ? { tabIndex: linkTabIndex } : {}),
         ...(tagName === 'a' ? { onClick: (event) => event.preventDefault() } : {}),
         ...(tagName === 'button' && autofocus ? { autoFocus: true } : {}),
         ...(tagName === 'button' && disabled ? { disabled: true } : {}),
@@ -166,7 +166,7 @@ export default function Edit({ attributes, setAttributes }) {
                         resetAll={() => setAttributes({
                             href: '',
                             linkRole: '',
-                            linkTabIndex: '',
+                            linkTabIndex: undefined,
                         })}
                     >
                         <ToolsPanelItem
@@ -195,15 +195,26 @@ export default function Edit({ attributes, setAttributes }) {
                             />
                         </ToolsPanelItem>
                         <ToolsPanelItem
-                            hasValue={() => linkTabIndex !== ''}
+                            hasValue={() => Number.isInteger(linkTabIndex)}
                             label={__('Tab index', 'bbfse-plug')}
-                            onDeselect={() => setAttributes({ linkTabIndex: '' })}
+                            onDeselect={() => setAttributes({ linkTabIndex: undefined })}
                             isShownByDefault
                         >
                             <TextControl
+                                type="number"
                                 label={__('Tab index', 'bbfse-plug')}
-                                value={linkTabIndex}
-                                onChange={(value) => setAttributes({ linkTabIndex: value })}
+                                value={Number.isInteger(linkTabIndex) ? linkTabIndex : ''}
+                                onChange={(value) => {
+                                    if (value === '') {
+                                        setAttributes({ linkTabIndex: undefined });
+                                        return;
+                                    }
+
+                                    const parsedValue = Number(value);
+                                    if (Number.isInteger(parsedValue)) {
+                                        setAttributes({ linkTabIndex: parsedValue });
+                                    }
+                                }}
                             />
                         </ToolsPanelItem>
                     </ToolsPanel>

@@ -19,8 +19,7 @@
             "default": ""
         },
         "linkTabIndex": {
-            "type": "string",
-            "default": ""
+            "type": "integer"
         },
         "dataAttributes": {
             "type": "object",

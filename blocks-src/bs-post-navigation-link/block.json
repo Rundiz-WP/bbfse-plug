@@ -32,8 +32,7 @@
             "default": ""
         },
         "tabindex": {
-            "type": "string",
-            "default": ""
+            "type": "integer"
         },
         "dataAttributes": {
             "type": "object",

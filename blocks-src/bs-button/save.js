@@ -46,7 +46,7 @@ export default function Save({ attributes }) {
         ? {
             ...(href ? { href } : {}),
             ...(linkRole ? { role: linkRole } : {}),
-            ...(linkTabIndex ? { tabIndex: linkTabIndex } : {}),
+            ...(Number.isInteger(linkTabIndex) ? { tabIndex: linkTabIndex } : {}),
         }
         : {};
 

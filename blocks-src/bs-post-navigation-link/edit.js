@@ -71,7 +71,7 @@ export default function Edit({ context: { postType }, attributes, setAttributes 
     const blockProps = useBlockProps({
         className: 'post-navigation-link-' + type,
         rel: (rel ? rel : defaultRel),
-        ...(tabindex !== '' ? { tabIndex: tabindex } : {}),
+        ...(Number.isInteger(tabindex) ? { tabIndex: tabindex } : {}),
         ...attributesToProps(dataAttributes, 'data-'),
         ...attributesToProps(ariaAttributes, 'aria-'),
         onClick: (event) => event.preventDefault(),
@@ -137,7 +137,7 @@ export default function Edit({ context: { postType }, attributes, setAttributes 
                     resetAll={() => {
                         setAttributes({
                             rel: '',
-                            tabindex: '',
+                            tabindex: undefined,
                         });
                     }}
                 >
@@ -156,13 +156,24 @@ export default function Edit({ context: { postType }, attributes, setAttributes 
                     <ToolsPanelItem
                         label={__('Tab index', 'bbfse-plug')}
                         isShownByDefault
-                        hasValue={() => tabindex !== ''}
-                        onDeselect={() => setAttributes({ tabindex: '' })}
+                        hasValue={() => Number.isInteger(tabindex)}
+                        onDeselect={() => setAttributes({ tabindex: undefined })}
                     >
                         <TextControl
+                            type="number"
                             label={__('Tab index', 'bbfse-plug')}
-                            value={tabindex}
-                            onChange={(value) => setAttributes({ tabindex: value })}
+                            value={Number.isInteger(tabindex) ? tabindex : ''}
+                            onChange={(value) => {
+                                if (value === '') {
+                                    setAttributes({ tabindex: undefined });
+                                    return;
+                                }
+
+                                const parsedValue = Number(value);
+                                if (Number.isInteger(parsedValue)) {
+                                    setAttributes({ tabindex: parsedValue });
+                                }
+                            }}
                         />
                     </ToolsPanelItem>
                 </ToolsPanel>

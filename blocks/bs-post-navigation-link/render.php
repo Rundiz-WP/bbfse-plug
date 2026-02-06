@@ -89,7 +89,7 @@ if ('' === $rel) {
 }
 unset($attType);
 
-$tabindex = (isset($attributes['tabindex']) && is_string($attributes['tabindex']) ? trim($attributes['tabindex']) : '');
+$tabindex = (isset($attributes['tabindex']) && is_int($attributes['tabindex']) ? $attributes['tabindex'] : null);
 
 $dataAttributes = '';
 if (isset($attributes['dataAttributes']) && is_array($attributes['dataAttributes'])) {
@@ -134,7 +134,7 @@ printf(
     esc_url(get_permalink($adjacentPost)),
     esc_attr(implode(' ', $classes)),
     esc_attr($rel),
-    ('' !== $tabindex ? ' tabindex="' . esc_attr($tabindex) . '"' : ''),
+    (is_int($tabindex) ? ' tabindex="' . esc_attr((string) $tabindex) . '"' : ''),
     $dataAttributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     $ariaAttributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     $linkText // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
