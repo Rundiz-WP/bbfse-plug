@@ -8,6 +8,7 @@
  * @link https://github.com/WordPress/gutenberg/tree/trunk/packages/block-library/src/post-navigation-link Source reference.
  * 
  * phpcs:disable Squiz.Commenting.BlockComment.NoNewLine
+ * phpcs:disable WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid
  */
 
 

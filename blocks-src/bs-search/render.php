@@ -7,6 +7,7 @@
  * @author Vee W.
  * 
  * phpcs:disable Squiz.Commenting.BlockComment.NoNewLine
+ * phpcs:disable WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid, Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
  */
 
 
@@ -14,10 +15,6 @@ if (!defined('ABSPATH')) {
     exit();
 }
 
-
-/* @var $attributes array Block attributes. */
-/* @var $content string Block default content. */
-/* @var $block \WP_Block Block instance. */
 
 if (!function_exists('bbfse_plug_block_bsSearch_render')) {
     /**

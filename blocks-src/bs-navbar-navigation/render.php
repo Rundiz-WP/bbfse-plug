@@ -6,6 +6,7 @@
  * @since 0.0.1
  * 
  * phpcs:disable Squiz.Commenting.BlockComment.NoNewLine
+ * phpcs:disable WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid, Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
  */
 
 
