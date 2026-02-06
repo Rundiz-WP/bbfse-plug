@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-06T10:56:47+07:00\n"
+"POT-Creation-Date: 2026-02-06T22:37:02+07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: bbfse-plug\n"
@@ -142,6 +142,7 @@ msgstr ""
 
 #: App/Libraries/RundizSettings.php:734
 #: assets/js/blocks/shared/keyValueControl.js:86
+#: blocks/bbfse-plug-div/index.js:1
 #: blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1
 #: blocks/bs-container/index.js:1
@@ -334,6 +335,7 @@ msgid "Search"
 msgstr ""
 
 #: assets/js/blocks/shared/keyValueControl.js:71
+#: blocks/bbfse-plug-div/index.js:1
 #: blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1
 #: blocks/bs-container/index.js:1
@@ -347,6 +349,7 @@ msgid "Key"
 msgstr ""
 
 #: assets/js/blocks/shared/keyValueControl.js:76
+#: blocks/bbfse-plug-div/index.js:1
 #: blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1
 #: blocks/bs-container/index.js:1
@@ -360,6 +363,7 @@ msgid "Value"
 msgstr ""
 
 #: assets/js/blocks/shared/keyValueControl.js:91
+#: blocks/bbfse-plug-div/index.js:1
 #: blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1
 #: blocks/bs-container/index.js:1
@@ -370,6 +374,86 @@ msgstr ""
 #: blocks/bs-post-navigation-link/index.js:1
 #: blocks/bs-row/index.js:1
 msgid "Add attribute"
+msgstr ""
+
+#: blocks/bbfse-plug-div/index.js:1
+#: blocks/bs-column/index.js:1
+#: blocks/bs-container/index.js:1
+#: blocks/bs-row/index.js:1
+msgid "HTML element"
+msgstr ""
+
+#: blocks/bbfse-plug-div/index.js:1
+#: blocks/bs-column/index.js:1
+#: blocks/bs-container/index.js:1
+#: blocks/bs-row/index.js:1
+msgid "Default (<div>)"
+msgstr ""
+
+#: blocks/bbfse-plug-div/index.js:1
+msgid "HTML Attributes"
+msgstr ""
+
+#: blocks/bbfse-plug-div/index.js:1
+msgctxt "HTML attribute"
+msgid "Accesskey"
+msgstr ""
+
+#: blocks/bbfse-plug-div/index.js:1
+msgctxt "HTML attribute"
+msgid "Lang"
+msgstr ""
+
+#: blocks/bbfse-plug-div/index.js:1
+#: blocks/bs-button/index.js:1
+msgctxt "HTML attribute"
+msgid "Role"
+msgstr ""
+
+#: blocks/bbfse-plug-div/index.js:1
+#: blocks/bs-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1
+msgid "Tab index"
+msgstr ""
+
+#: blocks/bbfse-plug-div/index.js:1
+msgctxt "HTML attribute"
+msgid "Title"
+msgstr ""
+
+#: blocks/bbfse-plug-div/index.js:1
+#: blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1
+#: blocks/bs-container/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1
+#: blocks/bs-row/index.js:1
+msgid "Data and Aria Attributes"
+msgstr ""
+
+#: blocks/bbfse-plug-div/index.js:1
+#: blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1
+#: blocks/bs-container/index.js:1
+#: blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1
+#: blocks/bs-row/index.js:1
+msgid "Data attributes"
+msgstr ""
+
+#: blocks/bbfse-plug-div/index.js:1
+#: blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1
+#: blocks/bs-container/index.js:1
+#: blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1
+#: blocks/bs-row/index.js:1
+msgid "Aria attributes"
 msgstr ""
 
 #: blocks/bs-button/index.js:1
@@ -414,16 +498,6 @@ msgstr ""
 
 #: blocks/bs-button/index.js:1
 msgid "Required when using <a>."
-msgstr ""
-
-#: blocks/bs-button/index.js:1
-msgctxt "HTML attribute"
-msgid "Role"
-msgstr ""
-
-#: blocks/bs-button/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1
-msgid "Tab index"
 msgstr ""
 
 #: blocks/bs-button/index.js:1
@@ -480,50 +554,6 @@ msgstr ""
 #: blocks/bs-button/index.js:1
 msgctxt "Button type"
 msgid "Type"
-msgstr ""
-
-#: blocks/bs-button/index.js:1
-#: blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1
-#: blocks/bs-row/index.js:1
-msgid "Data and Aria Attributes"
-msgstr ""
-
-#: blocks/bs-button/index.js:1
-#: blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1
-#: blocks/bs-navbar-container/index.js:1
-#: blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1
-#: blocks/bs-row/index.js:1
-msgid "Data attributes"
-msgstr ""
-
-#: blocks/bs-button/index.js:1
-#: blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1
-#: blocks/bs-navbar-container/index.js:1
-#: blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1
-#: blocks/bs-row/index.js:1
-msgid "Aria attributes"
-msgstr ""
-
-#: blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1
-#: blocks/bs-row/index.js:1
-msgid "HTML element"
-msgstr ""
-
-#: blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1
-#: blocks/bs-row/index.js:1
-msgid "Default (<div>)"
 msgstr ""
 
 #: blocks/bs-column/index.js:1
@@ -914,6 +944,58 @@ msgstr ""
 msgid "Add label…"
 msgstr ""
 
+#: blocks/bbfse-plug-div/block.json
+msgctxt "block description"
+msgid "Create <div> element that can customize class, attributes. This block is in BBFSE plugin."
+msgstr ""
+
+#: blocks/bbfse-plug-div/block.json
+msgctxt "block keyword"
+msgid "div"
+msgstr ""
+
+#: blocks/bbfse-plug-div/block.json
+msgctxt "block keyword"
+msgid "custom div"
+msgstr ""
+
+#: blocks/bbfse-plug-div/block.json
+msgctxt "block keyword"
+msgid "customizable"
+msgstr ""
+
+#: blocks/bbfse-plug-div/block.json
+#: blocks/bs-column/block.json
+#: blocks/bs-container/block.json
+#: blocks/bs-navbar-responsive-wrapper/block.json
+#: blocks/bs-row/block.json
+msgctxt "block keyword"
+msgid "wrapper"
+msgstr ""
+
+#: blocks/bbfse-plug-div/block.json
+msgctxt "block keyword"
+msgid "element"
+msgstr ""
+
+#: blocks/bbfse-plug-div/block.json
+msgctxt "block keyword"
+msgid "semantic"
+msgstr ""
+
+#: blocks/bbfse-plug-div/block.json
+#: blocks/bs-column/block.json
+#: blocks/bs-container/block.json
+#: blocks/bs-row/block.json
+msgctxt "block keyword"
+msgid "layout"
+msgstr ""
+
+#: blocks/bbfse-plug-div/block.json
+msgctxt "block title"
+msgid "Customizable div"
+msgstr ""
+
 #: blocks/bs-button/block.json
 msgctxt "block description"
 msgid "Render Bootstrap button. This block is in the BBFSE plugin."
@@ -958,21 +1040,6 @@ msgstr ""
 #: blocks/bs-column/block.json
 msgctxt "block keyword"
 msgid "column"
-msgstr ""
-
-#: blocks/bs-column/block.json
-#: blocks/bs-container/block.json
-#: blocks/bs-row/block.json
-msgctxt "block keyword"
-msgid "layout"
-msgstr ""
-
-#: blocks/bs-column/block.json
-#: blocks/bs-container/block.json
-#: blocks/bs-navbar-responsive-wrapper/block.json
-#: blocks/bs-row/block.json
-msgctxt "block keyword"
-msgid "wrapper"
 msgstr ""
 
 #: blocks/bs-column/block.json

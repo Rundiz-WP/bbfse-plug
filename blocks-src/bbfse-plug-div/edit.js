@@ -142,12 +142,12 @@ export default function Edit({ attributes, setAttributes, clientId }) {
                 >
                     <ToolsPanelItem
                         hasValue={() => accesskey !== ''}
-                        label={_x('Access key', 'HTML attribute', 'bbfse-plug')}
+                        label={_x('Accesskey', 'HTML attribute', 'bbfse-plug')}
                         onDeselect={() => setAttributes({ accesskey: '' })}
                         isShownByDefault
                     >
                         <TextControl
-                            label={_x('Access key', 'HTML attribute', 'bbfse-plug')}
+                            label={_x('Accesskey', 'HTML attribute', 'bbfse-plug')}
                             value={accesskey}
                             onChange={(value) => setAttributes({ accesskey: value })}
                         />
