@@ -1,0 +1,73 @@
+<?php
+/**
+ * Bootstrap Basic FSE Plugin - Customizable div block.
+ *
+ * @package bbfse-plug
+ * @since 0.0.1
+ * @license http://opensource.org/licenses/MIT MIT
+ */
+
+
+namespace BBFSEPlug\App\Controllers\Blocks;
+
+
+if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Blocks\\BbfsePlugDiv')) {
+    /**
+     * Customizable div block class.
+     *
+     * @since 0.0.1
+     */
+    class BbfsePlugDiv implements \BBFSEPlug\App\Controllers\ControllerInterface
+    {
+
+
+        /**
+         * @type string Block folder name.
+         */
+        private const BLOCK_NAME = 'bbfse-plug-div';
+
+
+        /**
+         * Register block.
+         *
+         * @link https://developer.wordpress.org/reference/functions/register_block_type/ Reference.
+         * @since 0.0.1
+         */
+        public function registerBlock()
+        {
+            register_block_type(dirname(BBFSEPLUG_FILE) . '/blocks/' . static::BLOCK_NAME . '/block.json');
+        }// registerBlocks
+
+
+        /**
+         * {@inheritDoc}
+         *
+         * @since 0.0.1
+         */
+        public function registerHooks()
+        {
+            add_action('init', [$this, 'registerBlock']);
+            add_action('wp_enqueue_scripts', [$this, 'setTranslation']);
+        }// registerHooks
+
+
+        /**
+         * Set script translation (for JS).
+         *
+         * @link https://developer.wordpress.org/reference/functions/wp_set_script_translations/ Reference.
+         * @since 0.0.1
+         */
+        public function setTranslation()
+        {
+            if (function_exists('wp_set_script_translations')) {
+                wp_set_script_translations(
+                    'bbfse-plug-blocks-' . static::BLOCK_NAME . '-script',
+                    'bbfse-plug',
+                    plugin_dir_path(BBFSEPLUG_FILE) . 'languages'
+                );
+            }
+        }// setTranslation
+
+
+    }// BbfsePlugDiv
+}

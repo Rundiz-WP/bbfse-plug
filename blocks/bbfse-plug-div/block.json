@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "attributes": {
+    "tagName": {
+      "type": "string",
+      "default": "div"
+    },
+    "accesskey": {
+      "type": "string",
+      "default": ""
+    },
+    "lang": {
+      "type": "string",
+      "default": ""
+    },
+    "role": {
+      "type": "string",
+      "default": ""
+    },
+    "tabindex": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "dataAttributes": {
+      "type": "object",
+      "default": {}
+    },
+    "ariaAttributes": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "category": "design",
+  "description": "Create <div> element that can customize class, attributes. This block is in BBFSE plugin.",
+  "editorScript": "file:./index.js",
+  "example": false,
+  "icon": "editor-code",
+  "keywords": [
+    "div",
+    "custom div",
+    "customizable",
+    "wrapper",
+    "element",
+    "semantic",
+    "layout"
+  ],
+  "name": "bbfse-plug/blocks-bbfse-plug-div",
+  "supports": {
+    "html": false,
+    "className": true,
+    "anchor": true
+  },
+  "textdomain": "bbfse-plug",
+  "title": "Customizable div",
+  "version": "0.0.1"
+}
