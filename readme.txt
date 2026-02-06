@@ -1,4 +1,4 @@
-=== Bootstrap Basic FSE plug ===
+=== BBFSE plug ===
 Contributors: okvee
 Donate link: https://github.com/sponsors/Rundiz-WP
 Tags: bootstrap

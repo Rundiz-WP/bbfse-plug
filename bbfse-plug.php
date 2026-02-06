@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Bootstrap Basic FSE plug
+ * Plugin Name: BBFSE plug
  * Plugin URI:
  * Description: A plugin that contain blocks for Bootstrap Basic FSE theme. All blocks based on Bootstrap CSS.
  * Version: 0.0.1
