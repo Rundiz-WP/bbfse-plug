@@ -14,6 +14,7 @@ if (!defined('ABSPATH')) {
 ?>
 <div class="wrap bbfse-plug-appearance-help">
     <h1><?php esc_html_e('BBFSE Plug help', 'bbfse-plug'); ?></h1>
+    <p><?php esc_html_e('Help page for Bootstrap Basic FSE Plugin.', 'bbfse-plug'); ?></p>
 
     <div class="rd-settings-tabs tabs-vertical">
         <ul class="tab-pane">
@@ -49,6 +50,8 @@ if (!defined('ABSPATH')) {
                     <li><?php esc_html_e('Bootstrap navbar responsive wrapper', 'bbfse-plug'); ?></li>
                     <li><?php esc_html_e('Bootstrap navbar navigation', 'bbfse-plug'); ?></li>
                 </ol>
+                <p><?php esc_html_e('Please note that not all WordPress core blocks are supported in Bootstrap navbar.', 'bbfse-plug'); ?></p>
+
                 <h2><?php esc_html_e('Navbar brand', 'bbfse-plug'); ?></h2>
                 <p><?php 
                 printf(
@@ -57,21 +60,29 @@ if (!defined('ABSPATH')) {
                     '<code>navbar-brand</code>'
                 ); 
                 ?></p>
+
                 <h2><?php esc_html_e('Navbar dropdown', 'bbfse-plug'); ?></h2>
                 <p><?php 
                 printf(
-                    /* translators: %1$s dropdown divider class, %2$s Navigation. */
-                    esc_html__('To use dropdown menu divider, add class %1$s to sub menu item in %2$s in the site editor.', 'bbfse-plug'),
-                    '<code>dropdown-divider</code>',
-                    '<strong>' . esc_html__('Navigation', 'bbfse-plug') . '</strong>'
+                    /* translators: %1$s link value (#). */
+                    esc_html__('To use dropdown menu, in manage navigation page, add submenu block and enter %1$s as link, set dropdown parent menu text.', 'bbfse-plug'),
+                    '<code>#</code>'
+                );
+                echo ' ';
+                esc_html_e('The parent item of dropdown menu cannot link to anywhere due to it is Bootstrap feature.', 'bbfse-plug');
+                ?></p>
+                <p><?php 
+                printf(
+                    /* translators: %1$s dropdown divider class. */
+                    esc_html__('To use dropdown menu divider, add class %1$s to sub menu item in manage navigation page.', 'bbfse-plug'),
+                    '<code>dropdown-divider</code>'
                 ); 
                 ?></p>
                 <p><?php 
                 printf(
-                    /* translators: %1$s dropdown header class, %2$s Navigation. */
-                    esc_html__('To use dropdown menu header, add class %1$s to sub menu item in %2$s in the site editor.', 'bbfse-plug'),
-                    '<code>dropdown-header</code>',
-                    '<strong>' . esc_html__('Navigation', 'bbfse-plug') . '</strong>'
+                    /* translators: %1$s dropdown header class. */
+                    esc_html__('To use dropdown menu header, add class %1$s to sub menu item in manage navigation page.', 'bbfse-plug'),
+                    '<code>dropdown-header</code>'
                 ); 
                 ?></p>
             </div><!-- #tabs-01 -->

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-06T10:28:29+07:00\n"
+"POT-Creation-Date: 2026-02-06T10:56:47+07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: bbfse-plug\n"
@@ -154,60 +154,72 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:20
+#: App/Views/admin/Appearance/pluginHelp_v.php:17
+msgid "Help page for Bootstrap Basic FSE Plugin."
+msgstr ""
+
+#: App/Views/admin/Appearance/pluginHelp_v.php:21
 msgid "Navbar"
 msgstr ""
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:45
+#: App/Views/admin/Appearance/pluginHelp_v.php:46
 msgid "The navbar consists of 4 parts."
 msgstr ""
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:47
+#: App/Views/admin/Appearance/pluginHelp_v.php:48
 msgid "Bootstrap navbar container"
 msgstr ""
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:48
+#: App/Views/admin/Appearance/pluginHelp_v.php:49
 msgid "Bootstrap navbar toggler button"
 msgstr ""
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:49
+#: App/Views/admin/Appearance/pluginHelp_v.php:50
 msgid "Bootstrap navbar responsive wrapper"
 msgstr ""
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:50
+#: App/Views/admin/Appearance/pluginHelp_v.php:51
 msgid "Bootstrap navbar navigation"
 msgstr ""
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:52
+#: App/Views/admin/Appearance/pluginHelp_v.php:53
+msgid "Please note that not all WordPress core blocks are supported in Bootstrap navbar."
+msgstr ""
+
+#: App/Views/admin/Appearance/pluginHelp_v.php:55
 msgid "Navbar brand"
 msgstr ""
 
 #. translators: %1$s navbar-brand class.
-#: App/Views/admin/Appearance/pluginHelp_v.php:56
+#: App/Views/admin/Appearance/pluginHelp_v.php:59
 #, php-format
 msgid "To use %1$s, you can use WordPress core row block and add class %1$s to it. Then you can add site logo, site title into row."
 msgstr ""
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:60
+#: App/Views/admin/Appearance/pluginHelp_v.php:64
 msgid "Navbar dropdown"
 msgstr ""
 
-#. translators: %1$s dropdown divider class, %2$s Navigation.
-#: App/Views/admin/Appearance/pluginHelp_v.php:64
+#. translators: %1$s link value (#).
+#: App/Views/admin/Appearance/pluginHelp_v.php:68
 #, php-format
-msgid "To use dropdown menu divider, add class %1$s to sub menu item in %2$s in the site editor."
+msgid "To use dropdown menu, in manage navigation page, add submenu block and enter %1$s as link, set dropdown parent menu text."
 msgstr ""
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:66
-#: App/Views/admin/Appearance/pluginHelp_v.php:74
-#: blocks/bs-navbar-navigation/index.js:1
-msgid "Navigation"
-msgstr ""
-
-#. translators: %1$s dropdown header class, %2$s Navigation.
 #: App/Views/admin/Appearance/pluginHelp_v.php:72
+msgid "The parent item of dropdown menu cannot link to anywhere due to it is Bootstrap feature."
+msgstr ""
+
+#. translators: %1$s dropdown divider class.
+#: App/Views/admin/Appearance/pluginHelp_v.php:77
 #, php-format
-msgid "To use dropdown menu header, add class %1$s to sub menu item in %2$s in the site editor."
+msgid "To use dropdown menu divider, add class %1$s to sub menu item in manage navigation page."
+msgstr ""
+
+#. translators: %1$s dropdown header class.
+#: App/Views/admin/Appearance/pluginHelp_v.php:84
+#, php-format
+msgid "To use dropdown menu header, add class %1$s to sub menu item in manage navigation page."
 msgstr ""
 
 #: App/Views/admin/Plugins/Upgrader_v.php:15
@@ -576,6 +588,10 @@ msgstr ""
 
 #: blocks/bs-navbar-navigation/index.js:1
 msgid "Navigation Settings"
+msgstr ""
+
+#: blocks/bs-navbar-navigation/index.js:1
+msgid "Navigation"
 msgstr ""
 
 #: blocks/bs-navbar-navigation/index.js:1

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap Basic FSE Plugin 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bbfse-plug\n"
-"POT-Creation-Date: 2026-02-06T10:28:29+07:00\n"
-"PO-Revision-Date: 2026-02-06 10:29+0700\n"
+"POT-Creation-Date: 2026-02-06T10:56:47+07:00\n"
+"PO-Revision-Date: 2026-02-06 10:58+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -158,36 +158,44 @@ msgstr "อัปโหลด"
 msgid "Remove"
 msgstr "เอาออก"
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:20
+#: App/Views/admin/Appearance/pluginHelp_v.php:17
+msgid "Help page for Bootstrap Basic FSE Plugin."
+msgstr "หน้าช่วยเหลือสำหรับปลั๊กอิน Bootstrap Basic FSE."
+
+#: App/Views/admin/Appearance/pluginHelp_v.php:21
 msgid "Navbar"
 msgstr "แถบนำทาง"
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:45
+#: App/Views/admin/Appearance/pluginHelp_v.php:46
 msgid "The navbar consists of 4 parts."
 msgstr "แถบนำทางประกอบด้วย 4 ส่วน."
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:47
+#: App/Views/admin/Appearance/pluginHelp_v.php:48
 msgid "Bootstrap navbar container"
 msgstr "คอนเทนเนอร์แถบนำทาง Bootstrap"
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:48
+#: App/Views/admin/Appearance/pluginHelp_v.php:49
 msgid "Bootstrap navbar toggler button"
 msgstr "ปุ่มสลับแถบนำทาง Bootstrap"
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:49
+#: App/Views/admin/Appearance/pluginHelp_v.php:50
 msgid "Bootstrap navbar responsive wrapper"
 msgstr "ตัวหุ้มแถบนำทาง Bootstrap ที่ตอบสนองต่อขนาดหน้าจอ"
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:50
+#: App/Views/admin/Appearance/pluginHelp_v.php:51
 msgid "Bootstrap navbar navigation"
 msgstr "การนำทางด้วยแถบนำทาง Bootstrap"
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:52
+#: App/Views/admin/Appearance/pluginHelp_v.php:53
+msgid "Please note that not all WordPress core blocks are supported in Bootstrap navbar."
+msgstr "โปรดทราบว่าแถบนำทาง Bootstrap ไม่ได้รองรับบล็อกหลักทั้งหมดของ WordPress."
+
+#: App/Views/admin/Appearance/pluginHelp_v.php:55
 msgid "Navbar brand"
 msgstr "แบรนด์ของแถบนำทาง"
 
 #. translators: %1$s navbar-brand class.
-#: App/Views/admin/Appearance/pluginHelp_v.php:56
+#: App/Views/admin/Appearance/pluginHelp_v.php:59
 #, php-format
 msgid ""
 "To use %1$s, you can use WordPress core row block and add class %1$s to it. Then you can add "
@@ -196,26 +204,35 @@ msgstr ""
 "ในการใช้ %1$s, คุณสามารถใช้บล็อกแถว (row) หลักของ WordPress และเพิ่มคลาส %1$s เข้าไป. "
 "จากนั้นคุณสามารถเพิ่มโลโก้เว็บไซต์และชื่อเว็บไซต์ลงในแถว (row) ได้."
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:60
+#: App/Views/admin/Appearance/pluginHelp_v.php:64
 msgid "Navbar dropdown"
 msgstr "แถบนำทางแบบดรอปดาวน์"
 
-#. translators: %1$s dropdown divider class, %2$s Navigation.
-#: App/Views/admin/Appearance/pluginHelp_v.php:64
+#. translators: %1$s link value (#).
+#: App/Views/admin/Appearance/pluginHelp_v.php:68
 #, php-format
-msgid "To use dropdown menu divider, add class %1$s to sub menu item in %2$s in the site editor."
-msgstr "ในการใช้ตัวแบ่งเมนูแบบดรอปดาวน์, ให้เพิ่มคลาส %1$s ให้กับรายการเมนูย่อยใน %2$s ในโปรแกรมแก้ไขไซต์."
+msgid ""
+"To use dropdown menu, in manage navigation page, add submenu block and enter %1$s as link, set "
+"dropdown parent menu text."
+msgstr ""
+"ในการใช้เมนูแบบดรอปดาวน์, ในหน้าจัดการการนำทาง, ให้เพิ่มบล็อกเมนูย่อยและป้อน %1$s เป็นลิงก์, "
+"จากนั้นตั้งค่าข้อความของเมนูหลักแบบดรอปดาวน์."
 
-#: App/Views/admin/Appearance/pluginHelp_v.php:66 App/Views/admin/Appearance/pluginHelp_v.php:74
-#: blocks/bs-navbar-navigation/index.js:1
-msgid "Navigation"
-msgstr "การนำทาง"
-
-#. translators: %1$s dropdown header class, %2$s Navigation.
 #: App/Views/admin/Appearance/pluginHelp_v.php:72
+msgid "The parent item of dropdown menu cannot link to anywhere due to it is Bootstrap feature."
+msgstr "เนื่องจากเป็นคุณสมบัติของ Bootstrap รายการหลักของเมนูแบบดรอปดาวน์จึงไม่สามารถเชื่อมโยงไปยังที่ใดได้."
+
+#. translators: %1$s dropdown divider class.
+#: App/Views/admin/Appearance/pluginHelp_v.php:77
 #, php-format
-msgid "To use dropdown menu header, add class %1$s to sub menu item in %2$s in the site editor."
-msgstr "ในการใช้ส่วนหัวเมนูแบบดรอปดาวน์, ให้เพิ่มคลาส %1$s ให้กับรายการเมนูย่อยใน %2$s ในโปรแกรมแก้ไขไซต์."
+msgid "To use dropdown menu divider, add class %1$s to sub menu item in manage navigation page."
+msgstr "ในการใช้ตัวแบ่งเมนูแบบดรอปดาวน์, ให้เพิ่มคลาส %1$s ให้กับรายการเมนูย่อยในหน้าจัดการการนำทาง."
+
+#. translators: %1$s dropdown header class.
+#: App/Views/admin/Appearance/pluginHelp_v.php:84
+#, php-format
+msgid "To use dropdown menu header, add class %1$s to sub menu item in manage navigation page."
+msgstr "ในการใช้ส่วนหัวเมนูแบบดรอปดาวน์, ให้เพิ่มคลาส %1$s ให้กับรายการเมนูย่อยในหน้าจัดการการนำทาง."
 
 #: App/Views/admin/Plugins/Upgrader_v.php:15
 msgid "Manual update"
@@ -549,6 +566,10 @@ msgstr "อัตโนมัติ: รายการแรกที่พบ"
 #: blocks/bs-navbar-navigation/index.js:1
 msgid "Navigation Settings"
 msgstr "การตั้งค่าการนำทาง"
+
+#: blocks/bs-navbar-navigation/index.js:1
+msgid "Navigation"
+msgstr "การนำทาง"
 
 #: blocks/bs-navbar-navigation/index.js:1
 msgid "Select a Navigation post or leave auto to use the first available."
