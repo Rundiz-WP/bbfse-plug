@@ -175,15 +175,15 @@
         {
             "nodePackage": "bootstrap",
             "assetsDataPattern": [
-                "bbfse\\-plug\\-bootstrap\\-css",
-                "bbfse\\-plug\\-bootstrap\\-js"
+                "rundizstrap\\-companion\\-bootstrap\\-css",
+                "rundizstrap\\-companion\\-bootstrap\\-js"
             ],
             "assetsDataFile": "App/Libraries/StylesAndScripts.php"
         },
         {
             "nodePackage": "bootstrap-icons",
             "assetsDataPattern": [
-                "bbfse\\-plug\\-bootstrap\\-icons"
+                "rundizstrap\\-companion\\-bootstrap\\-icons"
             ],
             "assetsDataFile": "App/Libraries/StylesAndScripts.php"
         }

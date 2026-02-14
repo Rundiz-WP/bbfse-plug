@@ -8,16 +8,16 @@
  */
 
 
-namespace BBFSEPlug\App\Controllers\Blocks;
+namespace RundizStrapCompanion\App\Controllers\Blocks;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Blocks\\BsNavbarTogglerButton')) {
+if (!class_exists('\\RundizStrapCompanion\\App\\Controllers\\Blocks\\BsNavbarTogglerButton')) {
     /**
      * Bootstrap navbar toggler button class.
      * 
      * @since 0.0.1
      */
-    class BsNavbarTogglerButton implements \BBFSEPlug\App\Controllers\ControllerInterface
+    class BsNavbarTogglerButton implements \RundizStrapCompanion\App\Controllers\ControllerInterface
     {
 
 
@@ -35,7 +35,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Blocks\\BsNavbarTogglerButton'
          */
         public function registerBlock()
         {
-            register_block_type(dirname(BBFSEPLUG_FILE) . '/blocks/' . static::BLOCK_NAME . '/block.json');
+            register_block_type(dirname(RUNDIZSTRAP_COMPANION_FILE) . '/blocks/' . static::BLOCK_NAME . '/block.json');
         }// registerBlocks
 
 
@@ -63,7 +63,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Blocks\\BsNavbarTogglerButton'
                 wp_set_script_translations(
                     'rundizstrap-companion-blocks-' . static::BLOCK_NAME . '-script',
                     'rundizstrap-companion',
-                    plugin_dir_path(BBFSEPLUG_FILE) . 'languages'
+                    plugin_dir_path(RUNDIZSTRAP_COMPANION_FILE) . 'languages'
                 );
             }
         }// setTranslation

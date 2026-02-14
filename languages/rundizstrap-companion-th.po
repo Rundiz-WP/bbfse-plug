@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RundizStrap Companion 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rundizstrap-companion\n"
-"POT-Creation-Date: 2026-02-14T23:32:00+07:00\n"
-"PO-Revision-Date: 2026-02-14 23:33+0700\n"
+"POT-Creation-Date: 2026-02-14T23:40:52+07:00\n"
+"PO-Revision-Date: 2026-02-14 23:41+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -29,7 +29,9 @@ msgstr ""
 
 #. Description of the plugin
 #: rundizstrap-companion.php
-msgid "A plugin that contains blocks for the Bootstrap Basic FSE theme. All blocks are based on Bootstrap CSS."
+msgid ""
+"A plugin that contains blocks for the Bootstrap Basic FSE theme. All blocks are based on Bootstrap "
+"CSS."
 msgstr "ปลั๊กอินที่มีบล็อกสำหรับธีม Bootstrap Basic FSE. บล็อกทั้งหมดสร้างขึ้นจาก CSS ของ Bootstrap."
 
 #. Author of the plugin
@@ -104,8 +106,11 @@ msgid "Success, please click next to continue update."
 msgstr "สำเร็จแล้ว โปรดคลิกถัดไปเพื่อดำเนินการอัปเดตต่อ."
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:104
-msgid "All manual update completed successfully. This page will be no longer available until there is next manual update."
-msgstr "การอัปเดตด้วยตนเองทั้งหมดเสร็จสมบูรณ์แล้ว. หน้าเว็บนี้จะไม่สามารถใช้งานได้อีกต่อไปจนกว่าจะมีการอัปเดตด้วยตนเองครั้งต่อไป."
+msgid ""
+"All manual update completed successfully. This page will be no longer available until there is next "
+"manual update."
+msgstr ""
+"การอัปเดตด้วยตนเองทั้งหมดเสร็จสมบูรณ์แล้ว. หน้าเว็บนี้จะไม่สามารถใช้งานได้อีกต่อไปจนกว่าจะมีการอัปเดตด้วยตนเองครั้งต่อไป."
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:123
 msgid "Unable to run update, there is no update classes to run."
@@ -115,9 +120,11 @@ msgstr "ไม่สามารถดำเนินการอัปเดต
 #: App/Controllers/Admin/Plugins/Upgrader.php:173
 #, php-format
 msgid ""
-"The RundizStrap Companion is just upgraded and need to be manually update. Please continue to the %1$splugin update "
-"page%2$s."
-msgstr "ปลั๊กอิน RundizStrap Companion เพิ่งได้รับการอัปเกรดและจำเป็นต้องอัปเดตด้วยตนเอง. โปรดดำเนินการต่อที่ %1$sหน้าอัปเดตปลั๊กอิน%2$s."
+"The RundizStrap Companion is just upgraded and need to be manually update. Please continue to the "
+"%1$splugin update page%2$s."
+msgstr ""
+"ปลั๊กอิน RundizStrap Companion เพิ่งได้รับการอัปเกรดและจำเป็นต้องอัปเดตด้วยตนเอง. โปรดดำเนินการต่อที่ "
+"%1$sหน้าอัปเดตปลั๊กอิน%2$s."
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:216
 msgid "Bootstrap Basic FSE Plugin update"
@@ -168,10 +175,11 @@ msgstr "ไม่พบไฟล์ views (%s)."
 msgid "Upload"
 msgstr "อัปโหลด"
 
-#: App/Libraries/RundizSettings.php:734 assets/js/blocks/shared/keyValueControl.js:86 blocks/bs-button/index.js:1
-#: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
-#: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
+#: App/Libraries/RundizSettings.php:734 assets/js/blocks/shared/keyValueControl.js:86
+#: blocks/bs-button/index.js:1 blocks/bs-column/index.js:1 blocks/bs-container/index.js:1
+#: blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1 blocks/bs-navbar-toggler-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
 #: blocks/rundizstrap-companion-div/index.js:1
 msgid "Remove"
 msgstr "เอาออก"
@@ -216,10 +224,11 @@ msgstr "แบรนด์ของแถบนำทาง"
 #: App/Views/admin/Appearance/pluginHelp_v.php:59
 #, php-format
 msgid ""
-"To use %1$s, you can use WordPress core row block and add class %1$s to it. Then you can add site logo, site title into row."
+"To use %1$s, you can use WordPress core row block and add class %1$s to it. Then you can add site "
+"logo, site title into row."
 msgstr ""
-"ในการใช้ %1$s, คุณสามารถใช้บล็อกแถว (row) หลักของ WordPress และเพิ่มคลาส %1$s เข้าไป. จากนั้นคุณสามารถเพิ่มโลโก้เว็บไซต์และชื่อเว็บไซต์ลงในแถว "
-"(row) ได้."
+"ในการใช้ %1$s, คุณสามารถใช้บล็อกแถว (row) หลักของ WordPress และเพิ่มคลาส %1$s เข้าไป. "
+"จากนั้นคุณสามารถเพิ่มโลโก้เว็บไซต์และชื่อเว็บไซต์ลงในแถว (row) ได้."
 
 #: App/Views/admin/Appearance/pluginHelp_v.php:64
 msgid "Navbar dropdown"
@@ -229,8 +238,11 @@ msgstr "แถบนำทางแบบดรอปดาวน์"
 #: App/Views/admin/Appearance/pluginHelp_v.php:68
 #, php-format
 msgid ""
-"To use dropdown menu, in manage navigation page, add submenu block and enter %1$s as link, set dropdown parent menu text."
-msgstr "ในการใช้เมนูแบบดรอปดาวน์, ในหน้าจัดการการนำทาง, ให้เพิ่มบล็อกเมนูย่อยและป้อน %1$s เป็นลิงก์, จากนั้นตั้งค่าข้อความของเมนูหลักแบบดรอปดาวน์."
+"To use dropdown menu, in manage navigation page, add submenu block and enter %1$s as link, set "
+"dropdown parent menu text."
+msgstr ""
+"ในการใช้เมนูแบบดรอปดาวน์, ในหน้าจัดการการนำทาง, ให้เพิ่มบล็อกเมนูย่อยและป้อน %1$s เป็นลิงก์, "
+"จากนั้นตั้งค่าข้อความของเมนูหลักแบบดรอปดาวน์."
 
 #: App/Views/admin/Appearance/pluginHelp_v.php:72
 msgid "The parent item of dropdown menu cannot link to anywhere due to it is Bootstrap feature."
@@ -346,28 +358,32 @@ msgstr "ก่อนหน้า"
 msgid "(no title)"
 msgstr "(ไม่มีไตเติล)"
 
-#: blocks/bs-search/render.php:36 blocks/bs-search/render.php:42 blocks/bs-search/render.php:91 blocks/bs-search/index.js:1
+#: blocks/bs-search/render.php:36 blocks/bs-search/render.php:42 blocks/bs-search/render.php:91
+#: blocks/bs-search/index.js:1
 msgid "Search"
 msgstr "ค้นหา"
 
-#: assets/js/blocks/shared/keyValueControl.js:71 blocks/bs-button/index.js:1 blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1 blocks/bs-navbar-toggler-button/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1 blocks/rundizstrap-companion-div/index.js:1
+#: assets/js/blocks/shared/keyValueControl.js:71 blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
+#: blocks/bs-row/index.js:1 blocks/rundizstrap-companion-div/index.js:1
 msgid "Key"
 msgstr "Key"
 
-#: assets/js/blocks/shared/keyValueControl.js:76 blocks/bs-button/index.js:1 blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1 blocks/bs-navbar-toggler-button/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1 blocks/rundizstrap-companion-div/index.js:1
+#: assets/js/blocks/shared/keyValueControl.js:76 blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
+#: blocks/bs-row/index.js:1 blocks/rundizstrap-companion-div/index.js:1
 msgid "Value"
 msgstr "ค่า"
 
-#: assets/js/blocks/shared/keyValueControl.js:91 blocks/bs-button/index.js:1 blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1 blocks/bs-navbar-toggler-button/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1 blocks/rundizstrap-companion-div/index.js:1
+#: assets/js/blocks/shared/keyValueControl.js:91 blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
+#: blocks/bs-row/index.js:1 blocks/rundizstrap-companion-div/index.js:1
 msgid "Add attribute"
 msgstr "เพิ่มแอตทริบิวต์ aria"
 
@@ -417,7 +433,8 @@ msgctxt "HTML attribute"
 msgid "Role"
 msgstr "Role"
 
-#: blocks/bs-button/index.js:1 blocks/bs-post-navigation-link/index.js:1 blocks/rundizstrap-companion-div/index.js:1
+#: blocks/bs-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
 msgid "Tab index"
 msgstr "ดัชนีแท็บ"
 
@@ -478,20 +495,23 @@ msgid "Type"
 msgstr "Type"
 
 #: blocks/bs-button/index.js:1 blocks/bs-column/index.js:1 blocks/bs-container/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1 blocks/rundizstrap-companion-div/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
 msgid "Data and Aria Attributes"
 msgstr "แอตทริบิวต์ของ Data และ Aria"
 
 #: blocks/bs-button/index.js:1 blocks/bs-column/index.js:1 blocks/bs-container/index.js:1
-#: blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
+#: blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1 blocks/bs-navbar-toggler-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
 #: blocks/rundizstrap-companion-div/index.js:1
 msgid "Data attributes"
 msgstr "แอตทริบิวต์ data"
 
 #: blocks/bs-button/index.js:1 blocks/bs-column/index.js:1 blocks/bs-container/index.js:1
-#: blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
+#: blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1 blocks/bs-navbar-toggler-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
 #: blocks/rundizstrap-companion-div/index.js:1
 msgid "Aria attributes"
 msgstr "แอตทริบิวต์ aria"
@@ -508,9 +528,11 @@ msgstr "ค่าเริ่มต้น (<div>)"
 
 #: blocks/bs-column/index.js:1
 msgid ""
-"Please add a Bootstrap column class (e.g. \"col\", \"col-md-6\") in the \"Additional CSS class(es)\" field under Advanced "
-"settings."
-msgstr "โปรดเพิ่มคลาสคอลัมน์ของ Bootstrap (เช่น \"col\", \"col-md-6\") ในช่อง \"คลาส CSS เพิ่มเติม\" ภายใต้การตั้งค่าขั้นสูง."
+"Please add a Bootstrap column class (e.g. \"col\", \"col-md-6\") in the \"Additional CSS class(es)"
+"\" field under Advanced settings."
+msgstr ""
+"โปรดเพิ่มคลาสคอลัมน์ของ Bootstrap (เช่น \"col\", \"col-md-6\") ในช่อง \"คลาส CSS เพิ่มเติม\" "
+"ภายใต้การตั้งค่าขั้นสูง."
 
 #: blocks/bs-comment-form/index.js:1
 msgid "Comment Form Settings"
@@ -534,9 +556,11 @@ msgstr "แสดงความคิดเห็น"
 
 #: blocks/bs-container/index.js:1
 msgid ""
-"Please add a Bootstrap container class (e.g. \"container\", \"container-fluid\") in the \"Additional CSS class(es)\" field "
-"under Advanced settings."
-msgstr "โปรดเพิ่ม container ของ Bootstrap (เช่น \"container\", \"container-fluid\") ในช่อง \"คลาส CSS เพิ่มเติม\" ภายใต้การตั้งค่าขั้นสูง."
+"Please add a Bootstrap container class (e.g. \"container\", \"container-fluid\") in the "
+"\"Additional CSS class(es)\" field under Advanced settings."
+msgstr ""
+"โปรดเพิ่ม container ของ Bootstrap (เช่น \"container\", \"container-fluid\") ในช่อง \"คลาส CSS เพิ่มเติม\" "
+"ภายใต้การตั้งค่าขั้นสูง."
 
 #: blocks/bs-navbar-container/index.js:1
 msgid "Navbar Settings"
@@ -711,7 +735,8 @@ msgstr "กลาง"
 msgid "End"
 msgstr "จุดสิ้นสุด"
 
-#: blocks/bs-pagination/index.js:1 blocks/bs-post-navigation-link/index.js:1 blocks/bs-search/index.js:1
+#: blocks/bs-pagination/index.js:1 blocks/bs-post-navigation-link/index.js:1
+#: blocks/bs-search/index.js:1
 msgid "Settings"
 msgstr "ตั้งค่า"
 
@@ -753,9 +778,10 @@ msgstr "จำนวนหน้าติดกัน"
 
 #: blocks/bs-pagination/index.js:1
 msgid ""
-"Specify how many links can appear before and after the current page number. Links to the first, current and last page are "
-"always visible."
-msgstr "ระบุจำนวนลิงก์ที่สามารถปรากฏก่อนและหลังหมายเลขหน้าปัจจุบัน. ลิงก์ไปยังหน้าแรก หน้าปัจจุบัน และหน้าสุดท้ายจะแสดงอยู่เสมอ."
+"Specify how many links can appear before and after the current page number. Links to the first, "
+"current and last page are always visible."
+msgstr ""
+"ระบุจำนวนลิงก์ที่สามารถปรากฏก่อนและหลังหมายเลขหน้าปัจจุบัน. ลิงก์ไปยังหน้าแรก หน้าปัจจุบัน และหน้าสุดท้ายจะแสดงอยู่เสมอ."
 
 #: blocks/bs-pagination/index.js:1
 msgid "Alignment"
@@ -838,7 +864,9 @@ msgid "Filter by taxonomy"
 msgstr "กรองตามการแยกประเภท"
 
 #: blocks/bs-post-navigation-link/index.js:1
-msgid "Only link to posts that have the same taxonomy terms as the current post. For example the same tags or categories."
+msgid ""
+"Only link to posts that have the same taxonomy terms as the current post. For example the same tags "
+"or categories."
 msgstr "ลิงก์เฉพาะโพสต์ที่มีหมวดหมู่หรือคำจัดหมวดหมู่เดียวกันกับโพสต์ปัจจุบันเท่านั้น. ตัวอย่างเช่น แท็กหรือหมวดหมู่เดียวกัน."
 
 #: blocks/bs-search/index.js:1
@@ -921,10 +949,11 @@ msgctxt "block description"
 msgid "Render Bootstrap button. This block is in the RundizStrap Companion."
 msgstr "แสดงผลปุ่ม Bootstrap. บล็อกนี้อยู่ในปลั๊กอิน RundizStrap Companion."
 
-#: blocks/bs-button/block.json blocks/bs-column/block.json blocks/bs-comment-form/block.json blocks/bs-container/block.json
-#: blocks/bs-navbar-container/block.json blocks/bs-navbar-navigation/block.json blocks/bs-navbar-responsive-wrapper/block.json
-#: blocks/bs-navbar-toggler-button/block.json blocks/bs-pagination/block.json blocks/bs-post-navigation-link/block.json
-#: blocks/bs-row/block.json blocks/bs-search/block.json
+#: blocks/bs-button/block.json blocks/bs-column/block.json blocks/bs-comment-form/block.json
+#: blocks/bs-container/block.json blocks/bs-navbar-container/block.json
+#: blocks/bs-navbar-navigation/block.json blocks/bs-navbar-responsive-wrapper/block.json
+#: blocks/bs-navbar-toggler-button/block.json blocks/bs-pagination/block.json
+#: blocks/bs-post-navigation-link/block.json blocks/bs-row/block.json blocks/bs-search/block.json
 msgctxt "block keyword"
 msgid "bootstrap"
 msgstr "bootstrap"
@@ -960,8 +989,9 @@ msgctxt "block keyword"
 msgid "layout"
 msgstr "เค้าโครง"
 
-#: blocks/bs-column/block.json blocks/bs-container/block.json blocks/bs-navbar-responsive-wrapper/block.json
-#: blocks/bs-row/block.json blocks/rundizstrap-companion-div/block.json
+#: blocks/bs-column/block.json blocks/bs-container/block.json
+#: blocks/bs-navbar-responsive-wrapper/block.json blocks/bs-row/block.json
+#: blocks/rundizstrap-companion-div/block.json
 msgctxt "block keyword"
 msgid "wrapper"
 msgstr "ตัวหุ้ม"
@@ -1011,8 +1041,8 @@ msgctxt "block description"
 msgid "Bootstrap navbar container. This block is in the RundizStrap Companion."
 msgstr "คอนเทนเนอร์แถบนำทางของ Bootstrap. บล็อกนี้อยู่ในปลั๊กอิน RundizStrap Companion."
 
-#: blocks/bs-navbar-container/block.json blocks/bs-navbar-navigation/block.json blocks/bs-navbar-responsive-wrapper/block.json
-#: blocks/bs-navbar-toggler-button/block.json
+#: blocks/bs-navbar-container/block.json blocks/bs-navbar-navigation/block.json
+#: blocks/bs-navbar-responsive-wrapper/block.json blocks/bs-navbar-toggler-button/block.json
 msgctxt "block keyword"
 msgid "navbar"
 msgstr "แถบนำทาง"
@@ -1109,7 +1139,9 @@ msgstr "การแบ่งหน้าแบบ Bootstrap"
 
 #: blocks/bs-post-navigation-link/block.json
 msgctxt "block description"
-msgid "Displays the next or previous post link in Bootstrap style. This block is in the RundizStrap Companion."
+msgid ""
+"Displays the next or previous post link in Bootstrap style. This block is in the RundizStrap "
+"Companion."
 msgstr "แสดงลิงก์ไปยังโพสต์ถัดไปหรือโพสต์ก่อนหน้าในรูปแบบ Bootstrap. บล็อกนี้อยู่ในปลั๊กอิน RundizStrap Companion."
 
 #: blocks/bs-post-navigation-link/block.json
@@ -1164,7 +1196,8 @@ msgstr "แบบฟอร์มค้นหา Bootstrap"
 
 #: blocks/rundizstrap-companion-div/block.json
 msgctxt "block description"
-msgid "Create <div> element that can customize class, attributes. This block is in RundizStrap Companion."
+msgid ""
+"Create <div> element that can customize class, attributes. This block is in RundizStrap Companion."
 msgstr "สร้างองค์ประกอบ <div> ที่สามารถปรับแต่งคลาสและแอตทริบิวต์ได้. บล็อกนี้อยู่ในปลั๊กอิน RundizStrap Companion."
 
 #: blocks/rundizstrap-companion-div/block.json
