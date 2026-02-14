@@ -44,7 +44,7 @@
     }
   },
   "category": "theme",
-  "description": "Displays the next or previous post link in Bootstrap style. This block is in the BBFSE plugin.",
+  "description": "Displays the next or previous post link in Bootstrap style. This block is in the RundizStrap Companion.",
   "editorScript": "file:./index.js",
   "example": {
     "attributes": {
@@ -62,13 +62,13 @@
     "next",
     "previous"
   ],
-  "name": "bbfse-plug/blocks-bs-post-navigation-link",
+  "name": "rundizstrap-companion/blocks-bs-post-navigation-link",
   "render": "file:./render.php",
   "supports": {
     "html": false,
     "className": true
   },
-  "textdomain": "bbfse-plug",
+  "textdomain": "rundizstrap-companion",
   "title": "Bootstrap post navigation link",
   "usesContext": [
     "postType"

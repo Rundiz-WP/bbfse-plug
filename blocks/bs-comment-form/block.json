@@ -8,7 +8,7 @@
     }
   },
   "category": "theme",
-  "description": "Display post comment form in Bootstrap style. This block is in the BBFSE plugin.",
+  "description": "Display post comment form in Bootstrap style. This block is in the RundizStrap Companion.",
   "editorScript": "file:./index.js",
   "example": {
     "attributes": {
@@ -21,14 +21,14 @@
     "comment",
     "form"
   ],
-  "name": "bbfse-plug/blocks-bs-comment-form",
+  "name": "rundizstrap-companion/blocks-bs-comment-form",
   "render": "file:./render.php",
   "style": "file:./style-index.css",
   "supports": {
     "html": false,
     "className": true
   },
-  "textdomain": "bbfse-plug",
+  "textdomain": "rundizstrap-companion",
   "title": "Bootstrap comment form",
   "usesContext": [
     "postId",

@@ -37,7 +37,7 @@
     }
   },
   "category": "widgets",
-  "description": "Display search form in Bootstrap style. This block is in the BBFSE plugin.",
+  "description": "Display search form in Bootstrap style. This block is in the RundizStrap Companion.",
   "editorScript": "file:./index.js",
   "example": {
     "viewportWidth": 350
@@ -47,12 +47,12 @@
     "bootstrap",
     "find"
   ],
-  "name": "bbfse-plug/blocks-bs-search",
+  "name": "rundizstrap-companion/blocks-bs-search",
   "render": "file:./render.php",
   "supports": {
     "className": true
   },
-  "textdomain": "bbfse-plug",
+  "textdomain": "rundizstrap-companion",
   "title": "Bootstrap search form",
   "version": "0.0.1"
 }

@@ -2,7 +2,7 @@
 /**
  * Bootstrap Basic FSE Plugin - Bootstrap pagination block.
  * 
- * @package bbfse-plug
+ * @package rundizstrap-companion
  * @since 0.0.1
  * @license http://opensource.org/licenses/MIT MIT
  */
@@ -39,7 +39,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Blocks\\BsPagination')) {
         public function enqueueBlockAssets()
         {
             if (is_admin()) {
-                wp_enqueue_style('bbfse-plug-bootstrap-icons');
+                wp_enqueue_style('rundizstrap-companion-bootstrap-icons');
             }
         }// enqueueBlockAssets
 
@@ -79,8 +79,8 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Blocks\\BsPagination')) {
         {
             if (function_exists('wp_set_script_translations')) {
                 wp_set_script_translations(
-                    'bbfse-plug-blocks-' . static::BLOCK_NAME . '-script', 
-                    'bbfse-plug', 
+                    'rundizstrap-companion-blocks-' . static::BLOCK_NAME . '-script', 
+                    'rundizstrap-companion', 
                     plugin_dir_path(BBFSEPLUG_FILE) . 'languages'
                 );
             }

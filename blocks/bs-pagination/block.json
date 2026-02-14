@@ -34,7 +34,7 @@
     }
   },
   "category": "theme",
-  "description": "Display pagination in Bootstrap style. This block is in the BBFSE plugin.",
+  "description": "Display pagination in Bootstrap style. This block is in the RundizStrap Companion.",
   "editorScript": "file:./index.js",
   "example": {
     "viewportWidth": 600
@@ -46,12 +46,12 @@
     "pages",
     "pagination"
   ],
-  "name": "bbfse-plug/blocks-bs-pagination",
+  "name": "rundizstrap-companion/blocks-bs-pagination",
   "render": "file:./render.php",
   "supports": {
     "className": true
   },
-  "textdomain": "bbfse-plug",
+  "textdomain": "rundizstrap-companion",
   "title": "Bootstrap pagination",
   "usesContext": [
     "queryId",

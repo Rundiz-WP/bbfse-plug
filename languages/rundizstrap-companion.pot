@@ -2,35 +2,41 @@
 # This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bootstrap Basic FSE plug 0.0.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bbfse-plug\n"
+"Project-Id-Version: RundizStrap Companion 0.0.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rundizstrap-companion\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-07T00:55:24+07:00\n"
+"POT-Creation-Date: 2026-02-14T23:32:00+07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: bbfse-plug\n"
+"X-Domain: rundizstrap-companion\n"
 
 #. Plugin Name of the plugin
-#: bbfse-plug.php
-msgid "Bootstrap Basic FSE plug"
+#: rundizstrap-companion.php
+#: App/Controllers/Admin/Settings.php:53
+msgid "RundizStrap Companion"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: rundizstrap-companion.php
+msgid "https://rundiz.com/en/blog/articles-en/wordpress-plugins-themes"
 msgstr ""
 
 #. Description of the plugin
-#: bbfse-plug.php
-msgid "A plugin that contain blocks for Bootstrap Basic FSE theme. All blocks based on Bootstrap CSS."
+#: rundizstrap-companion.php
+msgid "A plugin that contains blocks for the Bootstrap Basic FSE theme. All blocks are based on Bootstrap CSS."
 msgstr ""
 
 #. Author of the plugin
-#: bbfse-plug.php
+#: rundizstrap-companion.php
 msgid "Vee Winch"
 msgstr ""
 
 #. Author URI of the plugin
-#: bbfse-plug.php
+#: rundizstrap-companion.php
 msgid "https://rundiz.com"
 msgstr ""
 
@@ -56,7 +62,7 @@ msgstr ""
 
 #: App/Controllers/Admin/Appearance/PluginHelp.php:37
 #: App/Views/admin/Appearance/pluginHelp_v.php:16
-msgid "BBFSE Plug help"
+msgid "RundizStrap Companion help"
 msgstr ""
 
 #. translators: %s The DB version of this plugin.
@@ -108,7 +114,7 @@ msgstr ""
 #. translators: %1$s Open link, %2$s Close link.
 #: App/Controllers/Admin/Plugins/Upgrader.php:173
 #, php-format
-msgid "The Bootstrap Basic FSE Plugin is just upgraded and need to be manually update. Please continue to the %1$splugin update page%2$s."
+msgid "The RundizStrap Companion is just upgraded and need to be manually update. Please continue to the %1$splugin update page%2$s."
 msgstr ""
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:216
@@ -127,10 +133,6 @@ msgstr ""
 #: blocks/bs-pagination/render.php:116
 #: blocks/bs-post-navigation-link/index.js:1
 msgid "Next"
-msgstr ""
-
-#: App/Controllers/Admin/Settings.php:53
-msgid "BBFSE Plug"
 msgstr ""
 
 #. translators: %1$s Open link, %2$s Close link.
@@ -167,7 +169,6 @@ msgstr ""
 
 #: App/Libraries/RundizSettings.php:734
 #: assets/js/blocks/shared/keyValueControl.js:86
-#: blocks/bbfse-plug-div/index.js:1
 #: blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1
 #: blocks/bs-container/index.js:1
@@ -177,6 +178,7 @@ msgstr ""
 #: blocks/bs-navbar-toggler-button/index.js:1
 #: blocks/bs-post-navigation-link/index.js:1
 #: blocks/bs-row/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
 msgid "Remove"
 msgstr ""
 
@@ -268,10 +270,6 @@ msgstr ""
 msgid "Start"
 msgstr ""
 
-#: App/Views/admin/readsettings_v.php:15
-msgid "Example of how to access settings values in option db."
-msgstr ""
-
 #. translators: %s PHP code.
 #: App/Views/admin/readsettings_v.php:20
 #, php-format
@@ -289,7 +287,7 @@ msgid "Now, you can use this variable to access its array key anywhere."
 msgstr ""
 
 #: App/Views/admin/settings_v.php:16
-msgid "Bootstrap Basic FSE Plugin settings"
+msgid "RundizStrap Companion settings"
 msgstr ""
 
 #: blocks/bs-comment-form/render.php:61
@@ -317,8 +315,8 @@ msgstr ""
 msgid "Your email address will not be published."
 msgstr ""
 
-#: blocks/bs-navbar-navigation/render.php:61
-#: blocks/bs-navbar-navigation/render.php:74
+#: blocks/bs-navbar-navigation/render.php:62
+#: blocks/bs-navbar-navigation/render.php:75
 msgid "This navigation is empty."
 msgstr ""
 
@@ -341,30 +339,29 @@ msgstr ""
 msgid "Pagination"
 msgstr ""
 
-#: blocks/bs-post-navigation-link/render.php:58
+#: blocks/bs-post-navigation-link/render.php:59
 msgctxt "label for next post link"
 msgid "Next"
 msgstr ""
 
-#: blocks/bs-post-navigation-link/render.php:58
+#: blocks/bs-post-navigation-link/render.php:59
 msgctxt "label for previous post link"
 msgid "Previous"
 msgstr ""
 
-#: blocks/bs-post-navigation-link/render.php:63
+#: blocks/bs-post-navigation-link/render.php:64
 #: blocks/bs-navbar-navigation/index.js:1
 msgid "(no title)"
 msgstr ""
 
-#: blocks/bs-search/render.php:39
-#: blocks/bs-search/render.php:45
-#: blocks/bs-search/render.php:94
+#: blocks/bs-search/render.php:36
+#: blocks/bs-search/render.php:42
+#: blocks/bs-search/render.php:91
 #: blocks/bs-search/index.js:1
 msgid "Search"
 msgstr ""
 
 #: assets/js/blocks/shared/keyValueControl.js:71
-#: blocks/bbfse-plug-div/index.js:1
 #: blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1
 #: blocks/bs-container/index.js:1
@@ -374,11 +371,11 @@ msgstr ""
 #: blocks/bs-navbar-toggler-button/index.js:1
 #: blocks/bs-post-navigation-link/index.js:1
 #: blocks/bs-row/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
 msgid "Key"
 msgstr ""
 
 #: assets/js/blocks/shared/keyValueControl.js:76
-#: blocks/bbfse-plug-div/index.js:1
 #: blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1
 #: blocks/bs-container/index.js:1
@@ -388,11 +385,11 @@ msgstr ""
 #: blocks/bs-navbar-toggler-button/index.js:1
 #: blocks/bs-post-navigation-link/index.js:1
 #: blocks/bs-row/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
 msgid "Value"
 msgstr ""
 
 #: assets/js/blocks/shared/keyValueControl.js:91
-#: blocks/bbfse-plug-div/index.js:1
 #: blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1
 #: blocks/bs-container/index.js:1
@@ -402,87 +399,8 @@ msgstr ""
 #: blocks/bs-navbar-toggler-button/index.js:1
 #: blocks/bs-post-navigation-link/index.js:1
 #: blocks/bs-row/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
 msgid "Add attribute"
-msgstr ""
-
-#: blocks/bbfse-plug-div/index.js:1
-#: blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1
-#: blocks/bs-row/index.js:1
-msgid "HTML element"
-msgstr ""
-
-#: blocks/bbfse-plug-div/index.js:1
-#: blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1
-#: blocks/bs-row/index.js:1
-msgid "Default (<div>)"
-msgstr ""
-
-#: blocks/bbfse-plug-div/index.js:1
-msgid "HTML Attributes"
-msgstr ""
-
-#: blocks/bbfse-plug-div/index.js:1
-msgctxt "HTML attribute"
-msgid "Accesskey"
-msgstr ""
-
-#: blocks/bbfse-plug-div/index.js:1
-msgctxt "HTML attribute"
-msgid "Lang"
-msgstr ""
-
-#: blocks/bbfse-plug-div/index.js:1
-#: blocks/bs-button/index.js:1
-msgctxt "HTML attribute"
-msgid "Role"
-msgstr ""
-
-#: blocks/bbfse-plug-div/index.js:1
-#: blocks/bs-button/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1
-msgid "Tab index"
-msgstr ""
-
-#: blocks/bbfse-plug-div/index.js:1
-msgctxt "HTML attribute"
-msgid "Title"
-msgstr ""
-
-#: blocks/bbfse-plug-div/index.js:1
-#: blocks/bs-button/index.js:1
-#: blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1
-#: blocks/bs-row/index.js:1
-msgid "Data and Aria Attributes"
-msgstr ""
-
-#: blocks/bbfse-plug-div/index.js:1
-#: blocks/bs-button/index.js:1
-#: blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1
-#: blocks/bs-navbar-container/index.js:1
-#: blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1
-#: blocks/bs-row/index.js:1
-msgid "Data attributes"
-msgstr ""
-
-#: blocks/bbfse-plug-div/index.js:1
-#: blocks/bs-button/index.js:1
-#: blocks/bs-column/index.js:1
-#: blocks/bs-container/index.js:1
-#: blocks/bs-navbar-container/index.js:1
-#: blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1
-#: blocks/bs-navbar-toggler-button/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1
-#: blocks/bs-row/index.js:1
-msgid "Aria attributes"
 msgstr ""
 
 #: blocks/bs-button/index.js:1
@@ -527,6 +445,18 @@ msgstr ""
 
 #: blocks/bs-button/index.js:1
 msgid "Required when using <a>."
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
+msgctxt "HTML attribute"
+msgid "Role"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
+msgid "Tab index"
 msgstr ""
 
 #: blocks/bs-button/index.js:1
@@ -583,6 +513,55 @@ msgstr ""
 #: blocks/bs-button/index.js:1
 msgctxt "Button type"
 msgid "Type"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1
+#: blocks/bs-container/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1
+#: blocks/bs-row/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
+msgid "Data and Aria Attributes"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1
+#: blocks/bs-container/index.js:1
+#: blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1
+#: blocks/bs-row/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
+msgid "Data attributes"
+msgstr ""
+
+#: blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1
+#: blocks/bs-container/index.js:1
+#: blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1
+#: blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1
+#: blocks/bs-post-navigation-link/index.js:1
+#: blocks/bs-row/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
+msgid "Aria attributes"
+msgstr ""
+
+#: blocks/bs-column/index.js:1
+#: blocks/bs-container/index.js:1
+#: blocks/bs-row/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
+msgid "HTML element"
+msgstr ""
+
+#: blocks/bs-column/index.js:1
+#: blocks/bs-container/index.js:1
+#: blocks/bs-row/index.js:1
+#: blocks/rundizstrap-companion-div/index.js:1
+msgid "Default (<div>)"
 msgstr ""
 
 #: blocks/bs-column/index.js:1
@@ -973,61 +952,28 @@ msgstr ""
 msgid "Add label…"
 msgstr ""
 
-#: blocks/bbfse-plug-div/block.json
-msgctxt "block description"
-msgid "Create <div> element that can customize class, attributes. This block is in BBFSE plugin."
+#: blocks/rundizstrap-companion-div/index.js:1
+msgid "HTML Attributes"
 msgstr ""
 
-#: blocks/bbfse-plug-div/block.json
-msgctxt "block keyword"
-msgid "div"
+#: blocks/rundizstrap-companion-div/index.js:1
+msgctxt "HTML attribute"
+msgid "Accesskey"
 msgstr ""
 
-#: blocks/bbfse-plug-div/block.json
-msgctxt "block keyword"
-msgid "custom div"
+#: blocks/rundizstrap-companion-div/index.js:1
+msgctxt "HTML attribute"
+msgid "Lang"
 msgstr ""
 
-#: blocks/bbfse-plug-div/block.json
-msgctxt "block keyword"
-msgid "customizable"
-msgstr ""
-
-#: blocks/bbfse-plug-div/block.json
-#: blocks/bs-column/block.json
-#: blocks/bs-container/block.json
-#: blocks/bs-navbar-responsive-wrapper/block.json
-#: blocks/bs-row/block.json
-msgctxt "block keyword"
-msgid "wrapper"
-msgstr ""
-
-#: blocks/bbfse-plug-div/block.json
-msgctxt "block keyword"
-msgid "element"
-msgstr ""
-
-#: blocks/bbfse-plug-div/block.json
-msgctxt "block keyword"
-msgid "semantic"
-msgstr ""
-
-#: blocks/bbfse-plug-div/block.json
-#: blocks/bs-column/block.json
-#: blocks/bs-container/block.json
-#: blocks/bs-row/block.json
-msgctxt "block keyword"
-msgid "layout"
-msgstr ""
-
-#: blocks/bbfse-plug-div/block.json
-msgctxt "block title"
-msgid "Customizable div"
+#: blocks/rundizstrap-companion-div/index.js:1
+msgctxt "HTML attribute"
+msgid "Title"
 msgstr ""
 
 #: blocks/bs-button/block.json
 msgctxt "block description"
-msgid "Render Bootstrap button. This block is in the BBFSE plugin."
+msgid "Render Bootstrap button. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-button/block.json
@@ -1063,12 +1009,29 @@ msgstr ""
 
 #: blocks/bs-column/block.json
 msgctxt "block description"
-msgid "Render Bootstrap column. This block is in the BBFSE plugin."
+msgid "Render Bootstrap column. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-column/block.json
 msgctxt "block keyword"
 msgid "column"
+msgstr ""
+
+#: blocks/bs-column/block.json
+#: blocks/bs-container/block.json
+#: blocks/bs-row/block.json
+#: blocks/rundizstrap-companion-div/block.json
+msgctxt "block keyword"
+msgid "layout"
+msgstr ""
+
+#: blocks/bs-column/block.json
+#: blocks/bs-container/block.json
+#: blocks/bs-navbar-responsive-wrapper/block.json
+#: blocks/bs-row/block.json
+#: blocks/rundizstrap-companion-div/block.json
+msgctxt "block keyword"
+msgid "wrapper"
 msgstr ""
 
 #: blocks/bs-column/block.json
@@ -1078,7 +1041,7 @@ msgstr ""
 
 #: blocks/bs-comment-form/block.json
 msgctxt "block description"
-msgid "Display post comment form in Bootstrap style. This block is in the BBFSE plugin."
+msgid "Display post comment form in Bootstrap style. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-comment-form/block.json
@@ -1098,7 +1061,7 @@ msgstr ""
 
 #: blocks/bs-container/block.json
 msgctxt "block description"
-msgid "Render Bootstrap container. This block is in the BBFSE plugin."
+msgid "Render Bootstrap container. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-container/block.json
@@ -1114,7 +1077,7 @@ msgstr ""
 
 #: blocks/bs-navbar-container/block.json
 msgctxt "block description"
-msgid "Bootstrap navbar container. This block is in the BBFSE plugin."
+msgid "Bootstrap navbar container. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-navbar-container/block.json
@@ -1132,7 +1095,7 @@ msgstr ""
 
 #: blocks/bs-navbar-navigation/block.json
 msgctxt "block description"
-msgid "Bootstrap navbar navigation items. This block is in the BBFSE plugin."
+msgid "Bootstrap navbar navigation items. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-navbar-navigation/block.json
@@ -1153,7 +1116,7 @@ msgstr ""
 
 #: blocks/bs-navbar-responsive-wrapper/block.json
 msgctxt "block description"
-msgid "Wrap the navbar items with collapse or offcanvas. This block is in the BBFSE plugin."
+msgid "Wrap the navbar items with collapse or offcanvas. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-navbar-responsive-wrapper/block.json
@@ -1178,7 +1141,7 @@ msgstr ""
 
 #: blocks/bs-navbar-toggler-button/block.json
 msgctxt "block description"
-msgid "Bootstrap navbar toggler button. This block is in the BBFSE plugin."
+msgid "Bootstrap navbar toggler button. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-navbar-toggler-button/block.json
@@ -1193,7 +1156,7 @@ msgstr ""
 
 #: blocks/bs-pagination/block.json
 msgctxt "block description"
-msgid "Display pagination in Bootstrap style. This block is in the BBFSE plugin."
+msgid "Display pagination in Bootstrap style. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-pagination/block.json
@@ -1218,7 +1181,7 @@ msgstr ""
 
 #: blocks/bs-post-navigation-link/block.json
 msgctxt "block description"
-msgid "Displays the next or previous post link in Bootstrap style. This block is in the BBFSE plugin."
+msgid "Displays the next or previous post link in Bootstrap style. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-post-navigation-link/block.json
@@ -1243,7 +1206,7 @@ msgstr ""
 
 #: blocks/bs-row/block.json
 msgctxt "block description"
-msgid "Render Bootstrap row. This block is in the BBFSE plugin."
+msgid "Render Bootstrap row. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-row/block.json
@@ -1258,7 +1221,7 @@ msgstr ""
 
 #: blocks/bs-search/block.json
 msgctxt "block description"
-msgid "Display search form in Bootstrap style. This block is in the BBFSE plugin."
+msgid "Display search form in Bootstrap style. This block is in the RundizStrap Companion."
 msgstr ""
 
 #: blocks/bs-search/block.json
@@ -1269,4 +1232,39 @@ msgstr ""
 #: blocks/bs-search/block.json
 msgctxt "block title"
 msgid "Bootstrap search form"
+msgstr ""
+
+#: blocks/rundizstrap-companion-div/block.json
+msgctxt "block description"
+msgid "Create <div> element that can customize class, attributes. This block is in RundizStrap Companion."
+msgstr ""
+
+#: blocks/rundizstrap-companion-div/block.json
+msgctxt "block keyword"
+msgid "div"
+msgstr ""
+
+#: blocks/rundizstrap-companion-div/block.json
+msgctxt "block keyword"
+msgid "custom div"
+msgstr ""
+
+#: blocks/rundizstrap-companion-div/block.json
+msgctxt "block keyword"
+msgid "customizable"
+msgstr ""
+
+#: blocks/rundizstrap-companion-div/block.json
+msgctxt "block keyword"
+msgid "element"
+msgstr ""
+
+#: blocks/rundizstrap-companion-div/block.json
+msgctxt "block keyword"
+msgid "semantic"
+msgstr ""
+
+#: blocks/rundizstrap-companion-div/block.json
+msgctxt "block title"
+msgid "Customizable div"
 msgstr ""

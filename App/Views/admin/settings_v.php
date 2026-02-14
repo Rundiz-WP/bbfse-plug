@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
 
 ?>
 <div class="wrap rd-settings-page">
-    <h1><?php esc_html_e('Bootstrap Basic FSE Plugin settings', 'rundizstrap-companion'); ?></h1>
+    <h1><?php esc_html_e('RundizStrap Companion settings', 'rundizstrap-companion'); ?></h1>
 
     <?php 
     if (isset($form_result_class) && isset($form_result_msg)) {

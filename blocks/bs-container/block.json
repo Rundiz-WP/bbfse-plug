@@ -16,7 +16,7 @@
     }
   },
   "category": "design",
-  "description": "Render Bootstrap container. This block is in the BBFSE plugin.",
+  "description": "Render Bootstrap container. This block is in the RundizStrap Companion.",
   "editorScript": "file:./index.js",
   "example": false,
   "icon": "layout",
@@ -26,7 +26,7 @@
     "layout",
     "wrapper"
   ],
-  "name": "bbfse-plug/blocks-bs-container",
+  "name": "rundizstrap-companion/blocks-bs-container",
   "supports": {
     "anchor": true,
     "ariaLabel": true,
@@ -42,7 +42,7 @@
     "dimensions": false,
     "background": false
   },
-  "textdomain": "bbfse-plug",
+  "textdomain": "rundizstrap-companion",
   "title": "Bootstrap layout container",
   "version": "0.0.1"
 }

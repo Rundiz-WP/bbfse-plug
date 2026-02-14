@@ -35,7 +35,7 @@
     }
   },
   "category": "design",
-  "description": "Create <div> element that can customize class, attributes. This block is in BBFSE plugin.",
+  "description": "Create <div> element that can customize class, attributes. This block is in RundizStrap Companion.",
   "editorScript": "file:./index.js",
   "example": false,
   "icon": "editor-code",
@@ -48,13 +48,13 @@
     "semantic",
     "layout"
   ],
-  "name": "bbfse-plug/blocks-bbfse-plug-div",
+  "name": "rundizstrap-companion/blocks-rundizstrap-companion-div",
   "supports": {
     "html": false,
     "className": true,
     "anchor": true
   },
-  "textdomain": "bbfse-plug",
+  "textdomain": "rundizstrap-companion",
   "title": "Customizable div",
   "version": "0.0.1"
 }

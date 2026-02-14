@@ -2,7 +2,7 @@
 /**
  * Render contents for Bootstrap navbar navigation block.
  * 
- * @package bbfse-plug
+ * @package rundizstrap-companion
  * @since 0.0.1
  * 
  * phpcs:disable Squiz.Commenting.BlockComment.NoNewLine
@@ -15,9 +15,9 @@ if (!defined('ABSPATH')) {
 }
 
 
-use BBFSEPlug\App\Libraries\BootstrapNavbarNavigationWalker;
+use RundizstrapCompanion\App\Libraries\BootstrapNavbarNavigationWalker;
 
-if (!function_exists('bbfse_plug_block_bsNavbarNavigation_render')) {
+if (!function_exists('rundizstrap_companion_block_bsNavbarNavigation_render')) {
     /**
      * Render contents for Bootstrap navbar navigation block.
      *
@@ -27,7 +27,7 @@ if (!function_exists('bbfse_plug_block_bsNavbarNavigation_render')) {
      * @param mixed  $block Block instance.
      * @return string
      */
-    function bbfse_plug_block_bsNavbarNavigation_render(array $attributes, string $content = '', $block = null): string
+    function rundizstrap_companion_block_bsNavbarNavigation_render(array $attributes, string $content = '', $block = null): string
     {
         $output = '';
         $navigationRef = (isset($attributes['navigationRef']) ? (int) $attributes['navigationRef'] : 0);
@@ -59,7 +59,7 @@ if (!function_exists('bbfse_plug_block_bsNavbarNavigation_render')) {
 
         if (!$navigationPost) {
             if ($isBlockEditor) {
-                $output .= esc_html__('This navigation is empty.', 'bbfse-plug');
+                $output .= esc_html__('This navigation is empty.', 'rundizstrap-companion');
             }
             unset($navigationPost);
             return $output;
@@ -72,7 +72,7 @@ if (!function_exists('bbfse_plug_block_bsNavbarNavigation_render')) {
 
         if (empty($items)) {
             if ($isBlockEditor) {
-                $output .= esc_html__('This navigation is empty.', 'bbfse-plug');
+                $output .= esc_html__('This navigation is empty.', 'rundizstrap-companion');
             }
             if (defined('WP_DEBUG') && WP_DEBUG === true) {
                 // if enabled debug.
@@ -106,11 +106,11 @@ if (!function_exists('bbfse_plug_block_bsNavbarNavigation_render')) {
 
         unset($blocks, $className, $items, $navigationPost, $navigationRef, $walker, $wrapper_attributes);
         return $output;
-    }// bbfse_plug_block_bsNavbarNavigation_render
+    }// rundizstrap_companion_block_bsNavbarNavigation_render
 }// endif;
 
 // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-echo bbfse_plug_block_bsNavbarNavigation_render(
+echo rundizstrap_companion_block_bsNavbarNavigation_render(
     ($attributes ?? []),
     ((isset($content) && is_string($content)) ? $content : ''),
     ($block ?? null)

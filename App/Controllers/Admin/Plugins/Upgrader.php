@@ -170,7 +170,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Upg
                             <p>' .
                                 sprintf(
                                     // translators: %1$s Open link, %2$s Close link.
-                                    __('The Bootstrap Basic FSE Plugin is just upgraded and need to be manually update. Please continue to the %1$splugin update page%2$s.', 'rundizstrap-companion'),
+                                    __('The RundizStrap Companion is just upgraded and need to be manually update. Please continue to the %1$splugin update page%2$s.', 'rundizstrap-companion'),
                                     '<a href="' . esc_attr(network_admin_url('index.php?page=rundizstrap-companion-manual-update')) . '">', // this link will be auto convert to admin_url if not in multisite installed.
                                     '</a>'
                                 ) .

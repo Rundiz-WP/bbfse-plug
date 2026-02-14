@@ -2,7 +2,7 @@
 /**
  * Render contents for Bootstrap search block.
  * 
- * @package bbfse-plug
+ * @package rundizstrap-companion
  * @since 0.0.1
  * @author Vee W.
  * 
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 
-if (!function_exists('bbfse_plug_block_bsSearch_render')) {
+if (!function_exists('rundizstrap_companion_block_bsSearch_render')) {
     /**
      * Render contents for Bootstrap search block.
      *
@@ -26,20 +26,20 @@ if (!function_exists('bbfse_plug_block_bsSearch_render')) {
      * @param mixed  $block Block instance.
      * @return string
      */
-    function bbfse_plug_block_bsSearch_render(array $attributes, string $content = '', $block = null): string
+    function rundizstrap_companion_block_bsSearch_render(array $attributes, string $content = '', $block = null): string
     {
         $wrapper_attributes = '';
         $field_markup = '';
         $buttonClass = 'btn btn-primary';
         $buttonPosition = 'button-outside';
         $buttonUseIcon = false;
-        $buttonText = __('Search', 'bbfse-plug');
+        $buttonText = __('Search', 'rundizstrap-companion');
         $placeholderText = '';
         $forNavbar = (isset($attributes['forNavbar']) && true === $attributes['forNavbar'] ? true : false);
 
         if (isset($attributes)) {
             if (isset($attributes['showLabel']) && true === $attributes['showLabel']) {
-                $searchLabel = __('Search', 'bbfse-plug');
+                $searchLabel = __('Search', 'rundizstrap-companion');
                 if (isset($attributes['label']) && is_string($attributes['label']) && '' !== $attributes['label']) {
                     $searchLabel = $attributes['label'];
                 }
@@ -47,7 +47,7 @@ if (!function_exists('bbfse_plug_block_bsSearch_render')) {
                 if (false === $forNavbar) {
                     $field_markup .= '<div class="row">';
                     $field_markup .= '<div class="col-12">';
-                    $field_markup .= '<label class="form-label" for="bbfse-plug-blocks-bs-search-input">' . wp_kses_post($searchLabel) . '</label>';
+                    $field_markup .= '<label class="form-label" for="rundizstrap-companion-blocks-bs-search-input">' . wp_kses_post($searchLabel) . '</label>';
                     $field_markup .= '</div>';
                     $field_markup .= '</div><!-- .row -->';
                 }
@@ -83,12 +83,12 @@ if (!function_exists('bbfse_plug_block_bsSearch_render')) {
             }
         }// endif; $attributes
 
-        $input_field = '<input id="bbfse-plug-blocks-bs-search-input" class="form-control';
+        $input_field = '<input id="rundizstrap-companion-blocks-bs-search-input" class="form-control';
         if (true === $forNavbar && 'button-group-input' !== $buttonPosition && 'no-button' !== $buttonPosition) {
             $input_field .= ' me-2';
         }
         $input_field .= '" type="search" name="s" value="' . get_search_query() . '" placeholder="' . esc_attr($placeholderText) . '"' .
-            ' aria-label="' . esc_attr__('Search', 'bbfse-plug') . '" required>';
+            ' aria-label="' . esc_attr__('Search', 'rundizstrap-companion') . '" required>';
         $button_search = '<button class="' . esc_attr($buttonClass) . '" type="submit">' . wp_kses_post($buttonText) . '</button>';
 
         if ('button-group-input' === $buttonPosition) {
@@ -130,11 +130,11 @@ if (!function_exists('bbfse_plug_block_bsSearch_render')) {
             $wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             $field_markup // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         );
-    }// bbfse_plug_block_bsSearch_render
+    }// rundizstrap_companion_block_bsSearch_render
 }// endif;
 
 // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-echo bbfse_plug_block_bsSearch_render(
+echo rundizstrap_companion_block_bsSearch_render(
     ($attributes ?? []),
     ((isset($content) && is_string($content)) ? $content : ''),
     ($block ?? null)

@@ -71,7 +71,7 @@
     }
   },
   "category": "design",
-  "description": "Render Bootstrap button. This block is in the BBFSE plugin.",
+  "description": "Render Bootstrap button. This block is in the RundizStrap Companion.",
   "editorScript": "file:./index.js",
   "example": {
     "attributes": {
@@ -86,13 +86,13 @@
     "button",
     "link"
   ],
-  "name": "bbfse-plug/blocks-bs-button",
+  "name": "rundizstrap-companion/blocks-bs-button",
   "supports": {
     "html": false,
     "className": true,
     "anchor": true
   },
-  "textdomain": "bbfse-plug",
+  "textdomain": "rundizstrap-companion",
   "title": "Bootstrap button",
   "version": "0.0.1"
 }

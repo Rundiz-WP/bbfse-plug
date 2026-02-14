@@ -1,7 +1,7 @@
 /**
  * Key value controls for common use in blocks.
  * 
- * @package bbfse-plug
+ * @package rundizstrap-companion
  * @since 0.0.1
  */
 
@@ -68,12 +68,12 @@ export default function KeyValueControl ({ label, value, onChange }) {
             {localAttributes.map((attr, index) => (
                 <div key={index} style={{ display: 'flex', marginBottom: '5px', gap: '5px' }}>
                     <TextControl
-                        placeholder={__('Key', 'bbfse-plug')}
+                        placeholder={__('Key', 'rundizstrap-companion')}
                         value={attr.key}
                         onChange={(val) => updateAttribute(index, 'key', val)}
                     />
                     <TextControl
-                        placeholder={__('Value', 'bbfse-plug')}
+                        placeholder={__('Value', 'rundizstrap-companion')}
                         value={attr.val}
                         onChange={(val) => updateAttribute(index, 'val', val)}
                     />
@@ -83,12 +83,12 @@ export default function KeyValueControl ({ label, value, onChange }) {
                         variant="secondary"
                         icon="trash"
                         onClick={() => removeAttribute(index)}
-                        label={__('Remove', 'bbfse-plug')}
+                        label={__('Remove', 'rundizstrap-companion')}
                     />
                 </div>
             ))}
             <Button variant="secondary" onClick={addAttribute} isSmall>
-                {__('Add attribute', 'bbfse-plug')}
+                {__('Add attribute', 'rundizstrap-companion')}
             </Button>
         </div>
     );

@@ -2,7 +2,7 @@
 /**
  * Bootstrap Basic FSE Plugin - Customizable div block.
  *
- * @package bbfse-plug
+ * @package rundizstrap-companion
  * @since 0.0.1
  * @license http://opensource.org/licenses/MIT MIT
  */
@@ -24,7 +24,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Blocks\\BbfsePlugDiv')) {
         /**
          * @type string Block folder name.
          */
-        private const BLOCK_NAME = 'bbfse-plug-div';
+        private const BLOCK_NAME = 'rundizstrap-companion-div';
 
 
         /**
@@ -61,8 +61,8 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Blocks\\BbfsePlugDiv')) {
         {
             if (function_exists('wp_set_script_translations')) {
                 wp_set_script_translations(
-                    'bbfse-plug-blocks-' . static::BLOCK_NAME . '-script',
-                    'bbfse-plug',
+                    'rundizstrap-companion-blocks-' . static::BLOCK_NAME . '-script',
+                    'rundizstrap-companion',
                     plugin_dir_path(BBFSEPLUG_FILE) . 'languages'
                 );
             }
