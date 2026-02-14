@@ -7,20 +7,20 @@
  */
 
 
-namespace BBFSEPlug\App\Controllers\Admin;
+namespace RundizstrapCompanion\App\Controllers\Admin;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins')) {
     /**
      * Plugin class that will work on admin list plugins page.
      * 
      * @since 0.0.1
      */
-    class Plugins implements \BBFSEPlug\App\Controllers\ControllerInterface
+    class Plugins implements \RundizstrapCompanion\App\Controllers\ControllerInterface
     {
 
 
-        use \BBFSEPlug\App\AppTrait;
+        use \RundizstrapCompanion\App\AppTrait;
 
 
         /**
@@ -37,7 +37,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins')) {
             static $plugin;
             
             if (!isset($plugin)) {
-                $plugin = plugin_basename(BBFSEPLUG_FILE);
+                $plugin = plugin_basename(RUNDIZCOMPANION_FILE);
             }
             
             if ($plugin === $plugin_file) {
@@ -80,7 +80,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins')) {
             static $plugin;
             
             if (!isset($plugin)) {
-                $plugin = plugin_basename(BBFSEPLUG_FILE);
+                $plugin = plugin_basename(RUNDIZCOMPANION_FILE);
             }
             
             if ($plugin === $file) {

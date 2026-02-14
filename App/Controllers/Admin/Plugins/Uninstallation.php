@@ -7,20 +7,20 @@
  */
 
 
-namespace BBFSEPlug\App\Controllers\Admin\Plugins;
+namespace RundizstrapCompanion\App\Controllers\Admin\Plugins;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Uninstallation')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Uninstallation')) {
     /**
      * Plugin uninstallation and site deletion (hard delete) hooks class.
      * 
      * @since 0.0.1
      */
-    class Uninstallation implements \BBFSEPlug\App\Controllers\ControllerInterface
+    class Uninstallation implements \RundizstrapCompanion\App\Controllers\ControllerInterface
     {
 
 
-        use \BBFSEPlug\App\AppTrait;
+        use \RundizstrapCompanion\App\AppTrait;
 
 
         /**
@@ -44,7 +44,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Uninstallation
         public function registerHooks()
         {
             // register uninstall hook. MUST be static method or function.
-            register_uninstall_hook(BBFSEPLUG_FILE, ['\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Uninstallation', 'uninstall']);
+            register_uninstall_hook(RUNDIZCOMPANION_FILE, ['\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Uninstallation', 'uninstall']);
 
             if (is_multisite()) {
                 // hook on deleted site.
@@ -121,7 +121,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Uninstallation
         /**
          * Drop tables that was created with this plugin.
          * 
-         * Only tables that was created in `BBFSEPlug\App\Models\PluginDbStructure->get()` method will be drop here.
+         * Only tables that was created in `RundizstrapCompanion\App\Models\PluginDbStructure->get()` method will be drop here.
          * 
          * @since 0.0.1
          * @global \wpdb $wpdb
@@ -132,7 +132,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Uninstallation
             global $wpdb;
             $wpdb->show_errors();
 
-            $PluginDbStructure = new \BBFSEPlug\App\Models\PluginDbStructure();
+            $PluginDbStructure = new \RundizstrapCompanion\App\Models\PluginDbStructure();
             $schemas = $PluginDbStructure->get();
             unset($PluginDbStructure);
 

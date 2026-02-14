@@ -7,10 +7,10 @@
  */
 
 
-namespace BBFSEPlug\App\Libraries;
+namespace RundizstrapCompanion\App\Libraries;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Libraries\\StylesAndScripts')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\StylesAndScripts')) {
     /**
      * Common use styles (CSS) and scripts (JS) class.
      * 
@@ -20,7 +20,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\StylesAndScripts')) {
     {
 
 
-        use \BBFSEPlug\App\AppTrait;
+        use \RundizstrapCompanion\App\AppTrait;
 
 
         /**
@@ -32,24 +32,24 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\StylesAndScripts')) {
         public function enqueueAdminStylesAndScripts()
         {
             // rundiz settings based styles
-            wp_register_style('rundizstrap-companion-handle-rd-settings-based-css', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/css/Admin/rd-settings-based.css', [], BBFSEPLUG_VERSION);
+            wp_register_style('rundizstrap-companion-handle-rd-settings-based-css', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/css/Admin/rd-settings-based.css', [], RUNDIZCOMPANION_VERSION);
 
             // rundiz settings tabs
-            wp_register_style('rundizstrap-companion-handle-rd-settings-tabs-css', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/css/Admin/rd-settings-tabs.css', [], BBFSEPLUG_VERSION);
-            wp_register_script('rundizstrap-companion-handle-rd-settings-tabs-js', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/js/Admin/rd-settings-tabs.js', ['jquery'], BBFSEPLUG_VERSION, true);
+            wp_register_style('rundizstrap-companion-handle-rd-settings-tabs-css', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/css/Admin/rd-settings-tabs.css', [], RUNDIZCOMPANION_VERSION);
+            wp_register_script('rundizstrap-companion-handle-rd-settings-tabs-js', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/js/Admin/rd-settings-tabs.js', ['jquery'], RUNDIZCOMPANION_VERSION, true);
 
             // manual update
-            wp_register_script('rundizstrap-companion-handle-rd-settings-manual-update', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/js/Admin/rd-settings-manual-update.js', ['jquery'], BBFSEPLUG_VERSION, true);
+            wp_register_script('rundizstrap-companion-handle-rd-settings-manual-update', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/js/Admin/rd-settings-manual-update.js', ['jquery'], RUNDIZCOMPANION_VERSION, true);
 
             // you can remove some or all of the line below if you don't use it. ---------
             // ace editor (code editor)
-            wp_register_style('rundizstrap-companion-handle-rd-settings-ace-editor-css', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/css/Admin/rd-settings-ace-editor.css', [], BBFSEPLUG_VERSION);
-            wp_register_script('rundizstrap-companion-handle-ace-editor-js', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/vendor/ace/ace.js', ['jquery'], '1.39.1-minnoconflict', false);
-            wp_register_script('rundizstrap-companion-handle-rd-settings-ace-editor-js', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/js/Admin/rd-settings-ace-editor.js', ['rundizstrap-companion-handle-ace-editor-js'], BBFSEPLUG_VERSION, true);
+            wp_register_style('rundizstrap-companion-handle-rd-settings-ace-editor-css', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/css/Admin/rd-settings-ace-editor.css', [], RUNDIZCOMPANION_VERSION);
+            wp_register_script('rundizstrap-companion-handle-ace-editor-js', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/vendor/ace/ace.js', ['jquery'], '1.39.1-minnoconflict', false);
+            wp_register_script('rundizstrap-companion-handle-rd-settings-ace-editor-js', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/js/Admin/rd-settings-ace-editor.js', ['rundizstrap-companion-handle-ace-editor-js'], RUNDIZCOMPANION_VERSION, true);
 
             // media uploader
-            wp_register_style('rundizstrap-companion-handle-rd-settings-media-css', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/css/Admin/rd-settings-media.css', [], BBFSEPLUG_VERSION);
-            wp_register_script('rundizstrap-companion-handle-rd-settings-media-js', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/js/Admin/rd-settings-media.js', ['jquery'], BBFSEPLUG_VERSION, true);
+            wp_register_style('rundizstrap-companion-handle-rd-settings-media-css', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/css/Admin/rd-settings-media.css', [], RUNDIZCOMPANION_VERSION);
+            wp_register_script('rundizstrap-companion-handle-rd-settings-media-js', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/js/Admin/rd-settings-media.js', ['jquery'], RUNDIZCOMPANION_VERSION, true);
         }// enqueueAdminStylesAndScripts
 
 
@@ -62,8 +62,8 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\StylesAndScripts')) {
         public function enqueueStylesAndScripts()
         {
             $this->getOptions();
-            global $bbfse_plug_optname;
-            if (isset($bbfse_plug_optname['bbfse_plug_enqueue_assets']) && '1' !== strval($bbfse_plug_optname['bbfse_plug_enqueue_assets'])) {
+            global $rundizstrap_companion_optname;
+            if (isset($rundizstrap_companion_optname['rundizstrap_companion_enqueue_assets']) && '1' !== strval($rundizstrap_companion_optname['rundizstrap_companion_enqueue_assets'])) {
                 // if setting was set to not enqueue.
                 return;
             }
@@ -74,7 +74,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\StylesAndScripts')) {
              * @since 0.0.1
              * @param bool $enqueueStylesScripts Mark `true` to enqueue them, `false` to do not enqueue.
              */
-            $enqueueStylesScripts = apply_filters('bbfse_plug_enqueue_styles_scripts', true);
+            $enqueueStylesScripts = apply_filters('rundizstrap_companion_enqueue_styles_scripts', true);
             if (true === $enqueueStylesScripts) {
                 wp_enqueue_style('rundizstrap-companion-bootstrap-css');
                 wp_enqueue_style('rundizstrap-companion-bootstrap-icons');
@@ -121,11 +121,11 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\StylesAndScripts')) {
         public function registerStylesAndScripts()
         {
             // CSS
-            wp_register_style('rundizstrap-companion-bootstrap-css', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/vendor/bootstrap/css/bootstrap.min.css', [], '5.3.8');
-            wp_register_style('rundizstrap-companion-bootstrap-icons', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/vendor/bootstrap-icons/css/bootstrap-icons.min.css', [], '1.13.1');
+            wp_register_style('rundizstrap-companion-bootstrap-css', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/vendor/bootstrap/css/bootstrap.min.css', [], '5.3.8');
+            wp_register_style('rundizstrap-companion-bootstrap-icons', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/vendor/bootstrap-icons/css/bootstrap-icons.min.css', [], '1.13.1');
 
             // JS
-            wp_register_style('rundizstrap-companion-bootstrap-js', plugin_dir_url(BBFSEPLUG_FILE) . 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js', [], '5.3.8', true);
+            wp_register_style('rundizstrap-companion-bootstrap-js', plugin_dir_url(RUNDIZCOMPANION_FILE) . 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js', [], '5.3.8', true);
         }// registerStylesAndScripts
 
 

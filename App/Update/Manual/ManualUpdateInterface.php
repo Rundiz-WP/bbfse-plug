@@ -7,10 +7,10 @@
  */
 
 
-namespace BBFSEPlug\App\Update\Manual;
+namespace RundizstrapCompanion\App\Update\Manual;
 
 
-if (!interface_exists('\\BBFSEPlug\\App\\Update\\Manual\\ManualUpdateInterface')) {
+if (!interface_exists('\\RundizstrapCompanion\\App\\Update\\Manual\\ManualUpdateInterface')) {
     interface ManualUpdateInterface
     {
 

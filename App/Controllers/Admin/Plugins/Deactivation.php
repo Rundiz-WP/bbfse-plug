@@ -7,16 +7,16 @@
  */
 
 
-namespace BBFSEPlug\App\Controllers\Admin\Plugins;
+namespace RundizstrapCompanion\App\Controllers\Admin\Plugins;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Deactivation')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Deactivation')) {
     /**
      * Plugin deactivation hook class.
      * 
      * @since 0.0.1
      */
-    class Deactivation implements \BBFSEPlug\App\Controllers\ControllerInterface
+    class Deactivation implements \RundizstrapCompanion\App\Controllers\ControllerInterface
     {
 
 
@@ -61,7 +61,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Deactivation')
         public function registerHooks()
         {
             // register deactivate hook
-            register_deactivation_hook(BBFSEPLUG_FILE, [$this, 'deactivate']);
+            register_deactivation_hook(RUNDIZCOMPANION_FILE, [$this, 'deactivate']);
         }// registerHooks
 
 

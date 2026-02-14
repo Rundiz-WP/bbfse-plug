@@ -7,20 +7,20 @@
  */
 
 
-namespace BBFSEPlug\App\Controllers\Admin\Plugins;
+namespace RundizstrapCompanion\App\Controllers\Admin\Plugins;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
     /**
      * Plugin upgrader class.
      *
      * @since 0.0.1
      */
-    class Upgrader implements \BBFSEPlug\App\Controllers\ControllerInterface
+    class Upgrader implements \RundizstrapCompanion\App\Controllers\ControllerInterface
     {
 
 
-        use \BBFSEPlug\App\AppTrait;
+        use \RundizstrapCompanion\App\AppTrait;
 
 
         /**
@@ -50,7 +50,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
             // phpcs:ignore WordPress.Security
             if (isset($_SERVER['REQUEST_METHOD']) && strtolower($_SERVER['REQUEST_METHOD']) === 'post' && isset($_POST) && !empty($_POST)) {
                 // if method POST and there is POST data.
-                if (check_ajax_referer('bbfse_plug_nonce', 'security', false) === false) {
+                if (check_ajax_referer('rundizstrap_companion_nonce', 'security', false) === false) {
                     status_header(403);
                     wp_die(
                         esc_html(__('Please reload this page and try again.', 'rundizstrap-companion')), 
@@ -61,7 +61,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
 
                 $updateKey = filter_input(INPUT_POST, 'updateKey', FILTER_SANITIZE_NUMBER_INT);
 
-                $Loader = new \BBFSEPlug\App\Libraries\Loader();
+                $Loader = new \RundizstrapCompanion\App\Libraries\Loader();
                 $manualUpdateClasses = $Loader->getManualUpdateClasses();
                 $maxManualUpdateVersion = 0;
                 unset($Loader);
@@ -108,7 +108,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
                             $this->saveOptions($currentConfig);
                             unset($currentConfig);
 
-                            delete_transient('bbfse_plug_updated');
+                            delete_transient('rundizstrap_companion_updated');
                         }
                     } else {
                         // if contain error.
@@ -155,9 +155,9 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
          */
         public function detectPluginUpdate()
         {
-            if (get_transient('bbfse_plug_updated') && current_user_can('update_plugins')) {
+            if (get_transient('rundizstrap_companion_updated') && current_user_can('update_plugins')) {
                 // if there is updated transient
-                $Loader = new \BBFSEPlug\App\Libraries\Loader();
+                $Loader = new \RundizstrapCompanion\App\Libraries\Loader();
 
                 if ($Loader->haveManualUpdate() === true) {
                     // if found that there are manual update in this new version of code.
@@ -193,12 +193,12 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
                         add_action('admin_menu', [$this, 'displayManualUpdateMenu']);
                     }
 
-                    add_action('wp_ajax_bbfse_plug_manualUpdate', [$this, 'ajaxManualUpdate']);
+                    add_action('wp_ajax_rundizstrap_companion_manualUpdate', [$this, 'ajaxManualUpdate']);
                     // end display link to manual update page.
                     // -------------------------------------------------------------------------------------
                 } else {
                     // if don't have any manual update.
-                    delete_transient('bbfse_plug_updated');
+                    delete_transient('rundizstrap_companion_updated');
                 }// endif;
 
                 unset($Loader);
@@ -235,7 +235,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
 
             $output = [];
 
-            $Loader = new \BBFSEPlug\App\Libraries\Loader();
+            $Loader = new \RundizstrapCompanion\App\Libraries\Loader();
             $output['manualUpdateClasses'] = $Loader->getManualUpdateClasses();
 
             $Loader->loadView('admin/Plugins/Upgrader_v', $output);
@@ -278,7 +278,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
                     'alreadyRunUpdateKey' => '',
                     'alreadyRunUpdateTotal' => 0,
                     'completed' => 'false',
-                    'nonce' => wp_create_nonce('bbfse_plug_nonce'),
+                    'nonce' => wp_create_nonce('rundizstrap_companion_nonce'),
                     'txtCompleted' => __('Completed', 'rundizstrap-companion'),
                     'txtDismissNotice' => __('Dismiss', 'rundizstrap-companion'),
                     'txtNext' => __('Next', 'rundizstrap-companion'),
@@ -324,12 +324,12 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Upgrader')) {
         {
             if (is_array($hook_extra) && array_key_exists('action', $hook_extra) && array_key_exists('type', $hook_extra) && array_key_exists('plugins', $hook_extra)) {
                 if ('update' === $hook_extra['action'] && 'plugin' === $hook_extra['type'] && is_array($hook_extra['plugins']) && !empty($hook_extra['plugins'])) {
-                    $this_plugin = plugin_basename(BBFSEPLUG_FILE);
+                    $this_plugin = plugin_basename(RUNDIZCOMPANION_FILE);
                     foreach ($hook_extra['plugins'] as $key => $plugin) {
                         if ($this_plugin === $plugin) {
                             // if this plugin is in the updated plugins.
                             // set transient to let it run later. this transient will be called and run in `detectPluginUpdate()` method.
-                            set_transient('bbfse_plug_updated', 1);
+                            set_transient('rundizstrap_companion_updated', 1);
                             break;
                         }
                     }// endforeach;

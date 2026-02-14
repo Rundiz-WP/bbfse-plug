@@ -7,20 +7,20 @@
  */
 
 
-namespace BBFSEPlug\App\Controllers\Admin\Plugins;
+namespace RundizstrapCompanion\App\Controllers\Admin\Plugins;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Activation')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Activation')) {
     /**
      * Plugin activation and new site activation hooks class.
      * 
      * @since 0.0.1
      */
-    class Activation implements \BBFSEPlug\App\Controllers\ControllerInterface
+    class Activation implements \RundizstrapCompanion\App\Controllers\ControllerInterface
     {
 
 
-        use \BBFSEPlug\App\AppTrait;
+        use \RundizstrapCompanion\App\AppTrait;
 
 
         /**
@@ -110,14 +110,14 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Activation')) 
 
 
         /**
-         * If there is at least one or more table from `BBFSEPlug\App\Models\PluginDbStructure->get()` method then create or alter using WordPress's `dbDelta()`.
+         * If there is at least one or more table from `RundizstrapCompanion\App\Models\PluginDbStructure->get()` method then create or alter using WordPress's `dbDelta()`.
          *
          * @since 0.0.1
          * @global \wpdb $wpdb WordPress DB class.
          */
         private function activateCreateAlterTables()
         {
-            $PluginDbStructure = new \BBFSEPlug\App\Models\PluginDbStructure();
+            $PluginDbStructure = new \RundizstrapCompanion\App\Models\PluginDbStructure();
             $schemas = $PluginDbStructure->get();
             unset($PluginDbStructure);
 
@@ -188,7 +188,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Plugins\\Activation')) 
         public function registerHooks()
         {
             // register activate hook
-            register_activation_hook(BBFSEPLUG_FILE, [$this, 'activate']);
+            register_activation_hook(RUNDIZCOMPANION_FILE, [$this, 'activate']);
 
             if (is_multisite()) {
                 // hook on create new site (for multisite installation).

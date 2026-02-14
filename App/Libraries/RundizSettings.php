@@ -7,10 +7,10 @@
  */
 
 
-namespace BBFSEPlug\App\Libraries;
+namespace RundizstrapCompanion\App\Libraries;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Libraries\\RundizSettings')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
     /**
      * Rundiz Settings class for render pre-setup values. This will render tabs, form fields and content in each tabs.
      */
@@ -37,7 +37,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\RundizSettings')) {
                 wp_die('Settings configuration file was not set.');
             }
 
-            $loader = new \BBFSEPlug\App\Libraries\Loader();
+            $loader = new \RundizstrapCompanion\App\Libraries\Loader();
             return $loader->loadConfig($setting_file);
         }// getConfigFile
 

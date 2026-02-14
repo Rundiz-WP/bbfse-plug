@@ -7,16 +7,16 @@
  */
 
 
-namespace BBFSEPlug\App\Controllers\Admin\Appearance;
+namespace RundizstrapCompanion\App\Controllers\Admin\Appearance;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Appearance\\PluginHelp')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Appearance\\PluginHelp')) {
     /**
      * Plugin help class.
      * 
      * @since 0.0.1
      */
-    class PluginHelp implements \BBFSEPlug\App\Controllers\ControllerInterface
+    class PluginHelp implements \RundizstrapCompanion\App\Controllers\ControllerInterface
     {
 
 
@@ -50,7 +50,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Appearance\\PluginHelp'
          */
         public function displayHelpPage()
         {
-            $Loader = new \BBFSEPlug\App\Libraries\Loader();
+            $Loader = new \RundizstrapCompanion\App\Libraries\Loader();
             $Loader->loadView('admin/Appearance/pluginHelp_v');
             unset($Loader);
         }// displayHelpPage

@@ -10,10 +10,10 @@
  */
 
 
-namespace BBFSEPlug\App\Libraries\WPOverride;
+namespace RundizstrapCompanion\App\Libraries\WPOverride;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Libraries\\WPOverride\\GeneralTemplate')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\WPOverride\\GeneralTemplate')) {
     /**
      * General template class.
      * 
@@ -27,7 +27,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\WPOverride\\GeneralTemplate')) {
          * Retrieves paginated links for archive post pages.
          * 
          * What has been overridden:
-         * - Prepend `apply_filters()` with `bbfse_plug_`.
+         * - Prepend `apply_filters()` with `rundizstrap_companion_`.
          * - Replace current page from `span` tag with `a` tag.
          * - Replace dot page from `span` tag with `a` tag.
          * - Replace class `page-numbers` in all `a` tag with `page-link`.
@@ -141,7 +141,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\WPOverride\\GeneralTemplate')) {
                      *
                      * @param string $link The paginated link URL.
                      */
-                    esc_url(apply_filters('bbfse_plug_paginate_links', $link)),
+                    esc_url(apply_filters('rundizstrap_companion_paginate_links', $link)),
                     $args['prev_text']
                 );
             endif;
@@ -167,7 +167,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\WPOverride\\GeneralTemplate')) {
                         $page_links[] = sprintf(
                             '<a class="page-link" href="%s">%s</a>',
                             /** This filter is documented in wp-includes/general-template.php */
-                            esc_url(apply_filters('bbfse_plug_paginate_links', $link)),
+                            esc_url(apply_filters('rundizstrap_companion_paginate_links', $link)),
                             $args['before_page_number'] . number_format_i18n($n) . $args['after_page_number']
                         );
 
@@ -191,7 +191,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\WPOverride\\GeneralTemplate')) {
                 $page_links[] = sprintf(
                     '<a class="next page-link" href="%s">%s</a>',
                     /** This filter is documented in wp-includes/general-template.php */
-                    esc_url(apply_filters('bbfse_plug_paginate_links', $link)),
+                    esc_url(apply_filters('rundizstrap_companion_paginate_links', $link)),
                     $args['next_text']
                 );
             endif;
@@ -220,7 +220,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\WPOverride\\GeneralTemplate')) {
              * @param array  $args An array of arguments. See paginate_links()
              *                     for information on accepted arguments.
              */
-            $r = apply_filters('bbfse_plug_paginate_links_output', $r, $args);
+            $r = apply_filters('rundizstrap_companion_paginate_links_output', $r, $args);
 
             return $r;
         }// paginate_links

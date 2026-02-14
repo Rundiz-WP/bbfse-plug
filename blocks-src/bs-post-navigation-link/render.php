@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
 }
 
 
-if (!function_exists('bbfse_plug_block_bsPostNavigationLink_render')) {
+if (!function_exists('rundizstrap_companion_block_bsPostNavigationLink_render')) {
     /**
      * Render contents for Bootstrap post navigation link block.
      *
@@ -27,7 +27,7 @@ if (!function_exists('bbfse_plug_block_bsPostNavigationLink_render')) {
      * @param mixed  $block Block instance.
      * @return string
      */
-    function bbfse_plug_block_bsPostNavigationLink_render(array $attributes, string $content = '', $block = null): string
+    function rundizstrap_companion_block_bsPostNavigationLink_render(array $attributes, string $content = '', $block = null): string
     {
         if (!is_singular()) {
             return '';
@@ -148,11 +148,11 @@ if (!function_exists('bbfse_plug_block_bsPostNavigationLink_render')) {
             $ariaAttributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             $linkText // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         );
-    }// bbfse_plug_block_bsPostNavigationLink_render
+    }// rundizstrap_companion_block_bsPostNavigationLink_render
 }// endif;
 
 // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-echo bbfse_plug_block_bsPostNavigationLink_render(
+echo rundizstrap_companion_block_bsPostNavigationLink_render(
     ($attributes ?? []),
     ((isset($content) && is_string($content)) ? $content : ''),
     ($block ?? null)

@@ -7,10 +7,10 @@
  */
 
 
-namespace BBFSEPlug\App\Models;
+namespace RundizstrapCompanion\App\Models;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Models\\PluginDbStructure')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Models\\PluginDbStructure')) {
     /**
      * The plugin's database structure class.
      */
@@ -23,7 +23,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Models\\PluginDbStructure')) {
          * 
          * The db schema will be use by WordPress Db Delta.  
          * If you do not want to create any tables for this plugin then set this method to return empty array.  
-         * Please read more about db version at `\BBFSEPlug\App\AppTrait->db_version` property.
+         * Please read more about db version at `\RundizstrapCompanion\App\AppTrait->db_version` property.
          * 
          * Limitation:  
          * - DO NOT use back tick (`) anywhere because it will be thrown the error.
@@ -31,14 +31,14 @@ if (!class_exists('\\BBFSEPlug\\App\\Models\\PluginDbStructure')) {
          * 
          * Example:
          * <pre>
-         * $schema[0]['tablename'] = 'bbfse_plug_table1';
+         * $schema[0]['tablename'] = 'rundizstrap_companion_table1';
          * $schema[0]['statement'] = 'CREATE TABLE %PREFIX%%TABLE% (
          * id bigint(20) NOT NULL AUTO_INCREMENT,
          * PRIMARY KEY (id)
          * ) DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;';// no back tick (`) to prevent error.
          * $schema[0]['is_multisite'] = false;// by default it is set to false (not multisite tables).
          * 
-         * $schema[1]['tablename'] = 'bbfse_plug_table1';
+         * $schema[1]['tablename'] = 'rundizstrap_companion_table1';
          * $schema[1]['statement'] = 'CREATE TABLE ...';
          * $schema[1]['is_multisite'] = true;
          * </pre>

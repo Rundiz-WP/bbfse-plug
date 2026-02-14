@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 }
 
 
-if (!function_exists('bbfse_plug_block_bsCommentForm_render')) {
+if (!function_exists('rundizstrap_companion_block_bsCommentForm_render')) {
     /**
      * Render contents for Bootstrap comment form block.
      *
@@ -25,7 +25,7 @@ if (!function_exists('bbfse_plug_block_bsCommentForm_render')) {
      * @param mixed  $block Block instance.
      * @return string
      */
-    function bbfse_plug_block_bsCommentForm_render(array $attributes, string $content = '', $block = null): string
+    function rundizstrap_companion_block_bsCommentForm_render(array $attributes, string $content = '', $block = null): string
     {
         if (!isset($block->context['postId'])) {
             return '';
@@ -114,11 +114,11 @@ if (!function_exists('bbfse_plug_block_bsCommentForm_render')) {
         wp_enqueue_script('comment-reply');
 
         return $form;
-    }// bbfse_plug_block_bsCommentForm_render
+    }// rundizstrap_companion_block_bsCommentForm_render
 }
 
 // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-echo bbfse_plug_block_bsCommentForm_render(
+echo rundizstrap_companion_block_bsCommentForm_render(
     ($attributes ?? []),
     ((isset($content) && is_string($content)) ? $content : ''),
     ($block ?? null)

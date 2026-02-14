@@ -8,10 +8,10 @@
  */
 
 
-namespace BBFSEPlug\App\Controllers;
+namespace RundizstrapCompanion\App\Controllers;
 
 
-if (!interface_exists('\\BBFSEPlug\\App\\Controllers\\ControllerInterface')) {
+if (!interface_exists('\\RundizstrapCompanion\\App\\Controllers\\ControllerInterface')) {
     /**
      * The controller interface that have required methods to register hooks, and more.<br>
      * Implement this interface only when you want to have hooks into WP core.

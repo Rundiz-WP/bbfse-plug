@@ -23,14 +23,14 @@ if (!defined('ABSPATH')) {
         <li><?php printf(
             // translators: %s PHP code.
             __('Access this variable as global %s. This variable will be change, up to config in AppTrait.', 'rundizstrap-companion'), // phpcs:ignore
-            '<code>global $bbfse_plug_optname;</code>'
+            '<code>global $rundizstrap_companion_optname;</code>'
         ); ?></li>
         <li><?php esc_html_e('Now, you can use this variable to access its array key anywhere.', 'rundizstrap-companion'); ?></li>
     </ol>
-    <h3>Example: <code>print_r($bbfse_plug_optname);</code></h3>
+    <h3>Example: <code>print_r($rundizstrap_companion_optname);</code></h3>
     <pre style="background-color: #333; border: 1px solid #ccc; color: #ddd; height: 500px; overflow: auto; padding: 10px;"><?php 
-    if (isset($bbfse_plug_optname)) {
-        echo esc_html(print_r($bbfse_plug_optname, true)); // phpcs:ignore WordPress.PHP.DevelopmentFunctions
+    if (isset($rundizstrap_companion_optname)) {
+        echo esc_html(print_r($rundizstrap_companion_optname, true)); // phpcs:ignore WordPress.PHP.DevelopmentFunctions
     }
     ?></pre>
 </div>

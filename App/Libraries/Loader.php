@@ -7,10 +7,10 @@
  */
 
 
-namespace BBFSEPlug\App\Libraries;
+namespace RundizstrapCompanion\App\Libraries;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Libraries\\Loader')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\Loader')) {
     /**
      * Loader class for load template, view file, etc.
      * 
@@ -20,7 +20,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\Loader')) {
     {
 
 
-        use \BBFSEPlug\App\AppTrait;
+        use \RundizstrapCompanion\App\AppTrait;
 
 
         /**
@@ -31,24 +31,24 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\Loader')) {
 
         /**
          * Automatic look into those controllers and register to the main App class to make it works.<br>
-         * The controllers that will be register must implement BBFSEPlug\App\Controllers\ControllerInterface to have registerHooks() method in it, otherwise it will be skipped.
+         * The controllers that will be register must implement RundizstrapCompanion\App\Controllers\ControllerInterface to have registerHooks() method in it, otherwise it will be skipped.
          * 
          * @since 0.0.1
          */
         public function autoRegisterControllers()
         {
-            $this_plugin_dir = dirname(BBFSEPLUG_FILE);
+            $this_plugin_dir = dirname(RUNDIZCOMPANION_FILE);
             $file_list = $this->getClassFileList($this_plugin_dir . DIRECTORY_SEPARATOR . 'App' . DIRECTORY_SEPARATOR . 'Controllers');
 
             if (is_array($file_list)) {
                 foreach ($file_list as $file) {
-                    $this_file_classname = '\\BBFSEPlug' . str_replace([$this_plugin_dir, '.php', '/'], ['', '', '\\'], $file);
+                    $this_file_classname = '\\RundizstrapCompanion' . str_replace([$this_plugin_dir, '.php', '/'], ['', '', '\\'], $file);
                     if (class_exists($this_file_classname)) {
                         $TestClass = new \ReflectionClass($this_file_classname);
                         if (
                             !$TestClass->isAbstract() && 
                             !$TestClass->isTrait() && 
-                            $TestClass->implementsInterface('\\BBFSEPlug\\App\\Controllers\\ControllerInterface')
+                            $TestClass->implementsInterface('\\RundizstrapCompanion\\App\\Controllers\\ControllerInterface')
                         ) {
                             $ControllerClass = new $this_file_classname();
                             if (method_exists($ControllerClass, 'registerHooks')) {
@@ -123,19 +123,19 @@ if (!class_exists('\\BBFSEPlug\\App\\Libraries\\Loader')) {
             }
             unset($config_values);
 
-            $this_plugin_dir = dirname(BBFSEPLUG_FILE);
+            $this_plugin_dir = dirname(RUNDIZCOMPANION_FILE);
             $file_list = $this->getClassFileList($this_plugin_dir . DIRECTORY_SEPARATOR . 'App' . DIRECTORY_SEPARATOR . 'Update' . DIRECTORY_SEPARATOR . 'Manual');
 
             if (is_array($file_list) && !empty($file_list)) {
                 foreach ($file_list as $file) {
-                    $this_file_classname = '\\BBFSEPlug' . str_replace([$this_plugin_dir, '.php', '/'], ['', '', '\\'], $file);
+                    $this_file_classname = '\\RundizstrapCompanion' . str_replace([$this_plugin_dir, '.php', '/'], ['', '', '\\'], $file);
                     if (class_exists($this_file_classname)) {
                         $TestClass = new \ReflectionClass($this_file_classname);
                         if (
                             !$TestClass->isAbstract() && 
                             !$TestClass->isTrait() && 
                             !$TestClass->isInterface() &&
-                            $TestClass->implementsInterface('\\BBFSEPlug\\App\\Update\\Manual\\ManualUpdateInterface') &&
+                            $TestClass->implementsInterface('\\RundizstrapCompanion\\App\\Update\\Manual\\ManualUpdateInterface') &&
                             $TestClass->hasProperty('manual_update_version') &&
                             $TestClass->hasMethod('run')
                         ) {

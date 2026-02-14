@@ -26,7 +26,7 @@ return [
                     'options' => [
                         [
                             'default' => '1',
-                            'id' => 'bbfse_plug_enqueue_assets',
+                            'id' => 'rundizstrap_companion_enqueue_assets',
                             'title' => __('Enqueue Bootstrap CSS, JS, icons', 'rundizstrap-companion'),
                             'value' => '1',
                         ],

@@ -7,10 +7,10 @@
  */
 
 
-namespace BBFSEPlug\App;
+namespace RundizstrapCompanion\App;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\App')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\App')) {
     /**
      * Plugin application main entry class.
      * 

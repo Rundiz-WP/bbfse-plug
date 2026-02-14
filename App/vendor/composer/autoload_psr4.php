@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
-    'BBFSEPlug\\' => array($baseDir . '/'),
+    'RundizstrapCompanion\\' => array($baseDir . '/'),
 );

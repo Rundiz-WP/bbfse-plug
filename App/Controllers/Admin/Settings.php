@@ -7,20 +7,20 @@
  */
 
 
-namespace BBFSEPlug\App\Controllers\Admin;
+namespace RundizstrapCompanion\App\Controllers\Admin;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Settings')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Settings')) {
     /**
      * Admin settings page.
      * 
      * @since 0.0.1
      */
-    class Settings implements \BBFSEPlug\App\Controllers\ControllerInterface
+    class Settings implements \RundizstrapCompanion\App\Controllers\ControllerInterface
     {
 
 
-        use \BBFSEPlug\App\AppTrait;
+        use \RundizstrapCompanion\App\AppTrait;
 
 
         /**
@@ -71,7 +71,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Settings')) {
                 wp_die(esc_html(__('You do not have permission to access this page.', 'rundizstrap-companion')));
             }
 
-            if (get_transient('bbfse_plug_updated')) {
+            if (get_transient('rundizstrap_companion_updated')) {
                 if (current_user_can('update_plugins')) {
                     wp_die(
                         sprintf(
@@ -91,7 +91,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Settings')) {
             }
 
             // load config values to get settings config file.
-            $Loader = new \BBFSEPlug\App\Libraries\Loader();
+            $Loader = new \RundizstrapCompanion\App\Libraries\Loader();
             $config_values = $Loader->loadConfig();
             if (is_array($config_values) && array_key_exists('rundiz_settings_config_file', $config_values)) {
                 $settings_config_file = $config_values['rundiz_settings_config_file'];
@@ -101,7 +101,7 @@ if (!class_exists('\\BBFSEPlug\\App\\Controllers\\Admin\\Settings')) {
             }
             unset($config_values);
 
-            $RundizSettings = new \BBFSEPlug\App\Libraries\RundizSettings();
+            $RundizSettings = new \RundizstrapCompanion\App\Libraries\RundizSettings();
             $RundizSettings->settings_config_file = $settings_config_file;
 
             $options_values = $this->getOptions();

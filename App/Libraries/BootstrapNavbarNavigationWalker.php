@@ -8,10 +8,10 @@
  */
 
 
-namespace BBFSEPlug\App\Libraries;
+namespace RundizstrapCompanion\App\Libraries;
 
 
-if (!class_exists('\\BBFSEPlug\\App\\Libraries\\BootstrapNavbarNavigationWalker')) {
+if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\BootstrapNavbarNavigationWalker')) {
     /**
      * Build Bootstrap navbar navigation HTML from Navigation blocks.
      * 

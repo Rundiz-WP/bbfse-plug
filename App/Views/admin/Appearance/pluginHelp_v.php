@@ -28,7 +28,7 @@ if (!defined('ABSPATH')) {
              *              where key is unique name (use alpha-numeric, dash, underscore only) 
              *              and value is tab name.
              */
-            $rundizstrapCompanionAdditionalTabs = apply_filters('bbfse_plug_help_tabpane', []);
+            $rundizstrapCompanionAdditionalTabs = apply_filters('rundizstrap_companion_help_tabpane', []);
             if (is_array($rundizstrapCompanionAdditionalTabs) || is_iterable($rundizstrapCompanionAdditionalTabs)) {
                 foreach ($rundizstrapCompanionAdditionalTabs as $rundizstrapCompanionKey => $rundizstrapCompanionValue) {
                     echo '<li>';
@@ -94,11 +94,11 @@ if (!defined('ABSPATH')) {
                      * Display help tab content in the "BBFSE Plug" plugin help page.
                      * 
                      * If your defined tab pane array key is `my_plugin_help_tab_01`
-                     * then the hook can be `bbfse_plug_help_tabcontent_my_plugin_help_tab_01`.
+                     * then the hook can be `rundizstrap_companion_help_tabcontent_my_plugin_help_tab_01`.
                      * 
                      * @since 0.0.1
                      */
-                    do_action('bbfse_plug_help_tabcontent_' . $rundizstrapCompanionKey);
+                    do_action('rundizstrap_companion_help_tabcontent_' . $rundizstrapCompanionKey);
                     echo PHP_EOL;
                     echo '</div>' . PHP_EOL;
                 }// endforeach;

@@ -7,10 +7,10 @@
  */
 
 
-namespace BBFSEPlug\App;
+namespace RundizstrapCompanion\App;
 
 
-if (!trait_exists('\\BBFSEPlug\\App\\AppTrait')) {
+if (!trait_exists('\\RundizstrapCompanion\\App\\AppTrait')) {
     trait AppTrait
     {
 
@@ -18,15 +18,15 @@ if (!trait_exists('\\BBFSEPlug\\App\\AppTrait')) {
         /**
          * Main option name.
          * 
-         * @var string Set main option name of this plugin. the name should be english, number, underscore, or anycharacters that can be set to variable. for example: 'bbfse_plug_optname' will be set to $bbfse_plug_optname
-         * @uses call this trait method $this->getOptions(); before access $bbfse_plug_optname in global variable.
+         * @var string Set main option name of this plugin. the name should be english, number, underscore, or anycharacters that can be set to variable. for example: 'rundizstrap_companion_optname' will be set to $rundizstrap_companion_optname
+         * @uses call this trait method $this->getOptions(); before access $rundizstrap_companion_optname in global variable.
          */
-        public $main_option_name = 'bbfse_plug_optname';
+        public $main_option_name = 'rundizstrap_companion_optname';
 
         /**
          * All available options.
          * 
-         * These options will be accessible via main option name variable. for example: options name 'the_name' can call from $bbfse_plug_optname['the_name'];.
+         * These options will be accessible via main option name variable. for example: options name 'the_name' can call from $rundizstrap_companion_optname['the_name'];.
          * If you want to access this property, please call to `setupAllOptions()` method first.
          * 
          * @var array Set all options available for this plugin. it must be 2D array (key => default value, key2 => default value, ...)
@@ -37,7 +37,7 @@ if (!trait_exists('\\BBFSEPlug\\App\\AppTrait')) {
          * The database version.
          * 
          * If you have no tables to create on activate this plugin or don't use db for this plugin at all then set this to NULL.
-         * If you have tables to create on activate this plugin then set the db version number (string) here and then write create table schema at \BBFSEPlug\App\Models\PluginDbStructure->get() method.
+         * If you have tables to create on activate this plugin then set the db version number (string) here and then write create table schema at \RundizstrapCompanion\App\Models\PluginDbStructure->get() method.
          * Do not access this property directly if not necessary, use `getDbVersion()` method instead.
          * 
          * @var string|null Version number of DB structure.
@@ -130,7 +130,7 @@ if (!trait_exists('\\BBFSEPlug\\App\\AppTrait')) {
         public function setupAllOptions()
         {
             // load config values to get settings config file.
-            $loader = new \BBFSEPlug\App\Libraries\Loader();
+            $loader = new \RundizstrapCompanion\App\Libraries\Loader();
             $config_values = $loader->loadConfig();
             if (is_array($config_values) && array_key_exists('rundiz_settings_config_file', $config_values)) {
                 // if there is config value about config file.
@@ -144,7 +144,7 @@ if (!trait_exists('\\BBFSEPlug\\App\\AppTrait')) {
             }
             unset($config_values, $loader);
 
-            $RundizSettings = new \BBFSEPlug\App\Libraries\RundizSettings();
+            $RundizSettings = new \RundizstrapCompanion\App\Libraries\RundizSettings();
             $RundizSettings->settings_config_file = $settings_config_file;
             $this->all_options = $RundizSettings->getSettingsFieldsId();
             unset($RundizSettings, $settings_config_file);

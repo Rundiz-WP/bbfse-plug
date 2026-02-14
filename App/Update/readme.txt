@@ -22,9 +22,9 @@ The update class MUST have `run()` method to run the update code.
 Example:
 ```
 <?php
-namespace BBFSEPlug\App\Update\Manual;
+namespace RundizstrapCompanion\App\Update\Manual;
 
-class V1Sub1 implements \BBFSEPlug\App\Update\Manual\ManualUpdateInterface
+class V1Sub1 implements \RundizstrapCompanion\App\Update\Manual\ManualUpdateInterface
 {
 
 
