@@ -30,13 +30,13 @@ if (!defined('RUNDIZSTRAP_COMPANION_FILE')) {
 
 if (!defined('RUNDIZSTRAP_COMPANION_VERSION')) {
     // if not defined constant version.
-    $rundizstrapCompanionData = (function_exists('get_file_data') ? get_file_data(__FILE__, ['Version' => 'Version']) : null);
-    $rundizstrapCompanionVersion = (isset($rundizstrapCompanionData['Version']) ? $rundizstrapCompanionData['Version'] : date('Ym')); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
-    unset($rundizstrapCompanionData);
+    $rundizstrap_companion_Data = (function_exists('get_file_data') ? get_file_data(__FILE__, ['Version' => 'Version']) : null);
+    $rundizstrap_companion_Version = (isset($rundizstrap_companion_Data['Version']) ? $rundizstrap_companion_Data['Version'] : date('Ym')); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+    unset($rundizstrap_companion_Data);
 
-    define('RUNDIZSTRAP_COMPANION_VERSION', $rundizstrapCompanionVersion);
+    define('RUNDIZSTRAP_COMPANION_VERSION', $rundizstrap_companion_Version);
 
-    unset($rundizstrapCompanionVersion);
+    unset($rundizstrap_companion_Version);
 }
 
 
@@ -45,6 +45,6 @@ require_once 'App/vendor/autoload.php';
 
 
 // initialize plugin app main class.
-$rundizstrapCompanionApp = new \RundizstrapCompanion\App\App();
-$rundizstrapCompanionApp->run();
-unset($rundizstrapCompanionApp);
+$rundizstrap_companion_App = new \RundizstrapCompanion\App\App();
+$rundizstrap_companion_App->run();
+unset($rundizstrap_companion_App);

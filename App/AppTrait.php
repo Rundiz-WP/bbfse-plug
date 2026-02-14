@@ -73,7 +73,7 @@ if (!trait_exists('\\RundizstrapCompanion\\App\\AppTrait')) {
             $get_option = get_option($this->main_option_name);
             if (false !== $get_option) {
                 // if option has value.
-                ${$this->main_option_name} = maybe_unserialize($get_option);
+                ${$this->main_option_name} = maybe_unserialize($get_option);// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                 unset($get_option);
                 return (array) ${$this->main_option_name};
             }

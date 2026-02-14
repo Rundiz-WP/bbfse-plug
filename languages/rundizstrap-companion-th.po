@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RundizStrap Companion 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rundizstrap-companion\n"
-"POT-Creation-Date: 2026-02-15T00:17:47+07:00\n"
-"PO-Revision-Date: 2026-02-15 00:18+0700\n"
+"POT-Creation-Date: 2026-02-15T00:43:02+07:00\n"
+"PO-Revision-Date: 2026-02-15 00:43+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -279,6 +279,10 @@ msgstr "คุณกำลังใช้งาน %1$s ของ %2$d."
 #: App/Views/admin/Plugins/Upgrader_v.php:32
 msgid "Start"
 msgstr "เริ่ม"
+
+#: App/Views/admin/readsettings_v.php:15
+msgid "Example of how to access settings values in option db."
+msgstr "ตัวอย่างวิธีการเข้าถึงค่าการตั้งค่าในฐานข้อมูลตัวเลือก."
 
 #. translators: %s PHP code.
 #: App/Views/admin/readsettings_v.php:20

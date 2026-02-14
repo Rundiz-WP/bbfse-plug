@@ -100,4 +100,15 @@
         </properties>
         <!--exclude name="WordPress.WP.I18n.MissingArgDomain"></exclude--><!-- comment out this line if you want to use `__('WordPress core translation text')`, or `esc_html('Text')` -->
     </rule>
+
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+        <properties>
+            <property name="prefixes" type="array">
+                <element value="rundizstrap_companion"/>
+                <element value="rundizstrapCompanion"/>
+                <element value="RUNDIZSTRAP_COMPANION"/>
+                <element value="RundizstrapCompanion"/>
+            </property>
+        </properties>
+    </rule>
 </ruleset>

@@ -346,49 +346,49 @@ if (!function_exists('rundizstrap_companion_block_bsPagination_renderPagePreviou
 
 
 // call to create pagination result in array format. -------------------------------------------------------------
-$rundizstrapCompanionShowPreviousNext = (isset($attributes['showPreviousNext']) && is_bool($attributes['showPreviousNext']) ? $attributes['showPreviousNext'] : true);
-$rundizstrapCompanionPageResult = [];
-if (true === $rundizstrapCompanionShowPreviousNext) {
-    $rundizstrapCompanionPageResult = array_merge(
-        $rundizstrapCompanionPageResult, 
+$rundizstrap_companion_ShowPreviousNext = (isset($attributes['showPreviousNext']) && is_bool($attributes['showPreviousNext']) ? $attributes['showPreviousNext'] : true);
+$rundizstrap_companion_PageResult = [];
+if (true === $rundizstrap_companion_ShowPreviousNext) {
+    $rundizstrap_companion_PageResult = array_merge(
+        $rundizstrap_companion_PageResult, 
         rundizstrap_companion_block_bsPagination_renderPagePrevious(($attributes ?? []), ($content ?? ''), $block)
     );
-}// endif; $rundizstrapCompanionShowPreviousNext previous page.
+}// endif; $rundizstrap_companion_ShowPreviousNext previous page.
 
 if (isset($attributes['showPageNumbers']) && true === $attributes['showPageNumbers']) {
-    $rundizstrapCompanionPageResult = array_merge(
-        $rundizstrapCompanionPageResult, 
+    $rundizstrap_companion_PageResult = array_merge(
+        $rundizstrap_companion_PageResult, 
         rundizstrap_companion_block_bsPagination_renderPageNumbers(($attributes ?? []), ($content ?? ''), $block)
     );
 }// endif; $showPageNumbers
 
-if (true === $rundizstrapCompanionShowPreviousNext) {
-    $rundizstrapCompanionPageResult = array_merge(
-        $rundizstrapCompanionPageResult, 
+if (true === $rundizstrap_companion_ShowPreviousNext) {
+    $rundizstrap_companion_PageResult = array_merge(
+        $rundizstrap_companion_PageResult, 
         rundizstrap_companion_block_bsPagination_renderPageNext(($attributes ?? []), ($content ?? ''), $block)
     );
-}// endif; $rundizstrapCompanionShowPreviousNext next page.
-unset($rundizstrapCompanionShowPreviousNext);
+}// endif; $rundizstrap_companion_ShowPreviousNext next page.
+unset($rundizstrap_companion_ShowPreviousNext);
 // end call to create pagination result in array format. --------------------------------------------------------
 
-if (empty($rundizstrapCompanionPageResult)) {
+if (empty($rundizstrap_companion_PageResult)) {
     // if page result is empty.
     // do nothing here.
-    unset($rundizstrapCompanionPageResult);
+    unset($rundizstrap_companion_PageResult);
     return;
 } else {
     // if page result is not empty.
     // starting to build pagination HTML.
-    $rundizstrapCompanionOutput = rundizstrap_companion_block_bsPagination_generateOutputHTML(($attributes ?? []), ($content ?? ''), $block, $rundizstrapCompanionPageResult);
-    unset($rundizstrapCompanionPageResult);
+    $rundizstrap_companion_Output = rundizstrap_companion_block_bsPagination_generateOutputHTML(($attributes ?? []), ($content ?? ''), $block, $rundizstrap_companion_PageResult);
+    unset($rundizstrap_companion_PageResult);
 
     // get wrapper attributes.
-    $rundizstrapCompanion_wrapper_attributes = get_block_wrapper_attributes();
+    $rundizstrap_companion_wrapper_attributes = get_block_wrapper_attributes();
 
     printf(
         '<nav %1$s aria-label="' . esc_attr__('Pagination', 'rundizstrap-companion') . '">%2$s</nav>',
-        $rundizstrapCompanion_wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-        $rundizstrapCompanionOutput// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        $rundizstrap_companion_wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        $rundizstrap_companion_Output// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     );
-    unset($rundizstrapCompanionOutput, $rundizstrapCompanion_wrapper_attributes);
+    unset($rundizstrap_companion_Output, $rundizstrap_companion_wrapper_attributes);
 }

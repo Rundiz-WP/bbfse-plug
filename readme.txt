@@ -1,4 +1,4 @@
-=== BBFSE plug ===
+=== RundizStrap Companion ===
 Contributors: okvee
 Donate link: https://github.com/sponsors/Rundiz-WP
 Tags: bootstrap
@@ -9,7 +9,7 @@ Requires PHP: 8.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
-A plugin that contains blocks for the Bootstrap Basic FSE theme that help you customize your site in your style. All blocks are based on Bootstrap CSS.
+A plugin that contains blocks for the Bootstrap theme that help you customize your site in your style. All blocks are based on Bootstrap CSS.
 
 == Description ==
 

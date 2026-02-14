@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 <div class="wrap">
-    <h1><?php esc_html_e('Example of how to access settings values in option db.', 'rundizstrap-companionp-companionp-companion'); ?></h1>
+    <h1><?php esc_html_e('Example of how to access settings values in option db.', 'rundizstrap-companion'); ?></h1>
 
     <ol>
         <li><?php printf(

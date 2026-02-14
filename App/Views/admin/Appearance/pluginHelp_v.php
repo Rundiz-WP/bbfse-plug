@@ -28,17 +28,17 @@ if (!defined('ABSPATH')) {
              *              where key is unique name (use alpha-numeric, dash, underscore only) 
              *              and value is tab name.
              */
-            $rundizstrapCompanionAdditionalTabs = apply_filters('rundizstrap_companion_help_tabpane', []);
-            if (is_array($rundizstrapCompanionAdditionalTabs) || is_iterable($rundizstrapCompanionAdditionalTabs)) {
-                foreach ($rundizstrapCompanionAdditionalTabs as $rundizstrapCompanionKey => $rundizstrapCompanionValue) {
+            $rundizstrap_companion_AdditionalTabs = apply_filters('rundizstrap_companion_help_tabpane', []);
+            if (is_array($rundizstrap_companion_AdditionalTabs) || is_iterable($rundizstrap_companion_AdditionalTabs)) {
+                foreach ($rundizstrap_companion_AdditionalTabs as $rundizstrap_companion_Key => $rundizstrap_companion_Value) {
                     echo '<li>';
-                    echo '<a href="#' . sanitize_html_class($rundizstrapCompanionKey) . '">';
-                    echo '<span class="tab-text">' . esc_html($rundizstrapCompanionValue) . '</span>';
+                    echo '<a href="#' . sanitize_html_class($rundizstrap_companion_Key) . '">';
+                    echo '<span class="tab-text">' . esc_html($rundizstrap_companion_Value) . '</span>';
                     echo '</a>';
                     echo '</li>' . PHP_EOL;
                 }// endforeach;
-                unset($rundizstrapCompanionKey, $rundizstrapCompanionValue);
-            }// endif; $rundizstrapCompanionAdditionalTabs
+                unset($rundizstrap_companion_Key, $rundizstrap_companion_Value);
+            }// endif; $rundizstrap_companion_AdditionalTabs
             ?> 
         </ul>
         <div class="tab-content">
@@ -87,9 +87,9 @@ if (!defined('ABSPATH')) {
                 ?></p>
             </div><!-- #tabs-01 -->
             <?php
-            if (is_array($rundizstrapCompanionAdditionalTabs) || is_iterable($rundizstrapCompanionAdditionalTabs)) {
-                foreach ($rundizstrapCompanionAdditionalTabs as $rundizstrapCompanionKey => $rundizstrapCompanionValue) {
-                    echo '<div id="' . sanitize_html_class($rundizstrapCompanionKey) . '">' . PHP_EOL;
+            if (is_array($rundizstrap_companion_AdditionalTabs) || is_iterable($rundizstrap_companion_AdditionalTabs)) {
+                foreach ($rundizstrap_companion_AdditionalTabs as $rundizstrap_companion_Key => $rundizstrap_companion_Value) {
+                    echo '<div id="' . sanitize_html_class($rundizstrap_companion_Key) . '">' . PHP_EOL;
                     /**
                      * Display help tab content in the "RundizStrap Companion" plugin help page.
                      * 
@@ -98,13 +98,13 @@ if (!defined('ABSPATH')) {
                      * 
                      * @since 0.0.1
                      */
-                    do_action('rundizstrap_companion_help_tabcontent_' . $rundizstrapCompanionKey);
+                    do_action('rundizstrap_companion_help_tabcontent_' . $rundizstrap_companion_Key);
                     echo PHP_EOL;
                     echo '</div>' . PHP_EOL;
                 }// endforeach;
-                unset($rundizstrapCompanionKey, $rundizstrapCompanionValue);
-            }// endif; $rundizstrapCompanionAdditionalTabs
-            unset($rundizstrapCompanionAdditionalTabs);
+                unset($rundizstrap_companion_Key, $rundizstrap_companion_Value);
+            }// endif; $rundizstrap_companion_AdditionalTabs
+            unset($rundizstrap_companion_AdditionalTabs);
             ?> 
         </div><!-- .tab-content -->
     </div><!-- .rd-settings-tabs -->
