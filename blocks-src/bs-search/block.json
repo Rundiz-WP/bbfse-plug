@@ -37,7 +37,7 @@
         }
     },
     "category": "widgets",
-    "description": "Display search form in Bootstrap style. This block is in the BBFSE plugin.",
+    "description": "Display search form in Bootstrap style. This block is in the RundizStrap Companion.",
     "editorScript": "file:./index.js",
     "example": {
         "viewportWidth": 350

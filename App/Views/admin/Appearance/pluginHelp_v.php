@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
 
 ?>
 <div class="wrap rundizstrap-companion-appearance-help">
-    <h1><?php esc_html_e('BBFSE Plug help', 'rundizstrap-companion'); ?></h1>
+    <h1><?php esc_html_e('RundizStrap Companion help', 'rundizstrap-companion'); ?></h1>
     <p><?php esc_html_e('Help page for Bootstrap Basic FSE Plugin.', 'rundizstrap-companion'); ?></p>
 
     <div class="rd-settings-tabs tabs-vertical">
@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
             <li><a href="#tabs-01"><span class="tab-text"><?php esc_html_e('Navbar', 'rundizstrap-companion'); ?></span></a></li>
             <?php
             /**
-             * Setup help tab pane in the "BBFSE Plug" plugin help page.
+             * Setup help tab pane in the "RundizStrap Companion" plugin help page.
              * 
              * @since 0.0.1
              * @param array $tabPanes The associative array of tab panes 
@@ -91,7 +91,7 @@ if (!defined('ABSPATH')) {
                 foreach ($rundizstrapCompanionAdditionalTabs as $rundizstrapCompanionKey => $rundizstrapCompanionValue) {
                     echo '<div id="' . sanitize_html_class($rundizstrapCompanionKey) . '">' . PHP_EOL;
                     /**
-                     * Display help tab content in the "BBFSE Plug" plugin help page.
+                     * Display help tab content in the "RundizStrap Companion" plugin help page.
                      * 
                      * If your defined tab pane array key is `my_plugin_help_tab_01`
                      * then the hook can be `rundizstrap_companion_help_tabcontent_my_plugin_help_tab_01`.

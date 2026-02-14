@@ -34,7 +34,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Appearance\\
          */
         public function setupHelpMenu()
         {
-            $hook_suffix = add_theme_page(__('BBFSE Plug help', 'rundizstrap-companion'), __('BBFSE Plug help', 'rundizstrap-companion'), 'edit_theme_options', 'rundizstrap-companion-help', [$this, 'displayHelpPage']);
+            $hook_suffix = add_theme_page(__('RundizStrap Companion help', 'rundizstrap-companion'), __('RundizStrap Companion help', 'rundizstrap-companion'), 'edit_theme_options', 'rundizstrap-companion-help', [$this, 'displayHelpPage']);
             if (is_string($hook_suffix)) {
                 $this->hookSuffix = $hook_suffix;
                 add_action('load-' . $hook_suffix, [$this, 'callEnqueueHook']);

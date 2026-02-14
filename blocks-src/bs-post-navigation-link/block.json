@@ -44,7 +44,7 @@
         }
     },
     "category": "theme",
-    "description": "Displays the next or previous post link in Bootstrap style. This block is in the BBFSE plugin.",
+    "description": "Displays the next or previous post link in Bootstrap style. This block is in the RundizStrap Companion.",
     "editorScript": "file:./index.js",
     "example": {
         "attributes": {

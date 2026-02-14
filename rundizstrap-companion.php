@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: BBFSE plug
+ * Plugin Name: RundizStrap Companion
  * Plugin URI: https://rundiz.com/en/blog/articles-en/wordpress-plugins-themes
  * Description: A plugin that contains blocks for the Bootstrap Basic FSE theme. All blocks are based on Bootstrap CSS.
  * Version: 0.0.2

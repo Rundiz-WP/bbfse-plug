@@ -50,7 +50,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Settings')) 
          */
         public function pluginSettingsMenu()
         {
-            $hook_suffix = add_options_page(__('BBFSE Plug', 'rundizstrap-companion'), __('BBFSE Plug', 'rundizstrap-companion'), 'manage_options', 'rundizstrap-companion-settings', [$this, 'pluginSettingsPage']);
+            $hook_suffix = add_options_page(__('RundizStrap Companion', 'rundizstrap-companion'), __('RundizStrap Companion', 'rundizstrap-companion'), 'manage_options', 'rundizstrap-companion-settings', [$this, 'pluginSettingsPage']);
             if (is_string($hook_suffix)) {
                 $this->hookSuffix = $hook_suffix;
                 add_action('load-' . $hook_suffix, [$this, 'callEnqueueHook']);

@@ -24,7 +24,7 @@
         }
     },
     "category": "theme",
-    "description": "Bootstrap navbar toggler button. This block is in the BBFSE plugin.",
+    "description": "Bootstrap navbar toggler button. This block is in the RundizStrap Companion.",
     "editorScript": "file:./index.js",
     "example": false,
     "icon": "menu",

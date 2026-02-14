@@ -32,7 +32,7 @@
         }
     },
     "category": "theme",
-    "description": "Bootstrap navbar container. This block is in the BBFSE plugin.",
+    "description": "Bootstrap navbar container. This block is in the RundizStrap Companion.",
     "editorScript": "file:./index.js",
     "icon": "layout",
     "keywords": ["bootstrap", "navbar", "container"],

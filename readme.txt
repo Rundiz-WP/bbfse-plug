@@ -75,7 +75,7 @@ If you have the capability to edit theme options, you can access the help page u
 = 0.0.3 =
 2026-02-14
 
-* Renamed from BBFSE Plug -> rundizstrap-companion.
+* Renamed from BBFSE Plug -> RundizStrap Companion.
 
 = 0.0.1 =
 2026-02-06

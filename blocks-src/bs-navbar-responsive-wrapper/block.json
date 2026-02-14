@@ -49,7 +49,7 @@
         }
     },
     "category": "theme",
-    "description": "Wrap the navbar items with collapse or offcanvas. This block is in the BBFSE plugin.",
+    "description": "Wrap the navbar items with collapse or offcanvas. This block is in the RundizStrap Companion.",
     "editorScript": "file:./index.js",
     "icon": "layout",
     "keywords": ["bootstrap", "navbar", "responsive", "wrapper", "collapse", "offcanvas"],

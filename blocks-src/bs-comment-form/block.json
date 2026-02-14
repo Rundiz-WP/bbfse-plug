@@ -8,7 +8,7 @@
         }
     },
     "category": "theme",
-    "description": "Display post comment form in Bootstrap style. This block is in the BBFSE plugin.",
+    "description": "Display post comment form in Bootstrap style. This block is in the RundizStrap Companion.",
     "editorScript": "file:./index.js",
     "example": {
         "attributes": {

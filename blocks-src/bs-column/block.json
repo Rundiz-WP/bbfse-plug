@@ -16,7 +16,7 @@
         }
     },
     "category": "design",
-    "description": "Render Bootstrap column. This block is in the BBFSE plugin.",
+    "description": "Render Bootstrap column. This block is in the RundizStrap Companion.",
     "editorScript": "file:./index.js",
     "example": false,
     "icon": "layout",

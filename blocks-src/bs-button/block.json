@@ -71,7 +71,7 @@
         }
     },
     "category": "design",
-    "description": "Render Bootstrap button. This block is in the BBFSE plugin.",
+    "description": "Render Bootstrap button. This block is in the RundizStrap Companion.",
     "editorScript": "file:./index.js",
     "example": {
         "attributes": {

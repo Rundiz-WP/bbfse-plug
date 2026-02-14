@@ -35,7 +35,7 @@
         }
     },
     "category": "design",
-    "description": "Create <div> element that can customize class, attributes. This block is in BBFSE plugin.",
+    "description": "Create <div> element that can customize class, attributes. This block is in RundizStrap Companion.",
     "editorScript": "file:./index.js",
     "example": false,
     "icon": "editor-code",

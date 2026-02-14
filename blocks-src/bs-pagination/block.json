@@ -34,7 +34,7 @@
         }
     },
     "category": "theme",
-    "description": "Display pagination in Bootstrap style. This block is in the BBFSE plugin.",
+    "description": "Display pagination in Bootstrap style. This block is in the RundizStrap Companion.",
     "editorScript": "file:./index.js",
     "example": {
         "viewportWidth": 600
