@@ -44,7 +44,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Uni
         public function registerHooks()
         {
             // register uninstall hook. MUST be static method or function.
-            register_uninstall_hook(RUNDIZCOMPANION_FILE, ['\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Uninstallation', 'uninstall']);
+            register_uninstall_hook(RUNDIZSTRAP_COMPANION_FILE, ['\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Uninstallation', 'uninstall']);
 
             if (is_multisite()) {
                 // hook on deleted site.

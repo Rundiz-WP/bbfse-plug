@@ -324,7 +324,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Upg
         {
             if (is_array($hook_extra) && array_key_exists('action', $hook_extra) && array_key_exists('type', $hook_extra) && array_key_exists('plugins', $hook_extra)) {
                 if ('update' === $hook_extra['action'] && 'plugin' === $hook_extra['type'] && is_array($hook_extra['plugins']) && !empty($hook_extra['plugins'])) {
-                    $this_plugin = plugin_basename(RUNDIZCOMPANION_FILE);
+                    $this_plugin = plugin_basename(RUNDIZSTRAP_COMPANION_FILE);
                     foreach ($hook_extra['plugins'] as $key => $plugin) {
                         if ($this_plugin === $plugin) {
                             // if this plugin is in the updated plugins.

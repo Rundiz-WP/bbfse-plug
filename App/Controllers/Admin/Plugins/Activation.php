@@ -188,7 +188,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Act
         public function registerHooks()
         {
             // register activate hook
-            register_activation_hook(RUNDIZCOMPANION_FILE, [$this, 'activate']);
+            register_activation_hook(RUNDIZSTRAP_COMPANION_FILE, [$this, 'activate']);
 
             if (is_multisite()) {
                 // hook on create new site (for multisite installation).

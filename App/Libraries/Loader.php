@@ -37,7 +37,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\Loader')) {
          */
         public function autoRegisterControllers()
         {
-            $this_plugin_dir = dirname(RUNDIZCOMPANION_FILE);
+            $this_plugin_dir = dirname(RUNDIZSTRAP_COMPANION_FILE);
             $file_list = $this->getClassFileList($this_plugin_dir . DIRECTORY_SEPARATOR . 'App' . DIRECTORY_SEPARATOR . 'Controllers');
 
             if (is_array($file_list)) {
@@ -123,7 +123,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\Loader')) {
             }
             unset($config_values);
 
-            $this_plugin_dir = dirname(RUNDIZCOMPANION_FILE);
+            $this_plugin_dir = dirname(RUNDIZSTRAP_COMPANION_FILE);
             $file_list = $this->getClassFileList($this_plugin_dir . DIRECTORY_SEPARATOR . 'App' . DIRECTORY_SEPARATOR . 'Update' . DIRECTORY_SEPARATOR . 'Manual');
 
             if (is_array($file_list) && !empty($file_list)) {

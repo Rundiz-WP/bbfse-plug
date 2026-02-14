@@ -61,7 +61,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Dea
         public function registerHooks()
         {
             // register deactivate hook
-            register_deactivation_hook(RUNDIZCOMPANION_FILE, [$this, 'deactivate']);
+            register_deactivation_hook(RUNDIZSTRAP_COMPANION_FILE, [$this, 'deactivate']);
         }// registerHooks
 
 

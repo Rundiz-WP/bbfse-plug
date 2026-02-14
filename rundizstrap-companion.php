@@ -23,18 +23,18 @@ if (!defined('ABSPATH')) {
 
 
 // define this plugin main file path.
-if (!defined('RUNDIZCOMPANION_FILE')) {
-    define('RUNDIZCOMPANION_FILE', __FILE__);
+if (!defined('RUNDIZSTRAP_COMPANION_FILE')) {
+    define('RUNDIZSTRAP_COMPANION_FILE', __FILE__);
 }
 
 
-if (!defined('RUNDIZCOMPANION_VERSION')) {
+if (!defined('RUNDIZSTRAP_COMPANION_VERSION')) {
     // if not defined constant version.
     $rundizstrapCompanionData = (function_exists('get_file_data') ? get_file_data(__FILE__, ['Version' => 'Version']) : null);
     $rundizstrapCompanionVersion = (isset($rundizstrapCompanionData['Version']) ? $rundizstrapCompanionData['Version'] : date('Ym')); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
     unset($rundizstrapCompanionData);
 
-    define('RUNDIZCOMPANION_VERSION', $rundizstrapCompanionVersion);
+    define('RUNDIZSTRAP_COMPANION_VERSION', $rundizstrapCompanionVersion);
 
     unset($rundizstrapCompanionVersion);
 }

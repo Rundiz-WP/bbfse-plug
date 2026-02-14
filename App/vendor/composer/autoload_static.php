@@ -7,9 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInit88d86c5f4dbd33aa6620db67e48907c2
 {
     public static $prefixLengthsPsr4 = array (
-        'B' =>
+        'R' =>
         array (
-            'RundizstrapCompanion\\' => 12,
+            'RundizstrapCompanion\\' => 21,
         ),
     );
 

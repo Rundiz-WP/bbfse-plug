@@ -37,7 +37,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins')) {
             static $plugin;
             
             if (!isset($plugin)) {
-                $plugin = plugin_basename(RUNDIZCOMPANION_FILE);
+                $plugin = plugin_basename(RUNDIZSTRAP_COMPANION_FILE);
             }
             
             if ($plugin === $plugin_file) {
@@ -80,7 +80,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins')) {
             static $plugin;
             
             if (!isset($plugin)) {
-                $plugin = plugin_basename(RUNDIZCOMPANION_FILE);
+                $plugin = plugin_basename(RUNDIZSTRAP_COMPANION_FILE);
             }
             
             if ($plugin === $file) {
