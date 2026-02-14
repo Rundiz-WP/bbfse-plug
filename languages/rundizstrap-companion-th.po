@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RundizStrap Companion 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rundizstrap-companion\n"
-"POT-Creation-Date: 2026-02-14T23:40:52+07:00\n"
-"PO-Revision-Date: 2026-02-14 23:41+0700\n"
+"POT-Creation-Date: 2026-02-15T00:17:47+07:00\n"
+"PO-Revision-Date: 2026-02-15 00:18+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -1229,27 +1229,3 @@ msgstr "ความหมาย"
 msgctxt "block title"
 msgid "Customizable div"
 msgstr "แท็ก div ที่ปรับแต่งได้"
-
-#~ msgid "Bootstrap Basic FSE Plugin settings"
-#~ msgstr "ตั้งค่าปลั๊กอิน Bootstrap Basic FSE"
-
-#~ msgid "Bootstrap Basic FSE plug"
-#~ msgstr "Bootstrap Basic FSE plug"
-
-#~ msgid "BBFSE Plug help"
-#~ msgstr "ความช่วยเหลือของ BBFSE Plug"
-
-#~ msgid "BBFSE Plug"
-#~ msgstr "BBFSE Plug"
-
-#~ msgid "Example of how to access settings values in option db."
-#~ msgstr "ตัวอย่างวิธีการเข้าถึงค่าการตั้งค่าในฐานข้อมูล option."
-
-#~ msgid "Bootstrap navbar container."
-#~ msgstr "คอนเทนเนอร์แถบนำทาง Bootstrap."
-
-#~ msgid "Bootstrap navbar responsive wrapper."
-#~ msgstr "ตัวหุ้มแถบนำทาง Bootstrap ที่ตอบสนองต่อขนาดหน้าจอ."
-
-#~ msgid "Bootstrap navbar navigation."
-#~ msgstr "การนำทางด้วยแถบนำทาง Bootstrap."
