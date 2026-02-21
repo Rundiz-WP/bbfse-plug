@@ -16,9 +16,9 @@ import {
 import { useEffect, useState } from '@wordpress/element';
 
 import {
-    sanitizeAttributeKey,
-    sanitizeAttributeValue,
-} from './sanitizeAttributes.js';
+    rundizstrap_companion_sanitizeAttributeKey,
+    rundizstrap_companion_sanitizeAttributeValue,
+} from './rundizstrap-companion-attributes.js';
 
 
 /**
@@ -43,13 +43,13 @@ export default function KeyValueControl ({ label, value, onChange, prefix = '' }
     }, [value]);
 
     const toSanitizedAttributesObject = (items) => items.reduce((obj, item) => {
-        const sanitizedKey = sanitizeAttributeKey(item.key, prefix);
+        const sanitizedKey = rundizstrap_companion_sanitizeAttributeKey(item.key, prefix);
 
         if (!sanitizedKey) {
             return obj;
         }
 
-        obj[sanitizedKey] = sanitizeAttributeValue(item.val);
+        obj[sanitizedKey] = rundizstrap_companion_sanitizeAttributeValue(item.val);
 
         return obj;
     }, {});
@@ -61,7 +61,7 @@ export default function KeyValueControl ({ label, value, onChange, prefix = '' }
 
         // Check duplicate keys using sanitized format to prevent collisions.
         const keys = newAttributes
-            .map((attr) => sanitizeAttributeKey(attr.key, prefix))
+            .map((attr) => rundizstrap_companion_sanitizeAttributeKey(attr.key, prefix))
             .filter((key) => key !== '');
         const hasDuplicates = keys.some((key, i) => keys.indexOf(key) !== i);
 
