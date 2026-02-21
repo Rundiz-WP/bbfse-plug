@@ -4,7 +4,7 @@ Donate link: https://github.com/sponsors/Rundiz-WP
 Tags: bootstrap
 Requires at least: 6.1
 Tested up to: 7.0
-Stable tag: 0.0.3
+Stable tag: 0.0.4
 Requires PHP: 8.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
@@ -74,6 +74,15 @@ If you have the capability to edit theme options, you can access the help page u
 16. Plugin help page
 
 == Changelog ==
+
+= 0.0.4 =
+2026-02-21
+
+* Include GitHub link to show original source code in readme.txt.
+* Fix include JS without using built-in functions.
+* Update sanitize callback for config.
+* Fix escape and comments what cannot be escape.
+* Rename handle from dash(-) to underscore(_) as suggest by WP plugin reviewer.
 
 = 0.0.3 =
 2026-02-15
