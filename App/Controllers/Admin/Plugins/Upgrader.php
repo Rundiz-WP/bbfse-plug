@@ -284,6 +284,12 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Upg
                     'txtNext' => __('Next', 'rundizstrap-companion'),
                 ]
             );
+            
+            $Loader = new \RundizstrapCompanion\App\Libraries\Loader();
+            $manualUpdateClasses = $Loader->getManualUpdateClasses();
+            unset($Loader);
+            wp_add_inline_script('plugin-template-handle-rd-settings-manual-update', 'var manualUpdateClasses = ' . (!empty($manualUpdateClasses) ? wp_json_encode($manualUpdateClasses) : '') . ';');
+            unset($manualUpdateClasses);
 
             wp_enqueue_script('rundizstrap-companion-handle-rd-settings-manual-update');
         }// registerScripts
