@@ -8,6 +8,7 @@
 import { __, _x } from '@wordpress/i18n';
 
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { safeHTML } from '@wordpress/dom';
 
 import {
     ExternalLink,
@@ -64,6 +65,7 @@ export default function Edit({ attributes, setAttributes }) {
 
     const dataProps = attributesToProps(dataAttributes, 'data-');
     const ariaProps = attributesToProps(ariaAttributes, 'aria-');
+    const sanitizedTextHtml = safeHTML(textHtml || '');
 
     const blockProps = useBlockProps({
         ...dataProps,
@@ -358,12 +360,12 @@ export default function Edit({ attributes, setAttributes }) {
                         </ToolsPanelItem>
                         <ToolsPanelItem
                             hasValue={() => value !== ''}
-                            label={__('Value', 'rundizstrap-companion')}
+                            label={_x('Value', 'Button value', 'rundizstrap-companion')}
                             onDeselect={() => setAttributes({ value: '' })}
                             isShownByDefault
                         >
                             <TextControl
-                                label={__('Value', 'rundizstrap-companion')}
+                                label={_x('Value', 'Button value', 'rundizstrap-companion')}
                                 value={value}
                                 onChange={(value) => setAttributes({ value: value })}
                             />
@@ -388,6 +390,7 @@ export default function Edit({ attributes, setAttributes }) {
                             label={__('Data attributes', 'rundizstrap-companion') + ' '}
                             value={dataAttributes}
                             onChange={(value) => setAttributes({ dataAttributes: value })}
+                            prefix="data-"
                         />
                     </ToolsPanelItem>
                     <ToolsPanelItem
@@ -400,13 +403,14 @@ export default function Edit({ attributes, setAttributes }) {
                             label={__('Aria attributes', 'rundizstrap-companion') + ' '}
                             value={ariaAttributes}
                             onChange={(value) => setAttributes({ ariaAttributes: value })}
+                            prefix="aria-"
                         />
                     </ToolsPanelItem>
                 </ToolsPanel>
             </InspectorControls>
 
             {textHtml ? (
-                <TagName {...blockProps} dangerouslySetInnerHTML={{ __html: textHtml }} />
+                <TagName {...blockProps} dangerouslySetInnerHTML={{ __html: sanitizedTextHtml }} />
             ) : (
                 <TagName {...blockProps} />
             )}
