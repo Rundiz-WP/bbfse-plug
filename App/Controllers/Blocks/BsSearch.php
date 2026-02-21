@@ -61,7 +61,7 @@ if (!class_exists('\\RundizStrapCompanion\\App\\Controllers\\Blocks\\BsSearch'))
         {
             if (function_exists('wp_set_script_translations')) {
                 wp_set_script_translations(
-                    'rundizstrap-companion-blocks-' . static::BLOCK_NAME . '-script', 
+                    'rundizstrap_companion-blocks-' . static::BLOCK_NAME . '-script', 
                     'rundizstrap-companion', 
                     plugin_dir_path(RUNDIZSTRAP_COMPANION_FILE) . 'languages'
                 );

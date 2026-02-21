@@ -80,8 +80,8 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Appearance\\
                 return;
             }
 
-            wp_enqueue_style('rundizstrap-companion-handle-rd-settings-tabs-css');
-            wp_enqueue_script('rundizstrap-companion-handle-rd-settings-tabs-js');
+            wp_enqueue_style('rundizstrap_companion-handle-rd-settings-tabs-css');
+            wp_enqueue_script('rundizstrap_companion-handle-rd-settings-tabs-js');
         }// enqueueStylesScripts
 
 

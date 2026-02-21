@@ -274,7 +274,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Upg
             }
 
             wp_localize_script(
-                'rundizstrap-companion-handle-rd-settings-manual-update',
+                'rundizstrap_companion-handle-rd-settings-manual-update',
                 'RdSettingsManualUpdate',
                 [
                     'alreadyRunUpdateKey' => '',
@@ -293,7 +293,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Upg
             wp_add_inline_script('plugin-template-handle-rd-settings-manual-update', 'var manualUpdateClasses = ' . (!empty($manualUpdateClasses) ? wp_json_encode($manualUpdateClasses) : '') . ';');
             unset($manualUpdateClasses);
 
-            wp_enqueue_script('rundizstrap-companion-handle-rd-settings-manual-update');
+            wp_enqueue_script('rundizstrap_companion-handle-rd-settings-manual-update');
         }// registerScripts
 
 
@@ -309,7 +309,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Upg
                 return;
             }
 
-            wp_enqueue_style('rundizstrap-companion-bootstrap-icons');
+            wp_enqueue_style('rundizstrap_companion-bootstrap-icons');
         }// registerStyles
 
 

@@ -161,21 +161,21 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Settings')) 
                 return;
             }
 
-            wp_enqueue_style('rundizstrap-companion-bootstrap-icons');
+            wp_enqueue_style('rundizstrap_companion-bootstrap-icons');
 
-            wp_enqueue_style('rundizstrap-companion-handle-rd-settings-based-css');
+            wp_enqueue_style('rundizstrap_companion-handle-rd-settings-based-css');
 
-            wp_enqueue_style('rundizstrap-companion-handle-rd-settings-tabs-css');
-            wp_enqueue_script('rundizstrap-companion-handle-rd-settings-tabs-js');
+            wp_enqueue_style('rundizstrap_companion-handle-rd-settings-tabs-css');
+            wp_enqueue_script('rundizstrap_companion-handle-rd-settings-tabs-js');
 
             // you can remove some or all of the line below if you don't use it. ---------
             // css & js for code editor.
-            wp_enqueue_style('rundizstrap-companion-handle-rd-settings-ace-editor-css');
-            wp_enqueue_script('rundizstrap-companion-handle-ace-editor-js');
-            wp_enqueue_script('rundizstrap-companion-handle-rd-settings-ace-editor-js');
+            wp_enqueue_style('rundizstrap_companion-handle-rd-settings-ace-editor-css');
+            wp_enqueue_script('rundizstrap_companion-handle-ace-editor-js');
+            wp_enqueue_script('rundizstrap_companion-handle-rd-settings-ace-editor-js');
             // media uploader
-            wp_enqueue_style('rundizstrap-companion-handle-rd-settings-media-css');
-            wp_enqueue_script('rundizstrap-companion-handle-rd-settings-media-js');
+            wp_enqueue_style('rundizstrap_companion-handle-rd-settings-media-css');
+            wp_enqueue_script('rundizstrap_companion-handle-rd-settings-media-js');
         }// registerScripts
 
 

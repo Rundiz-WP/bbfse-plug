@@ -39,7 +39,7 @@ if (!class_exists('\\RundizStrapCompanion\\App\\Controllers\\Blocks\\BsPaginatio
         public function enqueueBlockAssets()
         {
             if (is_admin()) {
-                wp_enqueue_style('rundizstrap-companion-bootstrap-icons');
+                wp_enqueue_style('rundizstrap_companion-bootstrap-icons');
             }
         }// enqueueBlockAssets
 
@@ -79,7 +79,7 @@ if (!class_exists('\\RundizStrapCompanion\\App\\Controllers\\Blocks\\BsPaginatio
         {
             if (function_exists('wp_set_script_translations')) {
                 wp_set_script_translations(
-                    'rundizstrap-companion-blocks-' . static::BLOCK_NAME . '-script', 
+                    'rundizstrap_companion-blocks-' . static::BLOCK_NAME . '-script', 
                     'rundizstrap-companion', 
                     plugin_dir_path(RUNDIZSTRAP_COMPANION_FILE) . 'languages'
                 );
