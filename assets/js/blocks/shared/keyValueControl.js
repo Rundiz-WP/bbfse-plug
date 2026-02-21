@@ -78,7 +78,7 @@ export default function KeyValueControl ({ label, value, onChange }) {
                         onChange={(val) => updateAttribute(index, 'val', val)}
                     />
                     <Button
-                        isSmall
+                        size="small"
                         isDestructive
                         variant="secondary"
                         icon="trash"
@@ -87,7 +87,7 @@ export default function KeyValueControl ({ label, value, onChange }) {
                     />
                 </div>
             ))}
-            <Button variant="secondary" onClick={addAttribute} isSmall>
+            <Button variant="secondary" onClick={addAttribute} size="small">
                 {__('Add attribute', 'rundizstrap-companion')}
             </Button>
         </div>
