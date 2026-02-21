@@ -29,7 +29,7 @@ import { useSelect } from '@wordpress/data';
 import KeyValueControl from '../../assets/js/blocks/shared/keyValueControl.js';
 
 import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
-import { BLOCKLV_TAG_NAME_OPTIONS, sanitizeTagName } from '../../assets/js/blocks/shared/tagBlockLevel.js';
+import { BLOCKLV_TAG_NAME_OPTIONS, rundizstrap_companion_sanitizeTagName } from '../../assets/js/blocks/shared/rundizstrap-companion-tag-block-level.js';
 
 const DEFAULT_TAG_NAME = 'div';
 
@@ -81,7 +81,7 @@ export default function Edit({ attributes, setAttributes, clientId }) {
         dataAttributes,
         ariaAttributes,
     } = attributes;
-    const TagName = sanitizeTagName(tagName, DEFAULT_TAG_NAME);
+    const TagName = rundizstrap_companion_sanitizeTagName(tagName, DEFAULT_TAG_NAME);
 
     const { hasInnerBlocks } = useSelect(
         (select) => {
@@ -127,7 +127,7 @@ export default function Edit({ attributes, setAttributes, clientId }) {
             <GroupEditControls
                 tagName={TagName}
                 onSelectTagName={(value) =>
-                    setAttributes({ tagName: sanitizeTagName(value, DEFAULT_TAG_NAME) })
+                    setAttributes({ tagName: rundizstrap_companion_sanitizeTagName(value, DEFAULT_TAG_NAME) })
                 }
             />
             <InspectorControls>

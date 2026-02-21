@@ -8,7 +8,7 @@
 import { useInnerBlocksProps, useBlockProps } from '@wordpress/block-editor';
 
 import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
-import { sanitizeTagName } from '../../assets/js/blocks/shared/tagBlockLevel.js';
+import { rundizstrap_companion_sanitizeTagName } from '../../assets/js/blocks/shared/rundizstrap-companion-tag-block-level.js';
 
 const DEFAULT_TAG_NAME = 'div';
 
@@ -30,7 +30,7 @@ export default function Save({ attributes }) {
         dataAttributes,
         ariaAttributes,
     } = attributes;
-    const Tag = sanitizeTagName(tagName, DEFAULT_TAG_NAME);
+    const Tag = rundizstrap_companion_sanitizeTagName(tagName, DEFAULT_TAG_NAME);
 
     const blockProps = useBlockProps.save({
         ...(accesskey ? { accessKey: accesskey } : {}),

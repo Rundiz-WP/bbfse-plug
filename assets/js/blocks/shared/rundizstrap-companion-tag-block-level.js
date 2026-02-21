@@ -26,7 +26,7 @@ export const ALLOWED_BLOCKLV_TAG_NAMES = new Set(BLOCKLV_TAG_NAME_OPTIONS);
  * @param {string} defaultTagName Manually-defined default tag for each block.
  * @returns {string}
  */
-export function sanitizeTagName(tagName, defaultTagName) {
+export function rundizstrap_companion_sanitizeTagName(tagName, defaultTagName) {
     const normalizedTagName = String(tagName || '').trim().toLowerCase();
     const normalizedDefaultTagName = String(defaultTagName || '').trim().toLowerCase();
 
@@ -39,4 +39,4 @@ export function sanitizeTagName(tagName, defaultTagName) {
     }
 
     return 'div';
-}
+}// rundizstrap_companion_sanitizeTagName
