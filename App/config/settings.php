@@ -33,6 +33,7 @@ return [
                     ],
                     'title' => __('Enqueue Bootstrap', 'rundizstrap-companion'),
                     'type' => 'checkbox',
+                    'sanitize_callback' => 'sanitize_text_field',
                 ],
             ],
         ],// end general fields
