@@ -3,6 +3,7 @@
  *
  * @package rundizstrap-companion
  * @since 0.0.4
+ * @link https://www.geeksforgeeks.org/html/html-block-and-inline-elements/ Example list of HTML block level.
  */
 
 export const BLOCKLV_TAG_NAME_OPTIONS = [

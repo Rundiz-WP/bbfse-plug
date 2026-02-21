@@ -7,7 +7,10 @@
 
 import { useInnerBlocksProps, useBlockProps } from '@wordpress/block-editor';
 
-import attributesToProps from '../../assets/js/blocks/shared/attributesToProps.js';
+import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
+import { sanitizeTagName } from '../../assets/js/blocks/shared/tagBlockLevel.js';
+
+const DEFAULT_TAG_NAME = 'div';
 
 /**
  * Save component for customizable div block.
@@ -18,7 +21,7 @@ import attributesToProps from '../../assets/js/blocks/shared/attributesToProps.j
  */
 export default function Save({ attributes }) {
     const {
-        tagName: Tag = 'div',
+        tagName,
         accesskey,
         lang,
         role,
@@ -27,6 +30,7 @@ export default function Save({ attributes }) {
         dataAttributes,
         ariaAttributes,
     } = attributes;
+    const Tag = sanitizeTagName(tagName, DEFAULT_TAG_NAME);
 
     const blockProps = useBlockProps.save({
         ...(accesskey ? { accessKey: accesskey } : {}),
@@ -34,8 +38,8 @@ export default function Save({ attributes }) {
         ...(role ? { role } : {}),
         ...(Number.isInteger(tabindex) ? { tabIndex: tabindex } : {}),
         ...(title ? { title } : {}),
-        ...attributesToProps(dataAttributes, 'data-'),
-        ...attributesToProps(ariaAttributes, 'aria-'),
+        ...rundizstrap_companion_attribute_to_props(dataAttributes, 'data-'),
+        ...rundizstrap_companion_attribute_to_props(ariaAttributes, 'aria-'),
     });
 
     const innerBlocksProps = useInnerBlocksProps.save(blockProps);

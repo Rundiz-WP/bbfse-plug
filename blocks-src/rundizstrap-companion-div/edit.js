@@ -28,7 +28,10 @@ import { useSelect } from '@wordpress/data';
 
 import KeyValueControl from '../../assets/js/blocks/shared/keyValueControl.js';
 
-import attributesToProps from '../../assets/js/blocks/shared/attributesToProps.js';
+import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
+import { BLOCKLV_TAG_NAME_OPTIONS, sanitizeTagName } from '../../assets/js/blocks/shared/tagBlockLevel.js';
+
+const DEFAULT_TAG_NAME = 'div';
 
 /**
  * Render inspector controls for the block.
@@ -39,6 +42,11 @@ import attributesToProps from '../../assets/js/blocks/shared/attributesToProps.j
  * @return {JSX.Element} The control group.
  */
 function GroupEditControls({ tagName, onSelectTagName }) {
+    const tagNameOptions = BLOCKLV_TAG_NAME_OPTIONS.map((item) => ({
+        label: (item === DEFAULT_TAG_NAME ? __('Default (<div>)', 'rundizstrap-companion') : '<' + item + '>'),
+        value: item,
+    }));
+
     return (
         <InspectorControls group="advanced">
             <SelectControl
@@ -46,15 +54,7 @@ function GroupEditControls({ tagName, onSelectTagName }) {
                 label={__('HTML element', 'rundizstrap-companion')}
                 value={tagName}
                 onChange={onSelectTagName}
-                options={[
-                    { label: __('Default (<div>)', 'rundizstrap-companion'), value: 'div' },
-                    { label: '<header>', value: 'header' },
-                    { label: '<main>', value: 'main' },
-                    { label: '<section>', value: 'section' },
-                    { label: '<article>', value: 'article' },
-                    { label: '<aside>', value: 'aside' },
-                    { label: '<footer>', value: 'footer' },
-                ]}
+                options={tagNameOptions}
             />
         </InspectorControls>
     );
@@ -72,7 +72,7 @@ function GroupEditControls({ tagName, onSelectTagName }) {
  */
 export default function Edit({ attributes, setAttributes, clientId }) {
     const {
-        tagName: TagName = 'div',
+        tagName,
         accesskey,
         lang,
         role,
@@ -81,6 +81,7 @@ export default function Edit({ attributes, setAttributes, clientId }) {
         dataAttributes,
         ariaAttributes,
     } = attributes;
+    const TagName = sanitizeTagName(tagName, DEFAULT_TAG_NAME);
 
     const { hasInnerBlocks } = useSelect(
         (select) => {
@@ -104,8 +105,8 @@ export default function Edit({ attributes, setAttributes, clientId }) {
         ...(role ? { role } : {}),
         ...(Number.isInteger(tabindex) ? { tabIndex: tabindex } : {}),
         ...(title ? { title } : {}),
-        ...attributesToProps(dataAttributes, 'data-'),
-        ...attributesToProps(ariaAttributes, 'aria-'),
+        ...rundizstrap_companion_attribute_to_props(dataAttributes, 'data-'),
+        ...rundizstrap_companion_attribute_to_props(ariaAttributes, 'aria-'),
     });
 
     let renderAppender;
@@ -126,7 +127,7 @@ export default function Edit({ attributes, setAttributes, clientId }) {
             <GroupEditControls
                 tagName={TagName}
                 onSelectTagName={(value) =>
-                    setAttributes({ tagName: value })
+                    setAttributes({ tagName: sanitizeTagName(value, DEFAULT_TAG_NAME) })
                 }
             />
             <InspectorControls>
@@ -231,6 +232,7 @@ export default function Edit({ attributes, setAttributes, clientId }) {
                             label={__('Data attributes', 'rundizstrap-companion') + ' '}
                             value={dataAttributes}
                             onChange={(value) => setAttributes({ dataAttributes: value })}
+                            prefix="data-"
                         />
                     </ToolsPanelItem>
                     <ToolsPanelItem
@@ -243,6 +245,7 @@ export default function Edit({ attributes, setAttributes, clientId }) {
                             label={__('Aria attributes', 'rundizstrap-companion') + ' '}
                             value={ariaAttributes}
                             onChange={(value) => setAttributes({ ariaAttributes: value })}
+                            prefix="aria-"
                         />
                     </ToolsPanelItem>
                 </ToolsPanel>
