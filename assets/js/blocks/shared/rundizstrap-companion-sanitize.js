@@ -7,6 +7,39 @@
 
 
 /**
+ * Sanitizes an HTML classname to ensure it only contains valid characters.
+ *
+ * Strips the string down to A-Z, a-z, 0-9, `_`, `-`. If this results in an
+ * empty string, the alternative value supplied via `fallback` is returned instead.
+ *
+ * @see https://developer.wordpress.org/reference/functions/sanitize_html_class/
+ * @since 0.0.4
+ * @param {string} classname - The classname to be sanitized.
+ * @param {string} [fallback=''] - The value to return if the sanitization ends up as an empty string.
+ * @returns {string} The sanitized value.
+ */
+export default function rundizstrap_companion_sanitize_html_class( classname, fallback = '' ) {
+    if (typeof(classname) !== 'string') {
+        return classname;
+    }
+
+    // Strip out any percent-encoded characters (e.g. %20, %3A).
+    let sanitized = classname.replace( /%[a-fA-F0-9][a-fA-F0-9]/g, '' );
+
+    // Limit to A-Z, a-z, 0-9, underscore, and hyphen — strip everything else.
+    sanitized = sanitized.replace( /[^A-Za-z0-9_-]/g, '' );
+
+    // If the result is empty and a fallback is provided,
+    // recursively sanitize the fallback and return it instead.
+    if ( sanitized === '' && fallback ) {
+        return rundizstrap_companion_sanitize_html_class( fallback );
+    }
+
+    return sanitized;
+}// rundizstrap_companion_sanitize_html_class
+
+
+/**
  * Sanitize text similarly to WordPress `sanitize_text_field()` internals
  * (`_sanitize_text_fields( $str, false )`), without UTF-8 validation.
  *
