@@ -26,9 +26,13 @@ import { useSelect } from '@wordpress/data';
 
 import { store as coreDataStore } from '@wordpress/core-data';
 
+import { safeHTML } from '@wordpress/dom';
+
 import RundizStrapCompanionKeyValueCtrl from '../../assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js';
 
 import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
+
+import rundizstrap_companion_sanitize_text_field from '../../assets/js/blocks/shared/rundizstrap-companion-sanitize.js';
 
 
 export default function Edit({ context: { postType }, attributes, setAttributes }) {
@@ -50,6 +54,9 @@ export default function Edit({ context: { postType }, attributes, setAttributes 
     const defaultLabel = (isNext ? __('Next', 'rundizstrap-companion') : __('Previous', 'rundizstrap-companion'));
     const isObjectEmpty = (obj) => Object.keys(obj || {}).length === 0;
     const previewTitle = __('An example title', 'rundizstrap-companion');
+    const sanitizedRel = rundizstrap_companion_sanitize_text_field(rel || '');
+    const sanitizedPrependTextHtml = safeHTML(prependTextHtml || '');
+    const sanitizedAppendTextHtml = safeHTML(appendTextHtml || '');
 
     const taxonomies = useSelect(
         (select) => {
@@ -70,7 +77,7 @@ export default function Edit({ context: { postType }, attributes, setAttributes 
 
     const blockProps = useBlockProps({
         className: 'post-navigation-link-' + type,
-        rel: (rel ? rel : defaultRel),
+        rel: (sanitizedRel ? sanitizedRel : defaultRel),
         ...(Number.isInteger(tabindex) ? { tabIndex: tabindex } : {}),
         ...rundizstrap_companion_attribute_to_props(dataAttributes, 'data-'),
         ...rundizstrap_companion_attribute_to_props(ariaAttributes, 'aria-'),
@@ -195,6 +202,7 @@ export default function Edit({ context: { postType }, attributes, setAttributes 
                             label={__('Data attributes', 'rundizstrap-companion') + ' '}
                             value={dataAttributes}
                             onChange={(value) => setAttributes({ dataAttributes: value })}
+                            prefix="data-"
                         />
                     </ToolsPanelItem>
                     <ToolsPanelItem
@@ -207,6 +215,7 @@ export default function Edit({ context: { postType }, attributes, setAttributes 
                             label={__('Aria attributes', 'rundizstrap-companion') + ' '}
                             value={ariaAttributes}
                             onChange={(value) => setAttributes({ ariaAttributes: value })}
+                            prefix="aria-"
                         />
                     </ToolsPanelItem>
                 </ToolsPanel>
@@ -226,7 +235,7 @@ export default function Edit({ context: { postType }, attributes, setAttributes 
 
             <a {...blockProps}>
                 {!!prependTextHtml && (
-                    <span dangerouslySetInnerHTML={{ __html: prependTextHtml }} />
+                    <span dangerouslySetInnerHTML={{ __html: sanitizedPrependTextHtml }} />
                 )}
                 {showTitle ? (
                     <>{previewTitle}</>
@@ -242,7 +251,7 @@ export default function Edit({ context: { postType }, attributes, setAttributes 
                     />
                 )}
                 {!!appendTextHtml && (
-                    <span dangerouslySetInnerHTML={{ __html: appendTextHtml }} />
+                    <span dangerouslySetInnerHTML={{ __html: sanitizedAppendTextHtml }} />
                 )}
             </a>
         </>

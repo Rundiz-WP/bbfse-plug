@@ -39,7 +39,10 @@ if (!function_exists('rundizstrap_companion_block_bsPostNavigationLink_render'))
             return '';
         }
 
-        $attTaxonomy = (isset($attributes['taxonomy']) && is_string($attributes['taxonomy']) ? trim($attributes['taxonomy']) : '');
+        $attTaxonomy = (isset($attributes['taxonomy']) && is_string($attributes['taxonomy']) ? sanitize_key($attributes['taxonomy']) : '');
+        if ('' !== $attTaxonomy && !taxonomy_exists($attTaxonomy)) {
+            $attTaxonomy = '';
+        }
         $adjacentPost = get_adjacent_post(
             ('' !== $attTaxonomy),
             '',
@@ -96,47 +99,46 @@ if (!function_exists('rundizstrap_companion_block_bsPostNavigationLink_render'))
         if ('' === $rel) {
             $rel = ('next' === $attType ? 'next' : 'prev');
         }
+        $rel = sanitize_text_field($rel);
         unset($attType);
 
         $tabindex = (isset($attributes['tabindex']) && is_int($attributes['tabindex']) ? $attributes['tabindex'] : null);
 
-        $dataAttributes = '';
-        if (isset($attributes['dataAttributes']) && is_array($attributes['dataAttributes'])) {
-            foreach ($attributes['dataAttributes'] as $key => $value) {
+        $Sanitize = new \RundizstrapCompanion\App\Libraries\Sanitize();
+        $buildCustomAttributes = static function (array $attributeValues, string $attributePrefix) use ($Sanitize): string {
+            $output = '';
+            foreach ($attributeValues as $key => $value) {
                 if (!is_string($key) || '' === trim($key)) {
                     continue;
                 }
                 if (is_array($value) || is_object($value)) {
                     continue;
                 }
-                $sanitizedKey = preg_replace('/[^A-Za-z0-9_\-]/', '', trim($key));
+
+                $sanitizedKey = $Sanitize->attributeKey($key, $attributePrefix);
                 if ('' === $sanitizedKey) {
                     continue;
                 }
-                $dataAttributes .= ' data-' . esc_attr($sanitizedKey) . '="' . esc_attr((string) $value) . '"';
+
+                $sanitizedValue = $Sanitize->attributeValue((string) $value);
+                $output .= ' ' . $attributePrefix . esc_attr($sanitizedKey) . '="' . esc_attr($sanitizedValue) . '"';
             }// endforeach;
             unset($key, $value);
-            unset($sanitizedKey);
+            unset($sanitizedKey, $sanitizedValue);
+
+            return $output;
+        };
+
+        $dataAttributes = '';
+        if (isset($attributes['dataAttributes']) && is_array($attributes['dataAttributes'])) {
+            $dataAttributes = $buildCustomAttributes($attributes['dataAttributes'], 'data-');
         }// endif;
 
         $ariaAttributes = '';
         if (isset($attributes['ariaAttributes']) && is_array($attributes['ariaAttributes'])) {
-            foreach ($attributes['ariaAttributes'] as $key => $value) {
-                if (!is_string($key) || '' === trim($key)) {
-                    continue;
-                }
-                if (is_array($value) || is_object($value)) {
-                    continue;
-                }
-                $sanitizedKey = preg_replace('/[^A-Za-z0-9_\-]/', '', trim($key));
-                if ('' === $sanitizedKey) {
-                    continue;
-                }
-                $ariaAttributes .= ' aria-' . esc_attr($sanitizedKey) . '="' . esc_attr((string) $value) . '"';
-            }// endforeach;
-            unset($key, $value);
-            unset($sanitizedKey);
+            $ariaAttributes = $buildCustomAttributes($attributes['ariaAttributes'], 'aria-');
         }// endif;
+        unset($buildCustomAttributes, $Sanitize);
 
         return sprintf(
             '<a href="%1$s" class="%2$s" rel="%3$s"%4$s%5$s%6$s>%7$s</a>',
