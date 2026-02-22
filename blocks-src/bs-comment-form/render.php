@@ -14,6 +14,7 @@ if (!defined('ABSPATH')) {
     exit();
 }
 
+
 use RundizstrapCompanion\App\Libraries\Sanitize;
 
 
