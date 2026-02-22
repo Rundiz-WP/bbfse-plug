@@ -30,6 +30,11 @@ import { useSelect } from '@wordpress/data';
 
 import RundizStrapCompanionKeyValueCtrl from '../../assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js';
 
+import { rundizstrap_companion_blockLevelTagNameOptions, rundizstrap_companion_sanitizeTagName } from '../../assets/js/blocks/shared/rundizstrap-companion-tag-block-level.js';
+
+
+const DEFAULT_TAG_NAME = 'div';
+
 
 /**
  * Render inspector controls for the block.
@@ -40,6 +45,11 @@ import RundizStrapCompanionKeyValueCtrl from '../../assets/js/blocks/shared/rund
  * @return {JSX.Element} The control group.
  */
 function GroupEditControls({ tagName, onSelectTagName }) {
+    const tagNameOptions = rundizstrap_companion_blockLevelTagNameOptions.map((item) => ({
+        label: (item === DEFAULT_TAG_NAME ? __('Default (<div>)', 'rundizstrap-companion') : '<' + item + '>'),
+        value: item,
+    }));
+
     return (
         <InspectorControls group="advanced">
             <SelectControl
@@ -47,15 +57,7 @@ function GroupEditControls({ tagName, onSelectTagName }) {
                 label={__('HTML element', 'rundizstrap-companion')}
                 value={tagName}
                 onChange={onSelectTagName}
-                options={[
-                    { label: __('Default (<div>)', 'rundizstrap-companion'), value: 'div' },
-                    { label: '<header>', value: 'header' },
-                    { label: '<main>', value: 'main' },
-                    { label: '<section>', value: 'section' },
-                    { label: '<article>', value: 'article' },
-                    { label: '<aside>', value: 'aside' },
-                    { label: '<footer>', value: 'footer' },
-                ]}
+                options={tagNameOptions}
             />
         </InspectorControls>
     );
@@ -73,11 +75,12 @@ function GroupEditControls({ tagName, onSelectTagName }) {
  */
 function GroupEdit({ attributes, setAttributes, clientId }) {
     const {
-        tagName: TagName = 'div',
+        tagName,
         className,
         dataAttributes,
         ariaAttributes,
     } = attributes;
+    const TagName = rundizstrap_companion_sanitizeTagName(tagName, DEFAULT_TAG_NAME);
 
     const { hasInnerBlocks } = useSelect(
         (select) => {
@@ -129,7 +132,7 @@ function GroupEdit({ attributes, setAttributes, clientId }) {
             <GroupEditControls
                 tagName={TagName}
                 onSelectTagName={(value) =>
-                    setAttributes({ tagName: value })
+                    setAttributes({ tagName: rundizstrap_companion_sanitizeTagName(value, DEFAULT_TAG_NAME) })
                 }
             />
             {!hasContainerClass && (

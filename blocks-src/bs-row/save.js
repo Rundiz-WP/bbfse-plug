@@ -9,6 +9,11 @@ import { useInnerBlocksProps, useBlockProps } from '@wordpress/block-editor';
 
 import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
 
+import { rundizstrap_companion_sanitizeTagName } from '../../assets/js/blocks/shared/rundizstrap-companion-tag-block-level.js';
+
+
+const DEFAULT_TAG_NAME = 'div';
+
 
 /**
  * Save component for Bootstrap row block.
@@ -18,7 +23,10 @@ import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/sha
  * @param {Object} props.attributes Block attributes.
  * @return {JSX.Element} The saved element.
  */
-export default function save({ attributes: { tagName: Tag = 'div', dataAttributes, ariaAttributes } }) {
+export default function Save({ attributes }) {
+    const { tagName, dataAttributes, ariaAttributes } = attributes;
+    const Tag = rundizstrap_companion_sanitizeTagName(tagName, DEFAULT_TAG_NAME);
+
     // Merge 'row' class with WordPress auto-generated classes.
     const blockProps = useBlockProps.save({
         className: 'row',
@@ -30,4 +38,4 @@ export default function save({ attributes: { tagName: Tag = 'div', dataAttribute
     const innerBlocksProps = useInnerBlocksProps.save(blockProps);
 
     return <Tag {...innerBlocksProps} />;
-}// save
+}// Save
