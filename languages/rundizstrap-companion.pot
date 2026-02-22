@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-22T13:28:35+07:00\n"
+"POT-Creation-Date: 2026-02-22T14:48:55+07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: rundizstrap-companion\n"
@@ -294,28 +294,28 @@ msgstr ""
 msgid "RundizStrap Companion settings"
 msgstr ""
 
-#: blocks/bs-comment-form/render.php:61
+#: blocks/bs-comment-form/render.php:64
 msgid "Name"
 msgstr ""
 
-#: blocks/bs-comment-form/render.php:65
+#: blocks/bs-comment-form/render.php:68
 msgid "Email"
 msgstr ""
 
-#: blocks/bs-comment-form/render.php:69
+#: blocks/bs-comment-form/render.php:72
 msgid "Website"
 msgstr ""
 
-#: blocks/bs-comment-form/render.php:79
+#: blocks/bs-comment-form/render.php:82
 msgid "Save my name, email, and website in this browser for the next time I comment."
 msgstr ""
 
-#: blocks/bs-comment-form/render.php:89
+#: blocks/bs-comment-form/render.php:92
 #: blocks/bs-comment-form/index.js:1
 msgid "Comment"
 msgstr ""
 
-#: blocks/bs-comment-form/render.php:96
+#: blocks/bs-comment-form/render.php:99
 msgid "Your email address will not be published."
 msgstr ""
 
@@ -343,24 +343,24 @@ msgstr ""
 msgid "Pagination"
 msgstr ""
 
-#: blocks/bs-post-navigation-link/render.php:59
+#: blocks/bs-post-navigation-link/render.php:62
 msgctxt "label for next post link"
 msgid "Next"
 msgstr ""
 
-#: blocks/bs-post-navigation-link/render.php:59
+#: blocks/bs-post-navigation-link/render.php:62
 msgctxt "label for previous post link"
 msgid "Previous"
 msgstr ""
 
-#: blocks/bs-post-navigation-link/render.php:64
+#: blocks/bs-post-navigation-link/render.php:67
 #: blocks/bs-navbar-navigation/index.js:1
 msgid "(no title)"
 msgstr ""
 
 #: blocks/bs-search/render.php:36
 #: blocks/bs-search/render.php:42
-#: blocks/bs-search/render.php:91
+#: blocks/bs-search/render.php:99
 #: blocks/bs-search/index.js:1
 msgid "Search"
 msgstr ""
