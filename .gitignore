@@ -1,3 +1,4 @@
 /.backup
+/.dev-notes/todo*
 /.dist
 /node_modules
