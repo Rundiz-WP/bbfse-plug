@@ -29,7 +29,7 @@ import { store as coreDataStore } from '@wordpress/core-data';
 
 import { decodeEntities } from '@wordpress/html-entities';
 
-import ServerSideRender from '@wordpress/server-side-render';
+import { ServerSideRender } from '@wordpress/server-side-render';
 
 import metadata from './block.json';
 
