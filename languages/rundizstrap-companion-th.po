@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RundizStrap Companion 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rundizstrap-companion\n"
-"POT-Creation-Date: 2026-02-22T21:52:46+07:00\n"
-"PO-Revision-Date: 2026-02-22 21:52+0700\n"
+"POT-Creation-Date: 2026-02-23T04:02:05+07:00\n"
+"PO-Revision-Date: 2026-02-23 04:02+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -176,7 +176,7 @@ msgid "Upload"
 msgstr "อัปโหลด"
 
 #: App/Libraries/RundizSettings.php:734
-#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:105 blocks/bs-button/index.js:1
+#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:109 blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
 #: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
 #: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
@@ -304,31 +304,31 @@ msgstr "ตอนนี้คุณสามารถใช้ตัวแปร
 msgid "RundizStrap Companion settings"
 msgstr "ตั้งค่า RundizStrap Companion"
 
-#: blocks/bs-comment-form/render.php:64
+#: blocks/bs-comment-form/render.php:67
 msgid "Name"
 msgstr "ชื่อ"
 
-#: blocks/bs-comment-form/render.php:68
+#: blocks/bs-comment-form/render.php:71
 msgid "Email"
 msgstr "อีเมล"
 
-#: blocks/bs-comment-form/render.php:72
+#: blocks/bs-comment-form/render.php:75
 msgid "Website"
 msgstr "เว็บไซต์"
 
-#: blocks/bs-comment-form/render.php:82
+#: blocks/bs-comment-form/render.php:85
 msgid "Save my name, email, and website in this browser for the next time I comment."
 msgstr "บันทึกชื่อ อีเมล และเว็บไซต์ของฉันลงในเบราว์เซอร์นี้สำหรับการแสดงความคิดเห็นครั้งต่อไป."
 
-#: blocks/bs-comment-form/render.php:92 blocks/bs-comment-form/index.js:1
+#: blocks/bs-comment-form/render.php:95 blocks/bs-comment-form/index.js:1
 msgid "Comment"
 msgstr "ความคิดเห็น"
 
-#: blocks/bs-comment-form/render.php:99
+#: blocks/bs-comment-form/render.php:102
 msgid "Your email address will not be published."
 msgstr "ที่อยู่อีเมลของคุณจะไม่ถูกเผยแพร่."
 
-#: blocks/bs-navbar-navigation/render.php:63 blocks/bs-navbar-navigation/render.php:76
+#: blocks/bs-navbar-navigation/render.php:64 blocks/bs-navbar-navigation/render.php:77
 msgid "This navigation is empty."
 msgstr "เมนูนำทางนี้ว่างเปล่า"
 
@@ -362,12 +362,12 @@ msgstr "ก่อนหน้า"
 msgid "(no title)"
 msgstr "(ไม่มีไตเติล)"
 
-#: blocks/bs-search/render.php:36 blocks/bs-search/render.php:42 blocks/bs-search/render.php:99
+#: blocks/bs-search/render.php:39 blocks/bs-search/render.php:46 blocks/bs-search/render.php:100
 #: blocks/bs-search/index.js:1
 msgid "Search"
 msgstr "ค้นหา"
 
-#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:90 blocks/bs-button/index.js:1
+#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:92 blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
 #: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
 #: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
@@ -375,7 +375,7 @@ msgstr "ค้นหา"
 msgid "Key"
 msgstr "Key"
 
-#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:95 blocks/bs-button/index.js:1
+#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:98 blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
 #: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
 #: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
@@ -383,7 +383,7 @@ msgstr "Key"
 msgid "Value"
 msgstr "ค่า"
 
-#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:110 blocks/bs-button/index.js:1
+#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:114 blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
 #: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
 #: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
