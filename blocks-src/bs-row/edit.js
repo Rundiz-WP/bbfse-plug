@@ -143,6 +143,7 @@ function GroupEdit({ attributes, setAttributes, clientId }) {
                             label={__('Data attributes', 'rundizstrap-companion') + ' '}
                             value={dataAttributes}
                             onChange={(value) => setAttributes({ dataAttributes: value })}
+                            prefix="data-"
                         />
                     </ToolsPanelItem>
                     <ToolsPanelItem
@@ -155,6 +156,7 @@ function GroupEdit({ attributes, setAttributes, clientId }) {
                             label={__('Aria attributes', 'rundizstrap-companion') + ' '}
                             value={ariaAttributes}
                             onChange={(value) => setAttributes({ ariaAttributes: value })}
+                            prefix="aria-"
                         />
                     </ToolsPanelItem>
                 </ToolsPanel>
