@@ -9,6 +9,7 @@ import { useBlockProps } from '@wordpress/block-editor';
 
 import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
 
+
 export default function Save({ attributes }) {
     const {
         tagName,
@@ -80,4 +81,4 @@ export default function Save({ attributes }) {
     return (
         <TagName {...elementProps} />
     );
-}
+}// Save

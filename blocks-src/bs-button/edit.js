@@ -8,6 +8,7 @@
 import { __, _x } from '@wordpress/i18n';
 
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+
 import { safeHTML } from '@wordpress/dom';
 
 import {
@@ -25,6 +26,7 @@ import { useEffect } from '@wordpress/element';
 import RundizStrapCompanionKeyValueCtrl from '../../assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js';
 
 import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
+
 
 export default function Edit({ attributes, setAttributes }) {
     const {
@@ -416,4 +418,4 @@ export default function Edit({ attributes, setAttributes }) {
             )}
         </>
     );
-}
+}// Edit

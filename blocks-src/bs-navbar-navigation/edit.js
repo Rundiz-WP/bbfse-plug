@@ -35,6 +35,7 @@ import metadata from './block.json';
 
 import RundizStrapCompanionKeyValueCtrl from '../../assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js';
 
+
 export default function Edit({ attributes, setAttributes }) {
     const { navigationRef, dataAttributes, ariaAttributes, dropdownClassName } = attributes;
 
@@ -182,4 +183,4 @@ export default function Edit({ attributes, setAttributes }) {
             </div>
         </>
     );
-}
+}// Edit

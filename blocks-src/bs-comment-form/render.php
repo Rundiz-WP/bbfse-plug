@@ -120,6 +120,10 @@ if (!function_exists('rundizstrap_companion_block_bsCommentForm_render')) {
     }// rundizstrap_companion_block_bsCommentForm_render
 }
 
+
+// The echo below will be render HTML comment form.
+// It cannot escape HTML or the design will break.
+// The input values are already sanitize and escape inside the function above.
 // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 echo rundizstrap_companion_block_bsCommentForm_render(
     ($attributes ?? []),

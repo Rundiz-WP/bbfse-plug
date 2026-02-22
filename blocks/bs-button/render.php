@@ -142,10 +142,10 @@ if (!function_exists('rundizstrap_companion_block_bsButton_render')) {
     }// rundizstrap_companion_block_bsButton_render
 }// endif;
 
+
 // The echo below will be render HTML button or something that looks like a button.
 // It cannot escape HTML or the design will break.
 // The input values are already sanitize and escape inside the function above.
-// Trust those code scanners but not knowing the code or inexperienced cause wrong fix and waste of time!
 // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 echo rundizstrap_companion_block_bsButton_render(
     ($attributes ?? []),

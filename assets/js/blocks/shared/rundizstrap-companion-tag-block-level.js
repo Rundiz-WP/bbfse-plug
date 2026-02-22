@@ -16,7 +16,9 @@ export const rundizstrap_companion_blockLevelTagNameOptions = [
     'footer',
 ];
 
+
 export const rundizstrap_companion_allowedBlockLevelTagNames = new Set(rundizstrap_companion_blockLevelTagNameOptions);
+
 
 /**
  * Sanitize tag name and fallback to provided default tag.

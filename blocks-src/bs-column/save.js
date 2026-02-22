@@ -9,6 +9,7 @@ import { useInnerBlocksProps, useBlockProps } from '@wordpress/block-editor';
 
 import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
 
+
 /**
  * Save component for Bootstrap column block.
  * Outputs simple wrapper with user chosen tag.
@@ -27,4 +28,4 @@ export default function save({ attributes: { tagName: Tag = 'div', dataAttribute
     const innerBlocksProps = useInnerBlocksProps.save(blockProps);
 
     return <Tag {...innerBlocksProps} />;
-}
+}// save

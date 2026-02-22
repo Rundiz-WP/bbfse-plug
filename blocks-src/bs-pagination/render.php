@@ -397,4 +397,4 @@ if (empty($rundizstrap_companion_PageResult)) {
         $rundizstrap_companion_Output// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     );
     unset($rundizstrap_companion_Output, $rundizstrap_companion_wrapper_attributes);
-}
+}// endif;

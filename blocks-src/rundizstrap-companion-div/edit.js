@@ -29,10 +29,14 @@ import { useSelect } from '@wordpress/data';
 import RundizStrapCompanionKeyValueCtrl from '../../assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js';
 
 import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
+
 import rundizstrap_companion_sanitize_text_field from '../../assets/js/blocks/shared/rundizstrap-companion-sanitize.js';
+
 import { rundizstrap_companion_blockLevelTagNameOptions, rundizstrap_companion_sanitizeTagName } from '../../assets/js/blocks/shared/rundizstrap-companion-tag-block-level.js';
 
+
 const DEFAULT_TAG_NAME = 'div';
+
 
 /**
  * Render inspector controls for the block.
@@ -59,7 +63,7 @@ function GroupEditControls({ tagName, onSelectTagName }) {
             />
         </InspectorControls>
     );
-}
+}// GroupEditControls
 
 
 /**
@@ -257,4 +261,4 @@ export default function Edit({ attributes, setAttributes, clientId }) {
             <TagName {...innerBlocksProps} />
         </>
     );
-}
+}// Edit

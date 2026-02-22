@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-22T14:48:55+07:00\n"
+"POT-Creation-Date: 2026-02-22T15:38:50+07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: rundizstrap-companion\n"
@@ -319,8 +319,8 @@ msgstr ""
 msgid "Your email address will not be published."
 msgstr ""
 
-#: blocks/bs-navbar-navigation/render.php:62
-#: blocks/bs-navbar-navigation/render.php:75
+#: blocks/bs-navbar-navigation/render.php:63
+#: blocks/bs-navbar-navigation/render.php:76
 msgid "This navigation is empty."
 msgstr ""
 
@@ -329,17 +329,17 @@ msgstr ""
 msgid "Next »"
 msgstr ""
 
-#: blocks/bs-pagination/render.php:274
+#: blocks/bs-pagination/render.php:280
 #: blocks/bs-pagination/index.js:1
 msgid "« Previous"
 msgstr ""
 
-#: blocks/bs-pagination/render.php:277
+#: blocks/bs-pagination/render.php:283
 #: blocks/bs-post-navigation-link/index.js:1
 msgid "Previous"
 msgstr ""
 
-#: blocks/bs-pagination/render.php:389
+#: blocks/bs-pagination/render.php:395
 msgid "Pagination"
 msgstr ""
 

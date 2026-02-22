@@ -6,24 +6,8 @@
  */
 
 
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
 import { __ } from '@wordpress/i18n';
 
-/**
- * Imports the InspectorControls component, which is used to wrap
- * the block's custom controls that will appear in in the Settings
- * Sidebar when the block is selected.
- *
- * Also imports the React hook that is used to mark the block wrapper
- * element. It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#inspectorcontrols
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
 import {
     InspectorControls,
     useBlockProps,
@@ -31,22 +15,10 @@ import {
 
 import { safeHTML } from '@wordpress/dom';
 
-/**
- * Element is a package that builds on top of React and provide a set of utilities to work with React components and React elements.
- * 
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-element/
- */
 import { useEffect } from '@wordpress/element';
 
 import rundizstrap_companion_sanitize_text_field from '../../assets/js/blocks/shared/rundizstrap-companion-sanitize.js';
 
-/**
- * Imports the necessary components that will be used to create
- * the user interface for the block's settings.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/components/text-control/
- * @see https://developer.wordpress.org/block-editor/reference-guides/components/toggle-control/
- */
 import {
     Disabled,
     RangeControl,
@@ -56,6 +28,7 @@ import {
     __experimentalToolsPanel as ToolsPanel,
     __experimentalToolsPanelItem as ToolsPanelItem,
 } from '@wordpress/components';
+
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -354,4 +327,4 @@ export default function Edit({attributes, setAttributes}) {
             </Disabled>
         </div>
     );
-}// end export;
+}// Edit

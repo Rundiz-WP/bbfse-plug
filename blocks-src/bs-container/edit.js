@@ -30,6 +30,7 @@ import { useSelect } from '@wordpress/data';
 
 import RundizStrapCompanionKeyValueCtrl from '../../assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js';
 
+
 /**
  * Render inspector controls for the block.
  *
@@ -58,7 +59,7 @@ function GroupEditControls({ tagName, onSelectTagName }) {
             />
         </InspectorControls>
     );
-}
+}// GroupEditControls
 
 
 /**
@@ -177,7 +178,7 @@ function GroupEdit({ attributes, setAttributes, clientId }) {
             <TagName {...innerBlocksProps} />
         </>
     );
-}
+}// GroupEdit
 
 
 export default GroupEdit;

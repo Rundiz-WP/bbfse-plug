@@ -18,6 +18,7 @@ import {
 
 import RundizStrapCompanionKeyValueCtrl from '../../assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js';
 
+
 export default function Edit({ attributes, setAttributes }) {
     const {
         dataAttributes,
@@ -127,4 +128,4 @@ export default function Edit({ attributes, setAttributes }) {
             </button>
         </>
     );
-}
+}// Edit
