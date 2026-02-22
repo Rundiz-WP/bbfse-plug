@@ -41,7 +41,7 @@ if (!function_exists('rundizstrap_companion_block_bsSearch_render')) {
             if (isset($attributes['showLabel']) && true === $attributes['showLabel']) {
                 $searchLabel = __('Search', 'rundizstrap-companion');
                 if (isset($attributes['label']) && is_string($attributes['label']) && '' !== $attributes['label']) {
-                    $searchLabel = $attributes['label'];
+                    $searchLabel = wp_kses_post($attributes['label']);
                 }
 
                 if (false === $forNavbar) {
@@ -62,20 +62,28 @@ if (!function_exists('rundizstrap_companion_block_bsSearch_render')) {
             }
             unset($additionalClasses);
 
-            if (isset($attributes['buttonClass']) && is_string($attributes['buttonClass']) && '' !== $attributes['buttonClass']) {
-                $buttonClass = $attributes['buttonClass'];
+            if (isset($attributes['buttonClass']) && is_string($attributes['buttonClass']) && '' !== trim($attributes['buttonClass'])) {
+                $buttonClassParts = preg_split('/\s+/', $attributes['buttonClass']);
+                if (is_array($buttonClassParts)) {
+                    $buttonClassParts = array_filter(array_map('sanitize_html_class', $buttonClassParts));
+                    if (!empty($buttonClassParts)) {
+                        $buttonClass = implode(' ', $buttonClassParts);
+                    }
+                }
+                unset($buttonClassParts);
             }
             if (isset($attributes['buttonPosition']) && is_string($attributes['buttonPosition']) && '' !== $attributes['buttonPosition']) {
-                $buttonPosition = $attributes['buttonPosition'];
+                // Sanitize only. Keep this open so edit.js can add/update supported values in the future.
+                $buttonPosition = sanitize_key($attributes['buttonPosition']);
             }
             if (isset($attributes['buttonUseIcon']) && is_bool($attributes['buttonUseIcon'])) {
                 $buttonUseIcon = $attributes['buttonUseIcon'];
             }
             if (isset($attributes['buttonText']) && is_string($attributes['buttonText']) && '' !== $attributes['buttonText']) {
-                $buttonText = $attributes['buttonText'];
+                $buttonText = wp_kses_post($attributes['buttonText']);
             }
             if (isset($attributes['placeholderText']) && is_string($attributes['placeholderText']) && '' !== $attributes['placeholderText']) {
-                $placeholderText = $attributes['placeholderText'];
+                $placeholderText = sanitize_text_field($attributes['placeholderText']);
             }
 
             if (true === $buttonUseIcon) {
@@ -104,7 +112,7 @@ if (!function_exists('rundizstrap_companion_block_bsSearch_render')) {
                 if ('no-button' === $buttonPosition) {
                     $input_col_class = 'col-12';
                 }
-                $field_markup .= '<div class="' . $input_col_class . '">';
+                $field_markup .= '<div class="' . esc_attr($input_col_class) . '">';
                 $field_markup .= $input_field;
                 $field_markup .= '</div>';
                 if ('no-button' !== $buttonPosition) {

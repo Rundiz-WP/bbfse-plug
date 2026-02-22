@@ -94,6 +94,7 @@ export default function Edit({attributes, setAttributes}) {
 
     const searchFieldRef = useRef();
     const buttonRef = useRef();
+    // button position value rules: Lowercase alphanumeric characters, dashes, and underscores are allowed. ( https://developer.wordpress.org/reference/functions/sanitize_key/ )
     const buttonPositionControls = [
         {
             label: __('Button outside', 'rundizstrap-companion'),
