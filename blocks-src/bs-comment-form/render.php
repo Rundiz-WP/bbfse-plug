@@ -42,10 +42,13 @@ if (!function_exists('rundizstrap_companion_block_bsCommentForm_render')) {
 
         $buttonClassName = 'btn btn-primary';
         if (isset($attributes['buttonClassName']) && is_string($attributes['buttonClassName'])) {
-            $buttonClassName = trim(preg_replace('/[^A-Za-z0-9_\-\s]/', '', $attributes['buttonClassName']));
+            $buttonClassTokens = preg_split('/\s+/', trim($attributes['buttonClassName'])) ?: [];
+            $buttonClassTokens = array_filter(array_map('sanitize_html_class', $buttonClassTokens));
+            $buttonClassName = implode(' ', $buttonClassTokens);
             if ('' === $buttonClassName) {
                 $buttonClassName = 'btn btn-primary';
             }
+            unset($buttonClassTokens);
         }
 
         $classes = ['comment-respond'];
