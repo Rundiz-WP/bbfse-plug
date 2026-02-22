@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RundizStrap Companion 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rundizstrap-companion\n"
-"POT-Creation-Date: 2026-02-22T03:47:37+07:00\n"
-"PO-Revision-Date: 2026-02-22 03:48+0700\n"
+"POT-Creation-Date: 2026-02-22T12:17:04+07:00\n"
+"PO-Revision-Date: 2026-02-22 12:17+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -175,12 +175,12 @@ msgstr "ไม่พบไฟล์ views (%s)."
 msgid "Upload"
 msgstr "อัปโหลด"
 
-#: App/Libraries/RundizSettings.php:734 assets/js/blocks/shared/keyValueControl.js:105
-#: blocks/bs-button/index.js:1 blocks/bs-column/index.js:1 blocks/bs-container/index.js:1
-#: blocks/bs-navbar-container/index.js:1 blocks/bs-navbar-navigation/index.js:1
-#: blocks/bs-navbar-responsive-wrapper/index.js:1 blocks/bs-navbar-toggler-button/index.js:1
-#: blocks/bs-post-navigation-link/index.js:1 blocks/bs-row/index.js:1
-#: blocks/rundizstrap-companion-div/index.js:1
+#: App/Libraries/RundizSettings.php:734
+#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:105 blocks/bs-button/index.js:1
+#: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
+#: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
+#: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
+#: blocks/bs-row/index.js:1 blocks/rundizstrap-companion-div/index.js:1
 msgid "Remove"
 msgstr "เอาออก"
 
@@ -367,7 +367,7 @@ msgstr "(ไม่มีไตเติล)"
 msgid "Search"
 msgstr "ค้นหา"
 
-#: assets/js/blocks/shared/keyValueControl.js:90 blocks/bs-button/index.js:1
+#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:90 blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
 #: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
 #: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
@@ -375,7 +375,7 @@ msgstr "ค้นหา"
 msgid "Key"
 msgstr "Key"
 
-#: assets/js/blocks/shared/keyValueControl.js:95 blocks/bs-button/index.js:1
+#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:95 blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
 #: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
 #: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
@@ -383,7 +383,7 @@ msgstr "Key"
 msgid "Value"
 msgstr "ค่า"
 
-#: assets/js/blocks/shared/keyValueControl.js:110 blocks/bs-button/index.js:1
+#: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:110 blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
 #: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
 #: blocks/bs-navbar-toggler-button/index.js:1 blocks/bs-post-navigation-link/index.js:1
@@ -1242,9 +1242,3 @@ msgstr "ความหมาย"
 msgctxt "block title"
 msgid "Customizable div"
 msgstr "แท็ก div ที่ปรับแต่งได้"
-
-#~ msgid "Displays the post link that precedes the current post in Bootstrap style."
-#~ msgstr "แสดงลิงก์ของโพสต์ก่อนหน้าโพสต์ปัจจุบันในรูปแบบ Bootstrap."
-
-#~ msgid "Displays the post link that follows the current post in Bootstrap style."
-#~ msgstr "แสดงลิงก์โพสต์ที่ต่อจากโพสต์ปัจจุบันในรูปแบบ Bootstrap."
