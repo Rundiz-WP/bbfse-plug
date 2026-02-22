@@ -6,7 +6,7 @@
  * @link https://www.geeksforgeeks.org/html/html-block-and-inline-elements/ Example list of HTML block level.
  */
 
-export const BLOCKLV_TAG_NAME_OPTIONS = [
+export const rundizstrap_companion_blockLevelTagNameOptions = [
     'div',
     'header',
     'main',
@@ -16,7 +16,7 @@ export const BLOCKLV_TAG_NAME_OPTIONS = [
     'footer',
 ];
 
-export const ALLOWED_BLOCKLV_TAG_NAMES = new Set(BLOCKLV_TAG_NAME_OPTIONS);
+export const rundizstrap_companion_allowedBlockLevelTagNames = new Set(rundizstrap_companion_blockLevelTagNameOptions);
 
 /**
  * Sanitize tag name and fallback to provided default tag.
@@ -30,11 +30,11 @@ export function rundizstrap_companion_sanitizeTagName(tagName, defaultTagName) {
     const normalizedTagName = String(tagName || '').trim().toLowerCase();
     const normalizedDefaultTagName = String(defaultTagName || '').trim().toLowerCase();
 
-    if (ALLOWED_BLOCKLV_TAG_NAMES.has(normalizedTagName)) {
+    if (rundizstrap_companion_allowedBlockLevelTagNames.has(normalizedTagName)) {
         return normalizedTagName;
     }
 
-    if (ALLOWED_BLOCKLV_TAG_NAMES.has(normalizedDefaultTagName)) {
+    if (rundizstrap_companion_allowedBlockLevelTagNames.has(normalizedDefaultTagName)) {
         return normalizedDefaultTagName;
     }
 

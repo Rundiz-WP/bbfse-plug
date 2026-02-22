@@ -30,7 +30,7 @@ import RundizStrapCompanionKeyValueCtrl from '../../assets/js/blocks/shared/rund
 
 import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
 import rundizstrap_companion_sanitize_text_field from '../../assets/js/blocks/shared/rundizstrap-companion-sanitize.js';
-import { BLOCKLV_TAG_NAME_OPTIONS, rundizstrap_companion_sanitizeTagName } from '../../assets/js/blocks/shared/rundizstrap-companion-tag-block-level.js';
+import { rundizstrap_companion_blockLevelTagNameOptions, rundizstrap_companion_sanitizeTagName } from '../../assets/js/blocks/shared/rundizstrap-companion-tag-block-level.js';
 
 const DEFAULT_TAG_NAME = 'div';
 
@@ -43,7 +43,7 @@ const DEFAULT_TAG_NAME = 'div';
  * @return {JSX.Element} The control group.
  */
 function GroupEditControls({ tagName, onSelectTagName }) {
-    const tagNameOptions = BLOCKLV_TAG_NAME_OPTIONS.map((item) => ({
+    const tagNameOptions = rundizstrap_companion_blockLevelTagNameOptions.map((item) => ({
         label: (item === DEFAULT_TAG_NAME ? __('Default (<div>)', 'rundizstrap-companion') : '<' + item + '>'),
         value: item,
     }));

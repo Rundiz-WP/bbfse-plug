@@ -12,7 +12,7 @@
  *
  * @since 0.0.4
  */
-export const ALLOWED_ATTRIBUTE_PREFIXES = ['data-', 'aria-'];
+export const rundizstrap_companion_allowedAttributePrefixes = ['data-', 'aria-'];
 
 
 /**
@@ -32,7 +32,7 @@ export default function rundizstrap_companion_attribute_to_props(attributes, pre
 
     const normalizedPrefix = String(prefix || '').toLowerCase();
 
-    if (!ALLOWED_ATTRIBUTE_PREFIXES.includes(normalizedPrefix)) {
+    if (!rundizstrap_companion_allowedAttributePrefixes.includes(normalizedPrefix)) {
         return props;
     }
 
