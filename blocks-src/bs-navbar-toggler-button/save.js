@@ -10,6 +10,8 @@ import { useBlockProps } from '@wordpress/block-editor';
 
 import rundizstrap_companion_attribute_to_props from '../../assets/js/blocks/shared/rundizstrap-companion-attributes.js';
 
+import { rundizstrap_companion_sanitize_html_class_list } from '../../assets/js/blocks/shared/rundizstrap-companion-sanitize.js';
+
 
 export default function Save({ attributes }) {
     const {
@@ -19,7 +21,7 @@ export default function Save({ attributes }) {
         iconDataAttributes,
         iconAriaAttributes
     } = attributes;
-
+    const sanitizedIconClassName = rundizstrap_companion_sanitize_html_class_list(iconClassName || '');
     const blockProps = useBlockProps.save({
         className: 'navbar-toggler',
         type: 'button'
@@ -34,7 +36,7 @@ export default function Save({ attributes }) {
     const iconDataProps = rundizstrap_companion_attribute_to_props(iconDataAttributes, 'data-');
     const iconAriaProps = rundizstrap_companion_attribute_to_props(iconAriaAttributes, 'aria-');
     const iconProps = {
-        className: `navbar-toggler-icon ${iconClassName || ''}`.trim(),
+        className: `navbar-toggler-icon ${sanitizedIconClassName}`.trim(),
         ...iconDataProps,
         ...iconAriaProps
     };
