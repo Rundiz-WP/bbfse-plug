@@ -125,7 +125,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\StylesAndScripts')) {
             wp_register_style('rundizstrap_companion-bootstrap-icons', plugin_dir_url(RUNDIZSTRAP_COMPANION_FILE) . 'assets/vendor/bootstrap-icons/css/bootstrap-icons.min.css', [], '1.13.1');
 
             // JS
-            wp_register_style('rundizstrap_companion-bootstrap-js', plugin_dir_url(RUNDIZSTRAP_COMPANION_FILE) . 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js', [], '5.3.8', true);
+            wp_register_script('rundizstrap_companion-bootstrap-js', plugin_dir_url(RUNDIZSTRAP_COMPANION_FILE) . 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js', [], '5.3.8', true);
         }// registerStylesAndScripts
 
 

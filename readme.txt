@@ -85,6 +85,7 @@ If you have the capability to edit theme options, you can access the help page u
 
 * Fix deprecated in blocks.
 * Update all blocks to sanitize and escape.
+* Fix incorrect register Bootstrap JS.
 
 = 0.0.4 =
 2026-02-21
