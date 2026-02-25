@@ -29,6 +29,9 @@
             "type": "object",
             "default": {}
         },
+        "anchor": {
+            "type": "string"
+        },
         "autofocus": {
             "type": "boolean",
             "default": false

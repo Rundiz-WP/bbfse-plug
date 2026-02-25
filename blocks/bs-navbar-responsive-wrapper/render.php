@@ -143,7 +143,7 @@ if (!function_exists('rundizstrap_companion_block_bsNavbarResponsiveWrapper_rend
 
             $titleId = '';
             if (isset($attributes['offcanvasHeaderTitleIDName']) && is_string($attributes['offcanvasHeaderTitleIDName'])) {
-                $titleId = sanitize_text_field($attributes['offcanvasHeaderTitleIDName']);
+                $titleId = sanitize_html_class($attributes['offcanvasHeaderTitleIDName']);
             }
             if ('' === trim($titleId)) {
                 $titleId = 'navbar-responsive-offcanvas-title-id';
@@ -187,9 +187,23 @@ if (!function_exists('rundizstrap_companion_block_bsNavbarResponsiveWrapper_rend
                 rundizstrap_companion_block_bsNavbarResponsiveWrapper_sanitizeCustomAttributes(($attributes['offcanvasHeaderCloseBtnAriaAttributes'] ?? []), 'aria-', $Sanitize)
             );
 
+            $wrapperAttributes = get_block_wrapper_attributes($wrapperExtraAttributes);
+            if (
+                isset($attributes['anchor']) &&
+                is_string($attributes['anchor']) &&
+                '' !== trim($attributes['anchor']) &&
+                1 !== preg_match('/(?:^|\s)id\s*=\s*/i', $wrapperAttributes)
+            ) {
+                $sanitizedAnchor = sanitize_html_class($attributes['anchor']);
+                if ('' !== $sanitizedAnchor) {
+                    $wrapperAttributes .= ' id="' . esc_attr($sanitizedAnchor) . '"';
+                }
+                unset($sanitizedAnchor);
+            }
+
             return sprintf(
                 '<div %1$s><div class="%2$s"><h5 class="%3$s"%4$s>%5$s</h5><button%6$s></button></div><div class="%7$s">%8$s</div></div>',
-                get_block_wrapper_attributes($wrapperExtraAttributes),
+                $wrapperAttributes,
                 esc_attr($offcanvasHeaderClassName),
                 esc_attr($offcanvasHeaderTitleClassName),
                 ('' !== $titleId ? ' id="' . esc_attr($titleId) . '"' : ''),
@@ -200,9 +214,23 @@ if (!function_exists('rundizstrap_companion_block_bsNavbarResponsiveWrapper_rend
             );
         }
 
+        $wrapperAttributes = get_block_wrapper_attributes($wrapperExtraAttributes);
+        if (
+            isset($attributes['anchor']) &&
+            is_string($attributes['anchor']) &&
+            '' !== trim($attributes['anchor']) &&
+            1 !== preg_match('/(?:^|\s)id\s*=\s*/i', $wrapperAttributes)
+        ) {
+            $sanitizedAnchor = sanitize_html_class($attributes['anchor']);
+            if ('' !== $sanitizedAnchor) {
+                $wrapperAttributes .= ' id="' . esc_attr($sanitizedAnchor) . '"';
+            }
+            unset($sanitizedAnchor);
+        }
+
         return sprintf(
             '<div %1$s>%2$s</div>',
-            get_block_wrapper_attributes($wrapperExtraAttributes),
+            $wrapperAttributes,
             $content
         );
     }// rundizstrap_companion_block_bsNavbarResponsiveWrapper_render

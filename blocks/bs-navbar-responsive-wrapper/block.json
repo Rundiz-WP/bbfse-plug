@@ -46,6 +46,9 @@
     "offcanvasBodyClassName": {
       "type": "string",
       "default": "offcanvas-body"
+    },
+    "anchor": {
+      "type": "string"
     }
   },
   "category": "theme",

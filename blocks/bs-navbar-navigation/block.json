@@ -17,6 +17,9 @@
     "dropdownClassName": {
       "type": "string",
       "default": ""
+    },
+    "anchor": {
+      "type": "string"
     }
   },
   "category": "theme",

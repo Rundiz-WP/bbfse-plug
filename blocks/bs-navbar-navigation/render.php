@@ -102,6 +102,20 @@ if (!function_exists('rundizstrap_companion_block_bsNavbarNavigation_render')) {
         $wrapper_attributes = get_block_wrapper_attributes([
             'class' => $className,
         ]);
+
+        if (
+            isset($attributes['anchor']) &&
+            is_string($attributes['anchor']) &&
+            '' !== trim($attributes['anchor']) &&
+            1 !== preg_match('/(?:^|\s)id\s*=\s*/i', $wrapper_attributes)
+        ) {
+            $sanitizedAnchor = sanitize_html_class($attributes['anchor']);
+            if ('' !== $sanitizedAnchor) {
+                $wrapper_attributes .= ' id="' . esc_attr($sanitizedAnchor) . '"';
+            }
+            unset($sanitizedAnchor);
+        }
+
         $wrapper_attributes .= BootstrapNavbarNavigationWalker::attributesToString($sanitizedDataAttributes, 'data-');
         $wrapper_attributes .= BootstrapNavbarNavigationWalker::attributesToString($sanitizedAriaAttributes, 'aria-');
 
