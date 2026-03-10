@@ -275,7 +275,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Upg
 
             wp_localize_script(
                 'rundizstrap_companion-handle-rd-settings-manual-update',
-                'RdSettingsManualUpdate',
+                'RundizStrap_companion_settingsManualUpdateObj',
                 [
                     'alreadyRunUpdateKey' => '',
                     'alreadyRunUpdateTotal' => 0,

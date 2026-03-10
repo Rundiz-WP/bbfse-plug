@@ -16,21 +16,21 @@ function rundizstrap_companion_manualUpdateAjax()
     $('.manual-update-action-button').attr('disabled', 'disabled');
     $('.manual-update-action-placeholder').html('<i class="bi bi-hourglass"></i>');
 
-    if (RdSettingsManualUpdate.completed === 'true') {
+    if (RundizStrap_companion_settingsManualUpdateObj.completed === 'true') {
         $('.manual-update-action-button').removeAttr('disabled');
         $('.manual-update-action-placeholder').html('');
         return ;
     }
 
-    if (RdSettingsManualUpdate.alreadyRunUpdateKey === '') {
+    if (RundizStrap_companion_settingsManualUpdateObj.alreadyRunUpdateKey === '') {
         var runUpdateKey = 0;
     } else {
-        var runUpdateKey = (parseInt(RdSettingsManualUpdate.alreadyRunUpdateKey) + 1);
+        var runUpdateKey = (parseInt(RundizStrap_companion_settingsManualUpdateObj.alreadyRunUpdateKey) + 1);
     }
     $.ajax({
         'url': ajaxurl,
         'method': 'POST',
-        'data': 'security='+RdSettingsManualUpdate.nonce+'&action=rundizstrap_companion_manualUpdate&updateKey='+runUpdateKey,
+        'data': 'security='+RundizStrap_companion_settingsManualUpdateObj.nonce+'&action=rundizstrap_companion_manualUpdate&updateKey='+runUpdateKey,
         'dataType': 'json'
     })
     .done(function(data, textStatus, jqXHR) {
@@ -41,18 +41,18 @@ function rundizstrap_companion_manualUpdateAjax()
 
         if (typeof(response) === 'object') {
             if (typeof(response.alreadyRunKey) !== 'undefined') {
-                RdSettingsManualUpdate.alreadyRunUpdateKey = parseInt(response.alreadyRunKey);
+                RundizStrap_companion_settingsManualUpdateObj.alreadyRunUpdateKey = parseInt(response.alreadyRunKey);
             }
-            RdSettingsManualUpdate.alreadyRunUpdateTotal++;
-            $('.already-run-total-action').text(RdSettingsManualUpdate.alreadyRunUpdateTotal);
+            RundizStrap_companion_settingsManualUpdateObj.alreadyRunUpdateTotal++;
+            $('.already-run-total-action').text(RundizStrap_companion_settingsManualUpdateObj.alreadyRunUpdateTotal);
             if (typeof(response.nextRunKey) !== 'undefined') {
                 if (response.nextRunKey !== 'end') {
                     // if not completed, let admin do manual update until completed successfully.
-                    $('.manual-update-action-button').text(RdSettingsManualUpdate.txtNext);
+                    $('.manual-update-action-button').text(RundizStrap_companion_settingsManualUpdateObj.txtNext);
                 } else {
                     // if completed.
-                    $('.manual-update-action-button').text(RdSettingsManualUpdate.txtCompleted);
-                    RdSettingsManualUpdate.completed = 'true';
+                    $('.manual-update-action-button').text(RundizStrap_companion_settingsManualUpdateObj.txtCompleted);
+                    RundizStrap_companion_settingsManualUpdateObj.completed = 'true';
                 }
             }
             $('.manual-update-action-placeholder').html('<i class="bi bi-check-lg"></i>');
@@ -103,7 +103,7 @@ function rundizstrap_companion_GetNoticeElement(notice_class, notice_message) {
         });
     }
 
-    output += '<button type="button" class="notice-dismiss"><span class="screen-reader-text">'+RdSettingsManualUpdate.txtDismissNotice+'</span></button>'
+    output += '<button type="button" class="notice-dismiss"><span class="screen-reader-text">'+RundizStrap_companion_settingsManualUpdateObj.txtDismissNotice+'</span></button>'
         +'</div>';
 
     return output;
