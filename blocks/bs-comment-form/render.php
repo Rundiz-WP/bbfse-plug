@@ -121,6 +121,8 @@ if (!function_exists('rundizstrap_companion_block_bsCommentForm_render')) {
         $form = str_replace('class="comment-respond"', $wrapperAttributes, $form);
         unset($wrapperAttributes);
 
+        wp_enqueue_script('comment-reply');
+
         return $form;
     }// rundizstrap_companion_block_bsCommentForm_render
 }
