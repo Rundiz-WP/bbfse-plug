@@ -2,8 +2,7 @@
 /**
  * Setting's view file.
  * 
- * @package rundizstrap-companion
- * @since 0.0.1
+ * @package plugin-template-package
  */
 
 
@@ -13,7 +12,7 @@ if (!defined('ABSPATH')) {
 
 ?>
 <div class="wrap rd-settings-page">
-    <h1><?php esc_html_e('RundizStrap Companion settings', 'rundizstrap-companion'); ?></h1>
+    <h1><?php esc_html_e('Rundiz Plugin Template', 'plugin-template'); ?></h1>
 
     <?php 
     if (isset($form_result_class) && isset($form_result_msg)) {
@@ -40,8 +39,10 @@ if (!defined('ABSPATH')) {
         <?php 
         wp_nonce_field(); 
         if (isset($settings_page)) {
-            // the line below will be echo out HTML of settings page. It is not from user input and cannot/must not be escape, otherwise the result will be broken.
-            echo $settings_page; // phpcs:ignore
+            if (!is_file(dirname(__DIR__, 2) . '/config/kses_data.php')) {
+                throw new \Exception(esc_html('The file ' . dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'kses_data.php could not be found.'));
+            }
+            echo wp_kses($settings_page, include dirname(__DIR__, 2) . '/config/kses_data.php');
         } 
         submit_button(); 
         ?> 
