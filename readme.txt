@@ -82,7 +82,7 @@ If you have the capability to edit theme options, you can access the help page u
 * Update all blocks*/render.php to use custom kses to support modern HTML elements and attributes but excluded danger attributes.
 
 = 0.0.6 =
-2026-03-20
+2026-03-10
 
 * Fix supports `anchor` not working with dynamic block. ( See bug https://github.com/WordPress/gutenberg/issues/6356 )
 * Update object prefix in App/Controllers/Admin/Plugins/Upgrader.php and its assets/js/Admin/rd-settings-manual-update.js.
