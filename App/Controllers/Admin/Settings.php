@@ -2,6 +2,8 @@
 /**
  * Add settings sub menu and page into the Settings menu.
  *
+ * Last update Rundiz Plugin Template: 2026-03-27
+ * 
  * @package rundizstrap-companion
  * @since 0.0.1
  */
@@ -76,15 +78,15 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Settings')) 
                     wp_die(
                         sprintf(
                             // translators: %1$s Open link, %2$s Close link.
-                            __('The manual update is required, please %1$supdate first%2$s.', 'rundizstrap-companion'), // phpcs:ignore
-                            '<a href="' . esc_attr(network_admin_url('index.php?page=rundizstrap-companion-manual-update')) . '">', 
+                            esc_html__('The manual update is required, please %1$supdate first%2$s.', 'rundizstrap-companion'),
+                            '<a href="' . esc_url(network_admin_url('index.php?page=rundizstrap-companion-manual-update')) . '">', 
                             '</a>'
                         )
                     );
                 } else {
                     wp_die(
                         esc_html(
-                            __('The manual update is required, please tell administrator to update first.', 'rundizstrap-companion')
+                            esc_html__('The manual update is required, please tell administrator to update first.', 'rundizstrap-companion')
                         )
                     );
                 }
@@ -96,7 +98,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Settings')) 
             if (is_array($config_values) && array_key_exists('rundiz_settings_config_file', $config_values)) {
                 $settings_config_file = $config_values['rundiz_settings_config_file'];
             } else {
-                echo 'Settings configuration file was not set.';
+                wp_die(esc_html__('Settings configuration file was not set.', 'rundizstrap-companion'));
                 exit(1);
             }
             unset($config_values);
@@ -161,6 +163,29 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Settings')) 
                 return;
             }
 
+            $Loader = new \RundizstrapCompanion\App\Libraries\Loader();
+            $config_values = $Loader->loadConfig();
+            if (is_array($config_values) && array_key_exists('rundiz_settings_config_file', $config_values)) {
+                $settings_config_file = $config_values['rundiz_settings_config_file'];
+                $RundizSettings = new \RundizstrapCompanion\App\Libraries\RundizSettings();
+                $RundizSettings->settings_config_file = $settings_config_file;
+                $hasEditorField = $RundizSettings->hasEditor();
+                $hasMediaField = $RundizSettings->hasMedia();
+                unset($RundizSettings, $settings_config_file);
+            }
+            unset($config_values, $Loader);
+
+            if (isset($hasEditorField) && true === $hasEditorField) {
+                wp_enqueue_editor();
+                wp_enqueue_media();
+            }
+            unset($hasEditorField);
+            if (isset($hasMediaField) && true === $hasMediaField) {
+                wp_enqueue_script('jquery');
+                wp_enqueue_media();
+            }
+            unset($hasMediaField);
+
             wp_enqueue_style('rundizstrap_companion-bootstrap-icons');
 
             wp_enqueue_style('rundizstrap_companion-handle-rd-settings-based-css');
@@ -179,5 +204,5 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Settings')) 
         }// registerScripts
 
 
-    }
+    }// Settings
 }

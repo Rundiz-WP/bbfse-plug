@@ -1,6 +1,8 @@
 <?php
 /**
- * Rundiz Settings class.
+ * Rundiz Settings class for render pre-setup values. This will render tabs, form fields and content in each tabs.
+ * 
+ * Last update from Rundiz Plugin Template: 2026-03-27
  * 
  * @package rundizstrap-companion
  * @since 0.0.1
@@ -12,7 +14,7 @@ namespace RundizstrapCompanion\App\Libraries;
 
 if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
     /**
-     * Rundiz Settings class for render pre-setup values. This will render tabs, form fields and content in each tabs.
+     * Rundiz Settings class.
      */
     class RundizSettings
     {
@@ -167,7 +169,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
         /**
          * Get settings page. This is not include form and nonce. You have to write it yourself.
          * 
-         * @param array $options_values Options values.
+         * @param array $options_values The options values that is already un-slashed, and maybe sanitized by the method `getSubmittedData()` in App/Controllers/Admin/Settings.php file.
          * @return string Return settings tabbed page. Not include form tag and nonce.
          */
         public function getSettingsPage(array $options_values = []): string
@@ -195,9 +197,9 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
             if (is_array($settings_config) && array_key_exists('setting_tabs', $settings_config)) {
                 foreach ($settings_config['setting_tabs'] as $tab_key => $tabs) {
                     $output .= "\t\t" . '<li>';
-                    $output .= '<a href="#tabs-' . $tab_key . '">';
+                    $output .= '<a href="#tabs-' . esc_attr($tab_key) . '">';
                     if (is_array($tabs) && array_key_exists('icon', $tabs)) {
-                        $output .= '<i class="tab-icon ' . $tabs['icon'] . '"></i> ';
+                        $output .= '<i class="tab-icon ' . esc_attr($tabs['icon']) . '"></i> ';
                     }
                     $output .= '<span class="tab-text">' . (is_array($tabs) && array_key_exists('title', $tabs) ? $tabs['title'] : '') . '</span>';
                     $output .= '</a>';
@@ -212,9 +214,9 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
             $output .= "\t" . '<div class="tab-content">' . "\n";
             if (is_array($settings_config) && array_key_exists('setting_tabs', $settings_config)) {
                 foreach ($settings_config['setting_tabs'] as $tab_key => $tabs) {
-                    $output .= "\t\t" . '<div id="tabs-' . $tab_key . '">' . "\n";
+                    $output .= "\t\t" . '<div id="tabs-' . esc_attr($tab_key) . '">' . "\n";
                     if (is_array($tabs) && array_key_exists('fields', $tabs) && is_array($tabs['fields'])) {
-                        $output .= $this->renderFields($tabs['fields'], stripslashes_deep($options_values));
+                        $output .= $this->renderFields($tabs['fields'], $options_values);
                     }
                     // #tabs-xx
                     $output .= "\t\t" . '</div>' . "\n";
@@ -249,11 +251,17 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
 
                     // phpcs:ignore WordPress.Security.NonceVerification
                     if (isset($_REQUEST) && is_array($_REQUEST) && isset($_REQUEST[$nameNoSb])) {
+                        // The nonce is already verify in the controller. See App/Controllers/Settings.php method `pluginSettingsPage()`.
                         if (isset($field->sanitize_callback) && is_callable($field->sanitize_callback)) {
+                            // The sanitize is already did in the config's callback under array key named `sanitize_callback`.
                             // phpcs:ignore WordPress.Security.NonceVerification, WordPress.Security.ValidatedSanitizedInput
                             $value = call_user_func($field->sanitize_callback, wp_unslash($_REQUEST[$nameNoSb]));
                         } else {
-                            $value = wp_unslash($_REQUEST[$nameNoSb]);// phpcs:ignore
+                            // In this case it is not possible to sanitize because in the config and setting, it is allowed to edit HTML, JS, CSS, or any programming languages.
+                            // It's already safe to escape them in the method `renderFormCodeEditor()` and any `renderFormXXX()` methods.
+                            // The way the data stored in the database is used depends on the plugin that uses this class, and how they escape or filter it.
+                            // phpcs:ignore WordPress.Security.NonceVerification, WordPress.Security.ValidatedSanitizedInput
+                            $value = wp_unslash($_REQUEST[$nameNoSb]);
                         }
                         $output[$name] = $value;
                         unset($value);
@@ -270,6 +278,68 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
 
 
         /**
+         * Check that is configuration file has editor field in it or not.
+         * 
+         * @since 1.8.7
+         * @return bool Return `true` if yes, `false` if no.
+         */
+        public function hasEditor(): bool
+        {
+            return $this->hasField(['editor', 'editor_full']);
+        }// hasEditor
+
+
+        /**
+         * Check that is configuration has certain form field type(s) or not.
+         * 
+         * @since 1.8.7
+         * @param array|string $type The field type to check. Use array to check multiple field type at once. The field type must match configuration `['fields']['type']`.
+         * @return bool Return `true` if yes, `false` if no.
+         * @throws \InvalidArgumentException Throw exception if argument type is invalid.
+         */
+        public function hasField($type): bool
+        {
+            if (!is_string($type) && !is_array($type)) {
+                throw new \InvalidArgumentException('The argument `$type` must be string or array.');
+            }
+
+            $settings_config = $this->getConfigFile();
+            if (is_array($settings_config) && array_key_exists('setting_tabs', $settings_config) && is_array($settings_config['setting_tabs'])) {
+                foreach ($settings_config['setting_tabs'] as $tab_key => $tabs) {
+                    if (is_array($tabs) && array_key_exists('fields', $tabs) && is_array($tabs['fields'])) {
+                        foreach ($tabs['fields'] as $field_key => $fields) {
+                            if (is_array($fields) && array_key_exists('type', $fields)) {
+                                if (is_string($type) && $fields['type'] === $type) {
+                                    return true;
+                                } else if (is_array($type) && in_array($fields['type'], $type, true)) {
+                                    return true;
+                                }
+                            }
+                        }// endforeach;
+                        unset($field_key, $fields);
+                    }
+                }// endforeach;
+                unset($tab_key, $tabs);
+            }// endif;
+
+            return false;
+        }// hasField
+
+
+        /**
+         * Check that is configuration file has media field in it or not.
+         * 
+         * @since 1.8.7
+         * @return bool Return `true` if yes, `false` if no.
+         * @throws \InvalidArgumentException Throw exception if argument type is invalid.
+         */
+        public function hasMedia(): bool
+        {
+            return $this->hasField('media');
+        }// hasMedia
+
+
+        /**
          * Render tab content input fields.
          * 
          * @param array $tab_fields Tab fields in settings config.
@@ -278,6 +348,8 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
          */
         private function renderFields(array $tab_fields, array $options_values = []): string
         {
+            $kses_data_file = dirname(RUNDIZSTRAP_COMPANION_FILE) . '/App/config/kses_data.php';
+
             $output = "\t\t\t" . '<table class="form-table">' . "\n";
             $output .= "\t\t\t\t" . '<tbody>' . "\n";
 
@@ -338,12 +410,28 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
                             $output .= '</label>' . "\n";
                             $output .= "\t\t\t\t\t\t" . '</th>' . "\n";
                             $output .= "\t\t\t\t\t\t" . '<td>' . "\n";
-                            $output .= "\t\t\t\t\t\t\t" . (array_key_exists('content', $fields) ? $fields['content'] : '') . "\n";
+                            $output .= "\t\t\t\t\t\t\t";
+                            if (array_key_exists('content', $fields)) {
+                                if (is_file($kses_data_file)) {
+                                    $output .= wp_kses($fields['content'], include $kses_data_file);
+                                } else {
+                                    $output .= wp_kses_post($fields['content']);
+                                }
+                            }
+                            $output .= "\n";
                             $output .= "\t\t\t\t\t\t" . '</td>' . "\n";
                             break;
                         case 'html_full':
                             $output .= "\t\t\t\t\t\t" . '<td colspan="2" style="padding-left: 0;">' . "\n";
-                            $output .= "\t\t\t\t\t\t\t" . (array_key_exists('content', $fields) ? $fields['content'] : '') . "\n";
+                            $output .= "\t\t\t\t\t\t\t";
+                            if (array_key_exists('content', $fields)) {
+                                if (is_file($kses_data_file)) {
+                                    $output .= wp_kses($fields['content'], include $kses_data_file);
+                                } else {
+                                    $output .= wp_kses_post($fields['content']);
+                                }
+                            }
+                            $output .= "\n";
                             $output .= "\t\t\t\t\t\t" . '</td>' . "\n";
                             break;
 
@@ -417,12 +505,12 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
                 $field_value = (array_key_exists('default', $fields) ? $fields['default'] : '');
             }
 
-            $output = '<textarea name="' . $field_name . '" id="textarea-editor-' . $field_name . '">' . esc_textarea($field_value) . '</textarea>' . "\n";
-            $output .= '<div id="editor-' . $field_name . '"';
+            $output = '<textarea name="' . esc_attr($field_name) . '" id="textarea-editor-' . esc_attr($field_name) . '">' . esc_textarea($field_value) . '</textarea>' . "\n";
+            $output .= '<div id="editor-' . esc_attr($field_name) . '"';
             $output .= ' class="ace-editor ace-editor-display-element"';
-            $output .= ' data-target_textarea="#textarea-editor-' . $field_name . '"';
+            $output .= ' data-target_textarea="#textarea-editor-' . esc_attr($field_name) . '"';
             if (array_key_exists('mode', $fields)) {
-                $output .= ' data-editor_mode="' . $fields['mode'] . '"';
+                $output .= ' data-editor_mode="' . esc_attr($fields['mode']) . '"';
             }
             $output .= '>';
             $output .= '</div>' . "\n";
@@ -454,10 +542,12 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
                 $settings = $fields['editor_settings'];
             }
 
+            $output = '<!-- start output editor ' . esc_html($field_name) . ' -->' . "\n";
             ob_start();
             wp_editor($field_value, $field_name, $settings);
-            $output = ob_get_contents();
+            $output .= ob_get_contents();
             ob_end_clean();
+            $output .= "\t\t\t\t\t\t\t" . '<!-- end output editor ' . esc_html($field_name) . ' -->' . "\n";
 
             unset($field_name, $field_value, $settings);
             return $output;
@@ -694,9 +784,6 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
          */
         private function renderFormMedia(int $field_key, array $fields, array $options_values = []): string
         {
-            wp_enqueue_script('jquery');
-            wp_enqueue_media();
-
             $field_name = (array_key_exists('id', $fields) ? $fields['id'] : $field_key);
             // check values
             $field_values = [];
@@ -730,8 +817,8 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
                 }
                 $output .= '</div>' . "\n";
             }
-            $output .= '<input type="button" class="button-secondary upload-media-button" value="' . __('Upload', 'rundizstrap-companion') . '" data-input_target="' . esc_attr($field_name) . '">' . "\n";
-            $output .= '<input type="button" class="button-secondary remove-media-button" value="' . __('Remove', 'rundizstrap-companion') . '" data-input_target="' . esc_attr($field_name) . '">' . "\n";
+            $output .= '<input type="button" class="button-secondary upload-media-button" value="' . esc_attr__('Upload', 'rundizstrap-companion') . '" data-input-target="' . esc_attr($field_name) . '">' . "\n";
+            $output .= '<input type="button" class="button-secondary remove-media-button" value="' . esc_attr__('Remove', 'rundizstrap-companion') . '" data-input-target="' . esc_attr($field_name) . '">' . "\n";
 
             unset($field_name, $field_values, $preview_mode);
             return $output;
