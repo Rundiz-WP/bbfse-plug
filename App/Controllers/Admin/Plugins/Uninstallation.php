@@ -68,7 +68,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Uni
             // delete options.
             if (is_multisite()) {
                 // this is multi site, delete options in all sites.
-                $blog_ids = $wpdb->get_col('SELECT blog_id FROM ' . $wpdb->blogs); // phpcs:ignore
+                $blog_ids = get_sites(['fields' => 'ids']);
                 $original_blog_id = get_current_blog_id();
                 if ($blog_ids) {
                     foreach ($blog_ids as $blog_id) {
@@ -151,8 +151,8 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Uni
                             }
                         }
 
-                        $sql = 'DROP TABLE IF EXISTS ' . $prefix . $item['tablename'];
-                        $wpdb->query($sql);// phpcs:ignore
+                        $sql = 'DROP TABLE IF EXISTS ' . esc_sql($prefix . $item['tablename']);
+                        $wpdb->query($sql);// phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.NotPrepared
                         unset($prefix, $sql);
                     }
                 }// endforeach;

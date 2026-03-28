@@ -17,12 +17,12 @@ if (!defined('ABSPATH')) {
     <ol>
         <li><?php printf(
             // translators: %s PHP code.
-            esc_html__('Call to %s', 'rundizstrap-companion'), // phpcs:ignore
+            esc_html__('Call to %s', 'rundizstrap-companion'),
             '<code>$this->getOptions();</code>'
         ); ?></li>
         <li><?php printf(
             // translators: %s PHP code.
-            esc_html__('Access this variable as global %s. This variable will be change, up to config in AppTrait.', 'rundizstrap-companion'), // phpcs:ignore
+            esc_html__('Access this variable as global %s. This variable will be change, up to config in AppTrait.', 'rundizstrap-companion'),
             '<code>global $rundizstrap_companion_optname;</code>'
         ); ?></li>
         <li><?php esc_html_e('Now, you can use this variable to access its array key anywhere.', 'rundizstrap-companion'); ?></li>

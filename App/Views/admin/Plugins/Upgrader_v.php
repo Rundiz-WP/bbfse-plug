@@ -21,13 +21,13 @@ if (!defined('ABSPATH')) {
         <p><?php printf(
             // translators: %d Number of total actions.
             esc_html(__('There are total %d actions for this manual update, please continue step by step.', 'rundizstrap-companion')), 
-            count($manualUpdateClasses) // phpcs:ignore
+            count($manualUpdateClasses)
         ); ?></p>
         <p><?php printf(
             /* translators: %1$s The number of already run action, %2$d The number of total actions. */
             esc_html(__('You are running %1$s of %2$d.', 'rundizstrap-companion')), 
             '<span class="already-run-total-action">0</span>', 
-            count($manualUpdateClasses) // phpcs:ignore
+            count($manualUpdateClasses)
         ); ?></p>
         <button class="button button-primary manual-update-action-button" type="button"><?php esc_html_e('Start', 'rundizstrap-companion'); ?></button> <span class="manual-update-action-placeholder"></span>
     </form>

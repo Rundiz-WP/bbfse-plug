@@ -311,7 +311,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Libraries\\RundizSettings')) {
                             if (is_array($fields) && array_key_exists('type', $fields)) {
                                 if (is_string($type) && $fields['type'] === $type) {
                                     return true;
-                                } else if (is_array($type) && in_array($fields['type'], $type, true)) {
+                                } elseif (is_array($type) && in_array($fields['type'], $type, true)) {
                                     return true;
                                 }
                             }

@@ -40,8 +40,8 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Act
                     sprintf(
                         // translators: %1$s Current WordPress version, %2$s Required WordPress version.
                         esc_html__('Your WordPress version does not meet the minimum requirement. (%1$s < %2$s).', 'rundizstrap-companion'), 
-                        get_bloginfo('version'), // phpcs:ignore
-                        '6.0' // phpcs:ignore
+                        esc_html(get_bloginfo('version')),
+                        '6.0'
                     )
                 );
                 exit(1);
