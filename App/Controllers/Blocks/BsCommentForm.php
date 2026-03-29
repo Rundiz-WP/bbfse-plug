@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap Basic FSE Plugin - Bootstrap comment form block.
+ * RundizStrap Companion - Bootstrap comment form block.
  * 
  * @package rundizstrap-companion
  * @since 0.0.1

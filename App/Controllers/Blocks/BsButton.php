@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap Basic FSE Plugin - Bootstrap button block.
+ * RundizStrap Companion - Bootstrap button block.
  * 
  * @package rundizstrap-companion
  * @since 0.0.1

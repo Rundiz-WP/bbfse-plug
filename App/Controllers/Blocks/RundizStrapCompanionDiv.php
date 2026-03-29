@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap Basic FSE Plugin - Customizable div block.
+ * RundizStrap Companion - Customizable div block.
  *
  * @package rundizstrap-companion
  * @since 0.0.1

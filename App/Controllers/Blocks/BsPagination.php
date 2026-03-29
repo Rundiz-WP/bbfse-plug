@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap Basic FSE Plugin - Bootstrap pagination block.
+ * RundizStrap Companion - Bootstrap pagination block.
  * 
  * @package rundizstrap-companion
  * @since 0.0.1

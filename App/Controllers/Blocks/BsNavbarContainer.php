@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap Basic FSE Plugin - Bootstrap navbar container block.
+ * RundizStrap Companion - Bootstrap navbar container block.
  * 
  * @package rundizstrap-companion
  * @since 0.0.1

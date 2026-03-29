@@ -13,7 +13,7 @@ A plugin that contains blocks for the Bootstrap theme that help you customize yo
 
 == Description ==
 
-A WordPress plugin that contains many blocks to build your Bootstrap Basic FSE theme, or you can use it with any Bootstrap 5 themes.
+A WordPress plugin that contains many blocks to build your RundizStrap theme, or you can use it with any Bootstrap 5 themes.
 
 You can manually set CSS class(es) by referring to the Bootstrap document.
 

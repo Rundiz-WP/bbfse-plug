@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap Basic FSE Plugin - Bootstrap search form block.
+ * RundizStrap Companion - Bootstrap search form block.
  * 
  * @package rundizstrap-companion
  * @since 0.0.1

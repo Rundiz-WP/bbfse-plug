@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap Basic FSE Plugin - Bootstrap post navigation link block.
+ * RundizStrap Companion - Bootstrap post navigation link block.
  * 
  * @package rundizstrap-companion
  * @since 0.0.1

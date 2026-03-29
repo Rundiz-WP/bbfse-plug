@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap Basic FSE Plugin - Bootstrap navbar responsive wrapper block.
+ * RundizStrap Companion - Bootstrap navbar responsive wrapper block.
  * 
  * @package rundizstrap-companion
  * @since 0.0.1

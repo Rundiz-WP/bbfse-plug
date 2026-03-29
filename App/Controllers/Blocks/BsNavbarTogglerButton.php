@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap Basic FSE Plugin - Bootstrap navbar toggler button block.
+ * RundizStrap Companion - Bootstrap navbar toggler button block.
  * 
  * @package rundizstrap-companion
  * @since 0.0.1

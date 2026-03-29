@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap Basic FSE Plugin - Bootstrap layout row block.
+ * RundizStrap Companion - Bootstrap layout row block.
  * 
  * @package rundizstrap-companion
  * @since 0.0.1
