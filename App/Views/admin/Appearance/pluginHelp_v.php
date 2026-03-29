@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
 ?>
 <div class="wrap rundizstrap-companion-appearance-help">
     <h1><?php esc_html_e('RundizStrap Companion help', 'rundizstrap-companion'); ?></h1>
-    <p><?php esc_html_e('Help page for Bootstrap Basic FSE Plugin.', 'rundizstrap-companion'); ?></p>
+    <p><?php esc_html_e('Help page for RundizStrap Companion.', 'rundizstrap-companion'); ?></p>
 
     <div class="rd-settings-tabs tabs-vertical">
         <ul class="tab-pane">

@@ -215,7 +215,7 @@ if (!class_exists('\\RundizstrapCompanion\\App\\Controllers\\Admin\\Plugins\\Upg
          */
         public function displayManualUpdateMenu()
         {
-            $hook_suffix = add_dashboard_page(__('Bootstrap Basic FSE Plugin update', 'rundizstrap-companion'), __('Bootstrap Basic FSE Plugin update', 'rundizstrap-companion'), 'update_plugins', 'rundizstrap-companion-manual-update', [$this, 'displayManualUpdatePage']);
+            $hook_suffix = add_dashboard_page(__('RundizStrap Companion update', 'rundizstrap-companion'), __('RundizStrap Companion update', 'rundizstrap-companion'), 'update_plugins', 'rundizstrap-companion-manual-update', [$this, 'displayManualUpdatePage']);
             if (is_string($hook_suffix)) {
                 $this->hookSuffix = $hook_suffix;
                 add_action('load-' . $hook_suffix, [$this, 'callEnqueueHook']);

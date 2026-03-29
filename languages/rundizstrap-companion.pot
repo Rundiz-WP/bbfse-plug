@@ -2,21 +2,21 @@
 # This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: RundizStrap Companion 0.0.4\n"
+"Project-Id-Version: RundizStrap Companion 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rundizstrap-companion\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-23T04:02:05+07:00\n"
+"POT-Creation-Date: 2026-03-29T14:55:28+07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: rundizstrap-companion\n"
 
 #. Plugin Name of the plugin
 #: rundizstrap-companion.php
-#: App/Controllers/Admin/Settings.php:53
+#: App/Controllers/Admin/Settings.php:55
 msgid "RundizStrap Companion"
 msgstr ""
 
@@ -27,7 +27,7 @@ msgstr ""
 
 #. Description of the plugin
 #: rundizstrap-companion.php
-msgid "A plugin that contains blocks for the Bootstrap Basic FSE theme. All blocks are based on Bootstrap CSS."
+msgid "A plugin that contains blocks for the RundizStrap theme. All blocks are based on Bootstrap CSS."
 msgstr ""
 
 #. Author of the plugin
@@ -41,6 +41,7 @@ msgid "https://rundiz.com"
 msgstr ""
 
 #: App/AppTrait.php:141
+#: App/Controllers/Admin/Settings.php:101
 msgid "Settings configuration file was not set."
 msgstr ""
 
@@ -87,7 +88,7 @@ msgstr ""
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:42
 #: App/Controllers/Admin/Plugins/Upgrader.php:235
-#: App/Controllers/Admin/Settings.php:71
+#: App/Controllers/Admin/Settings.php:73
 msgid "You do not have permission to access this page."
 msgstr ""
 
@@ -118,7 +119,7 @@ msgid "The RundizStrap Companion is just upgraded and need to be manually update
 msgstr ""
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:218
-msgid "Bootstrap Basic FSE Plugin update"
+msgid "RundizStrap Companion update"
 msgstr ""
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:284
@@ -136,16 +137,16 @@ msgid "Next"
 msgstr ""
 
 #. translators: %1$s Open link, %2$s Close link.
-#: App/Controllers/Admin/Settings.php:79
+#: App/Controllers/Admin/Settings.php:81
 #, php-format
 msgid "The manual update is required, please %1$supdate first%2$s."
 msgstr ""
 
-#: App/Controllers/Admin/Settings.php:87
+#: App/Controllers/Admin/Settings.php:89
 msgid "The manual update is required, please tell administrator to update first."
 msgstr ""
 
-#: App/Controllers/Admin/Settings.php:130
+#: App/Controllers/Admin/Settings.php:132
 msgid "Settings saved."
 msgstr ""
 
@@ -163,11 +164,11 @@ msgstr ""
 msgid "The views file was not found (%s)."
 msgstr ""
 
-#: App/Libraries/RundizSettings.php:733
+#: App/Libraries/RundizSettings.php:820
 msgid "Upload"
 msgstr ""
 
-#: App/Libraries/RundizSettings.php:734
+#: App/Libraries/RundizSettings.php:821
 #: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:109
 #: blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1
@@ -183,7 +184,7 @@ msgid "Remove"
 msgstr ""
 
 #: App/Views/admin/Appearance/pluginHelp_v.php:17
-msgid "Help page for Bootstrap Basic FSE Plugin."
+msgid "Help page for RundizStrap Companion."
 msgstr ""
 
 #: App/Views/admin/Appearance/pluginHelp_v.php:21
@@ -290,7 +291,7 @@ msgstr ""
 msgid "Now, you can use this variable to access its array key anywhere."
 msgstr ""
 
-#: App/Views/admin/settings_v.php:16
+#: App/Views/admin/settings_v.php:15
 msgid "RundizStrap Companion settings"
 msgstr ""
 
@@ -339,7 +340,7 @@ msgstr ""
 msgid "Previous"
 msgstr ""
 
-#: blocks/bs-pagination/render.php:395
+#: blocks/bs-pagination/render.php:405
 msgid "Pagination"
 msgstr ""
 

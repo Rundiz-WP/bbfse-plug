@@ -4,21 +4,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RundizStrap Companion 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rundizstrap-companion\n"
-"POT-Creation-Date: 2026-02-23T04:02:05+07:00\n"
-"PO-Revision-Date: 2026-02-23 04:02+0700\n"
+"POT-Creation-Date: 2026-03-29T14:55:28+07:00\n"
+"PO-Revision-Date: 2026-03-29 14:57+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 "X-Domain: rundizstrap-companion\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #. Plugin Name of the plugin
-#: rundizstrap-companion.php App/Controllers/Admin/Settings.php:53
+#: rundizstrap-companion.php App/Controllers/Admin/Settings.php:55
 msgid "RundizStrap Companion"
 msgstr "RundizStrap Companion"
 
@@ -26,13 +26,15 @@ msgstr "RundizStrap Companion"
 #: rundizstrap-companion.php
 msgid "https://rundiz.com/en/blog/articles-en/wordpress-plugins-themes"
 msgstr ""
+"https://rundiz.com/blog/articles/"
+"%e0%b8%9b%e0%b8%a5%e0%b8%b1%e0%b9%8a%e0%b8%81%e0%b8%ad%e0%b8%b4%e0%b8%99%e0%b9%81%e0%b8%a5%e0%b8%b0%e0%b8%98%e0%b8%b5%e0%b8%a1%e0%b8%82%e0%b8%ad%e0%b8%87-"
+"wordpress/"
 
 #. Description of the plugin
 #: rundizstrap-companion.php
 msgid ""
-"A plugin that contains blocks for the Bootstrap Basic FSE theme. All blocks are based on Bootstrap "
-"CSS."
-msgstr "ปลั๊กอินที่มีบล็อกสำหรับธีม Bootstrap Basic FSE. บล็อกทั้งหมดสร้างขึ้นจาก CSS ของ Bootstrap."
+"A plugin that contains blocks for the RundizStrap theme. All blocks are based on Bootstrap CSS."
+msgstr "ปลั๊กอินที่มีบล็อกสำหรับธีม RundizStrap. บล็อกทั้งหมดสร้างขึ้นจาก CSS ของ Bootstrap."
 
 #. Author of the plugin
 #: rundizstrap-companion.php
@@ -44,7 +46,7 @@ msgstr ""
 msgid "https://rundiz.com"
 msgstr ""
 
-#: App/AppTrait.php:141
+#: App/AppTrait.php:141 App/Controllers/Admin/Settings.php:101
 msgid "Settings configuration file was not set."
 msgstr "ไฟล์การกำหนดค่าการตั้งค่าไม่ได้ถูกตั้งค่าไว้."
 
@@ -89,7 +91,7 @@ msgid "Unable to network activate, please activate per site only."
 msgstr "ไม่สามารถเปิดใช้งานผ่านเครือข่ายได้, โปรดเปิดใช้งานทีละไซต์เท่านั้น."
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:42 App/Controllers/Admin/Plugins/Upgrader.php:235
-#: App/Controllers/Admin/Settings.php:71
+#: App/Controllers/Admin/Settings.php:73
 msgid "You do not have permission to access this page."
 msgstr "คุณไม่ได้รับอนุญาตให้เข้าถึงหน้านี้."
 
@@ -127,8 +129,8 @@ msgstr ""
 "%1$sหน้าอัปเดตปลั๊กอิน%2$s."
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:218
-msgid "Bootstrap Basic FSE Plugin update"
-msgstr "อัปเดตปลั๊กอิน Bootstrap Basic FSE"
+msgid "RundizStrap Companion update"
+msgstr "การอัปเดท RundizStrap Companion"
 
 #: App/Controllers/Admin/Plugins/Upgrader.php:284
 msgid "Completed"
@@ -144,16 +146,16 @@ msgid "Next"
 msgstr "ถัดไป"
 
 #. translators: %1$s Open link, %2$s Close link.
-#: App/Controllers/Admin/Settings.php:79
+#: App/Controllers/Admin/Settings.php:81
 #, php-format
 msgid "The manual update is required, please %1$supdate first%2$s."
 msgstr "จำเป็นต้องอัปเดตด้วยตนเอง โปรด %1$supdate ก่อน%2$s."
 
-#: App/Controllers/Admin/Settings.php:87
+#: App/Controllers/Admin/Settings.php:89
 msgid "The manual update is required, please tell administrator to update first."
 msgstr "จำเป็นต้องอัปเดตด้วยตนเอง โปรดแจ้งให้ผู้ดูแลระบบทำการอัปเดตก่อน."
 
-#: App/Controllers/Admin/Settings.php:130
+#: App/Controllers/Admin/Settings.php:132
 msgid "Settings saved."
 msgstr "บันทึกการตั้งค่าแล้ว."
 
@@ -171,11 +173,11 @@ msgstr "(ไม่มีไตเติล)"
 msgid "The views file was not found (%s)."
 msgstr "ไม่พบไฟล์ views (%s)."
 
-#: App/Libraries/RundizSettings.php:733
+#: App/Libraries/RundizSettings.php:820
 msgid "Upload"
 msgstr "อัปโหลด"
 
-#: App/Libraries/RundizSettings.php:734
+#: App/Libraries/RundizSettings.php:821
 #: assets/js/blocks/shared/rundizstrap-companion-keyvalue-control.js:109 blocks/bs-button/index.js:1
 #: blocks/bs-column/index.js:1 blocks/bs-container/index.js:1 blocks/bs-navbar-container/index.js:1
 #: blocks/bs-navbar-navigation/index.js:1 blocks/bs-navbar-responsive-wrapper/index.js:1
@@ -185,8 +187,8 @@ msgid "Remove"
 msgstr "เอาออก"
 
 #: App/Views/admin/Appearance/pluginHelp_v.php:17
-msgid "Help page for Bootstrap Basic FSE Plugin."
-msgstr "หน้าช่วยเหลือสำหรับปลั๊กอิน Bootstrap Basic FSE."
+msgid "Help page for RundizStrap Companion."
+msgstr "หน้าช่วยเหลือสำหรับ RundizStrap Companion."
 
 #: App/Views/admin/Appearance/pluginHelp_v.php:21
 msgid "Navbar"
@@ -300,7 +302,7 @@ msgstr "เข้าถึงตัวแปรนี้โดยใช้ globa
 msgid "Now, you can use this variable to access its array key anywhere."
 msgstr "ตอนนี้คุณสามารถใช้ตัวแปรนี้เพื่อเข้าถึงคีย์ของอาร์เรย์ได้ทุกที่."
 
-#: App/Views/admin/settings_v.php:16
+#: App/Views/admin/settings_v.php:15
 msgid "RundizStrap Companion settings"
 msgstr "ตั้งค่า RundizStrap Companion"
 
@@ -344,7 +346,7 @@ msgstr "« ก่อนหน้า"
 msgid "Previous"
 msgstr "ก่อนหน้า"
 
-#: blocks/bs-pagination/render.php:395
+#: blocks/bs-pagination/render.php:405
 msgid "Pagination"
 msgstr "การแบ่งหน้า"
 
@@ -1242,3 +1244,9 @@ msgstr "ความหมาย"
 msgctxt "block title"
 msgid "Customizable div"
 msgstr "แท็ก div ที่ปรับแต่งได้"
+
+#~ msgid "Bootstrap Basic FSE Plugin update"
+#~ msgstr "อัปเดตปลั๊กอิน Bootstrap Basic FSE"
+
+#~ msgid "Help page for Bootstrap Basic FSE Plugin."
+#~ msgstr "หน้าช่วยเหลือสำหรับปลั๊กอิน Bootstrap Basic FSE."
