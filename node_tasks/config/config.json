@@ -169,17 +169,24 @@
     },
     "writeVersions": [
         {
+            "nodePackage": "ace-builds",
+            "assetsDataPattern": [
+                "rundizstrap_companion\\-handle\\-ace\\-editor\\-js"
+            ],
+            "assetsDataFile": "App/Libraries/StylesAndScripts.php"
+        },
+        {
             "nodePackage": "bootstrap",
             "assetsDataPattern": [
-                "rundizstrap\\-companion\\-bootstrap\\-css",
-                "rundizstrap\\-companion\\-bootstrap\\-js"
+                "rundizstrap_companion\\-bootstrap\\-css",
+                "rundizstrap_companion\\-bootstrap\\-js"
             ],
             "assetsDataFile": "App/Libraries/StylesAndScripts.php"
         },
         {
             "nodePackage": "bootstrap-icons",
             "assetsDataPattern": [
-                "rundizstrap\\-companion\\-bootstrap\\-icons"
+                "rundizstrap_companion\\-bootstrap\\-icons"
             ],
             "assetsDataFile": "App/Libraries/StylesAndScripts.php"
         }
