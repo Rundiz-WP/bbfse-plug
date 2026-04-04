@@ -19,12 +19,12 @@ const variations = [
         icon: previousIcon,
         attributes: { 
             type: 'previous',
-            className: 'btn btn-secondary',
+            className: 'btn btn-secondary text-break',
         },
         scope: ['inserter', 'transform'],
         example: {
             attributes: {
-                className: 'btn btn-secondary',
+                className: 'btn btn-secondary text-break',
                 type: 'previous',
                 label: __('Previous post', 'rundizstrap-companion'),
             }
@@ -38,12 +38,12 @@ const variations = [
         icon: nextIcon,
         attributes: { 
             type: 'next',
-            className: 'btn btn-secondary',
+            className: 'btn btn-secondary text-break',
         },
         scope: ['inserter', 'transform'],
         example: {
             attributes: {
-                className: 'btn btn-secondary',
+                className: 'btn btn-secondary text-break',
                 type: 'next',
                 label: __('Next post', 'rundizstrap-companion'),
             }

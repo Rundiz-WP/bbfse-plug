@@ -25,7 +25,7 @@ registerBlockType(metadata.name, {
     variations,
     example: {
         attributes: {
-            className: 'btn btn-secondary',
+            className: 'btn btn-secondary text-break',
             type: 'next',
             label: __('Bootstrap Next Post', 'rundizstrap-companion'),
         }
