@@ -1,6 +1,6 @@
 /*
-rundiz settings page (wp plugin).
-based style
+Rundiz settings page (WP plugin).
+Based style including non-specific feature.
 */
 
 
@@ -31,4 +31,12 @@ based style
 .rd-settings-page ul {
     list-style-type: disc;
     margin-left: 2em;/* copied from WordPress `ol` CSS */
+}
+
+
+/* Fix styles on editor (TinyMCE) that new version of WP displayed it differently. */
+.rd-settings-page .wp-core-ui .button, 
+.rd-settings-page .wp-core-ui .button-primary, 
+.rd-settings-page .wp-core-ui .button-secondary {
+    margin-bottom: 5px;
 }

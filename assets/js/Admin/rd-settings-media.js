@@ -20,18 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const image = wp.media({
-			// mutiple: true if you want to upload multiple files at once
-			multiple: false
+            // mutiple: true if you want to upload multiple files at once
+            multiple: false
         });
         image.open();
         image.on('select', function(e) {
-			// This will return the selected image from the Media Uploader, the result is an object
-		    const uploaded_image = image.state().get('selection').first();
-			// We convert uploaded_image to a JSON object to make accessing it easier
+            // This will return the selected image from the Media Uploader, the result is an object
+            const uploaded_image = image.state().get('selection').first();
+            // We convert uploaded_image to a JSON object to make accessing it easier
             const media_json = uploaded_image.toJSON();
             console.debug('selected media in JSON format: ', media_json);
 
-			// Let's assign the url value to the input field
+            // Let's assign the url value to the input field
             const setInputValue = function(id, value) {
                 const inputElement = document.getElementById(id);
                 if (inputElement) {
@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const sizes = media_json.sizes;
             if (sizes && sizes.large && typeof(sizes.large.url) !== 'undefined') {
                 setInputValue('media-large-' + target_input, sizes.large.url);
-			}
+            }
             if (sizes && sizes.medium && typeof(sizes.medium.url) !== 'undefined') {
                 setInputValue('media-medium-' + target_input, sizes.medium.url);
-			}
+            }
             if (sizes && sizes.thumbnail && typeof(sizes.thumbnail.url) !== 'undefined') {
                 setInputValue('media-thumbnail-' + target_input, sizes.thumbnail.url);
                 const previewElements = document.querySelectorAll('.image-preview-' + target_input);
@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 for (index = 0; index < previewElements.length; index++) {
                     previewElements[index].innerHTML = '<img src="' + sizes.thumbnail.url + '" alt="">';
                 }
-			}
-		});
+            }
+        });
     });// end event click on upload media button.
 
     document.addEventListener('click', function (event) {
