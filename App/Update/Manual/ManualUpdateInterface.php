@@ -11,6 +11,9 @@ namespace RundizstrapCompanion\App\Update\Manual;
 
 
 if (!interface_exists('\\RundizstrapCompanion\\App\\Update\\Manual\\ManualUpdateInterface')) {
+    /**
+     * Manual update interface.
+     */
     interface ManualUpdateInterface
     {
 

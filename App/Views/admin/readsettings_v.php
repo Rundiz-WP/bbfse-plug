@@ -3,7 +3,7 @@
  * Read setting's view file.
  * 
  * This file should be comment out completely in your project. It is for checking while development only.
- 
+  
  * @package rundizstrap-companion
  * @since 0.0.1
  */
@@ -12,6 +12,7 @@
 if (!defined('ABSPATH')) {
     exit();
 }
+
 ?>
 <div class="wrap">
     <h1><?php esc_html_e('Example of how to access settings values in option db.', 'rundizstrap-companion'); ?></h1>

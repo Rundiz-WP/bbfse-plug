@@ -42,7 +42,7 @@ if (!defined('ABSPATH')) {
         echo PHP_EOL;
 
         if (isset($settings_page)) {
-            $rundizstrap_companion_kses_data_file = dirname(__DIR__, 2) . '/config/kses_data.php';
+            $rundizstrap_companion_kses_data_file = dirname(RUNDIZSTRAP_COMPANION_FILE) . '/App/config/kses_data.php';
             // Use custom kses data to make sure it is up to date with modern HTML elements and attributes that will work.
             if (!is_file($rundizstrap_companion_kses_data_file)) {
                 // If not found custom kses data.

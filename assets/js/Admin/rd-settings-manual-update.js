@@ -154,8 +154,8 @@ function rundizstrap_companion_manualUpdateAjax()
 /**
  * Get notice html element from class and message specified.
  * 
- * @param {string} notice_class
- * @param {string} notice_message
+ * @param {string} notice_class Notice HTML class.
+ * @param {string} notice_message Notice message.
  * @returns {String}
  */
 function rundizstrap_companion_GetNoticeElement(notice_class, notice_message) {
