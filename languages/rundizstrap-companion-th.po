@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RundizStrap Companion 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rundizstrap-companion\n"
-"POT-Creation-Date: 2026-04-05T14:39:36+07:00\n"
-"PO-Revision-Date: 2026-04-05 14:40+0700\n"
+"POT-Creation-Date: 2026-04-09T00:06:53+07:00\n"
+"PO-Revision-Date: 2026-04-09 00:07+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #. Plugin Name of the plugin
-#: rundizstrap-companion.php App/Controllers/Admin/Settings.php:56
+#: rundizstrap-companion.php App/Controllers/Admin/Settings.php:61
 msgid "RundizStrap Companion"
 msgstr "RundizStrap Companion"
 
@@ -43,7 +43,7 @@ msgstr ""
 msgid "https://rundiz.com"
 msgstr ""
 
-#: App/AppTrait.php:150 App/Controllers/Admin/Settings.php:100
+#: App/AppTrait.php:150 App/Controllers/Admin/Settings.php:105
 msgid "Settings configuration file was not set."
 msgstr "ไฟล์การกำหนดค่าการตั้งค่าไม่ได้ถูกตั้งค่าไว้."
 
@@ -67,65 +67,65 @@ msgstr "เพิ่มคิว Bootstrap"
 msgid "RundizStrap Companion help"
 msgstr "ช่วยเหลือ RundizStrap Companion"
 
-#: App/Controllers/Admin/Plugins.php:45 blocks/bs-pagination/index.js:1
+#: App/Controllers/Admin/Plugins.php:50 blocks/bs-pagination/index.js:1
 #: blocks/bs-post-navigation-link/index.js:1 blocks/bs-search/index.js:1
 msgid "Settings"
 msgstr "ตั้งค่า"
 
 #. translators: %s The DB version of this plugin.
-#: App/Controllers/Admin/Plugins.php:97
+#: App/Controllers/Admin/Plugins.php:102
 #, php-format
 msgid "DB version %s"
 msgstr "รุ่นฐานข้อมูล %s"
 
-#: App/Controllers/Admin/Plugins.php:101
+#: App/Controllers/Admin/Plugins.php:106
 msgid "Donate"
 msgstr "บริจาค"
 
 #. translators: %1$s Current WordPress version, %2$s Required WordPress version.
-#: App/Controllers/Admin/Plugins/Activation.php:43
+#: App/Controllers/Admin/Plugins/Activation.php:48
 #, php-format
 msgid "Your WordPress version does not meet the requirement. (%1$s < %2$s)."
 msgstr "เวอร์ชัน WordPress ของคุณไม่ตรงความต้องการขั้นต่ำ (%1$s < %2$s)."
 
-#: App/Controllers/Admin/Plugins/Activation.php:48
+#: App/Controllers/Admin/Plugins/Activation.php:53
 msgid "Minimum requirement of WordPress version does not meet."
 msgstr "เวอร์ชัน WordPress ไม่ตรงความต้องการขั้นต่ำ."
 
-#: App/Controllers/Admin/Plugins/Activation.php:55
+#: App/Controllers/Admin/Plugins/Activation.php:60
 msgid "Unable to network activate, please activate per site only."
 msgstr "ไม่สามารถเปิดใช้งานผ่านเครือข่ายได้, โปรดเปิดใช้งานทีละไซต์เท่านั้น."
 
-#: App/Controllers/Admin/Plugins/Upgrader.php:42 App/Controllers/Admin/Plugins/Upgrader.php:235
-#: App/Controllers/Admin/Settings.php:74
+#: App/Controllers/Admin/Plugins/Upgrader.php:47 App/Controllers/Admin/Plugins/Upgrader.php:240
+#: App/Controllers/Admin/Settings.php:79
 msgid "You do not have permission to access this page."
 msgstr "คุณไม่ได้รับอนุญาตให้เข้าถึงหน้านี้."
 
-#: App/Controllers/Admin/Plugins/Upgrader.php:56
+#: App/Controllers/Admin/Plugins/Upgrader.php:61
 msgid "Please reload this page and try again."
 msgstr "โปรดรีเฟรชหน้านี้แล้วลองใหม่อีกครั้ง."
 
-#: App/Controllers/Admin/Plugins/Upgrader.php:84
+#: App/Controllers/Admin/Plugins/Upgrader.php:89
 msgid "An error has been occur, cannot continue manual update. Please contact plugin author."
 msgstr "เกิดข้อผิดพลาดขึ้น, ไม่สามารถดำเนินการอัปเดตด้วยตนเองต่อได้. โปรดติดต่อผู้พัฒนาปลั๊กอิน."
 
-#: App/Controllers/Admin/Plugins/Upgrader.php:101
+#: App/Controllers/Admin/Plugins/Upgrader.php:106
 msgid "Success, please click next to continue update."
 msgstr "สำเร็จแล้ว โปรดคลิกถัดไปเพื่อดำเนินการอัปเดตต่อ."
 
-#: App/Controllers/Admin/Plugins/Upgrader.php:104
+#: App/Controllers/Admin/Plugins/Upgrader.php:109
 msgid ""
 "All manual update completed successfully. This page will be no longer available until there is next "
 "manual update."
 msgstr ""
 "การอัปเดตด้วยตนเองทั้งหมดเสร็จสมบูรณ์แล้ว. หน้าเว็บนี้จะไม่สามารถใช้งานได้อีกต่อไปจนกว่าจะมีการอัปเดตด้วยตนเองครั้งต่อไป."
 
-#: App/Controllers/Admin/Plugins/Upgrader.php:123
+#: App/Controllers/Admin/Plugins/Upgrader.php:128
 msgid "Unable to run update, there is no update classes to run."
 msgstr "ไม่สามารถดำเนินการอัปเดตได้, เนื่องจากไม่มีคลาสสำหรับการอัปเดตให้เรียกใช้."
 
 #. translators: %1$s Open link, %2$s Close link.
-#: App/Controllers/Admin/Plugins/Upgrader.php:173
+#: App/Controllers/Admin/Plugins/Upgrader.php:178
 #, php-format
 msgid ""
 "The RundizStrap Companion is just upgraded and need to be manually update. Please continue to the "
@@ -134,34 +134,34 @@ msgstr ""
 "ปลั๊กอิน RundizStrap Companion เพิ่งได้รับการอัปเกรดและจำเป็นต้องอัปเดตด้วยตนเอง. โปรดดำเนินการต่อที่ "
 "%1$sหน้าอัปเดตปลั๊กอิน%2$s."
 
-#: App/Controllers/Admin/Plugins/Upgrader.php:218
+#: App/Controllers/Admin/Plugins/Upgrader.php:223
 msgid "RundizStrap Companion update"
 msgstr "การอัปเดท RundizStrap Companion"
 
-#: App/Controllers/Admin/Plugins/Upgrader.php:284
+#: App/Controllers/Admin/Plugins/Upgrader.php:289
 msgid "Completed"
 msgstr "สำเร็จแล้ว"
 
-#: App/Controllers/Admin/Plugins/Upgrader.php:285
+#: App/Controllers/Admin/Plugins/Upgrader.php:290
 msgid "Dismiss"
 msgstr "รับทราบ"
 
-#: App/Controllers/Admin/Plugins/Upgrader.php:286 blocks/bs-pagination/render.php:116
+#: App/Controllers/Admin/Plugins/Upgrader.php:291 blocks/bs-pagination/render.php:116
 #: blocks/bs-post-navigation-link/index.js:1
 msgid "Next"
 msgstr "ถัดไป"
 
 #. translators: %1$s Open link, %2$s Close link.
-#: App/Controllers/Admin/Settings.php:82
+#: App/Controllers/Admin/Settings.php:87
 #, php-format
 msgid "The manual update is required, please %1$supdate first%2$s."
 msgstr "จำเป็นต้องอัปเดตด้วยตนเอง โปรด %1$supdate ก่อน%2$s."
 
-#: App/Controllers/Admin/Settings.php:89
+#: App/Controllers/Admin/Settings.php:94
 msgid "The manual update is required, please tell administrator to update first."
 msgstr "จำเป็นต้องอัปเดตด้วยตนเอง โปรดแจ้งให้ผู้ดูแลระบบทำการอัปเดตก่อน."
 
-#: App/Controllers/Admin/Settings.php:131
+#: App/Controllers/Admin/Settings.php:136
 msgid "Settings saved."
 msgstr "บันทึกการตั้งค่าแล้ว."
 
@@ -269,27 +269,27 @@ msgstr "คุณกำลังใช้งาน %1$s ของ %2$d."
 msgid "Start"
 msgstr "เริ่ม"
 
-#: App/Views/admin/readsettings_v.php:17
+#: App/Views/admin/readsettings_v.php:18
 msgid "Example of how to access settings values in option db."
 msgstr "ตัวอย่างวิธีการเข้าถึงค่าการตั้งค่าในฐานข้อมูลตัวเลือก."
 
 #. translators: %s PHP code.
-#: App/Views/admin/readsettings_v.php:22
+#: App/Views/admin/readsettings_v.php:23
 #, php-format
 msgid "Call to %s"
 msgstr "เรียกไปยัง %s"
 
 #. translators: %s PHP code.
-#: App/Views/admin/readsettings_v.php:27
+#: App/Views/admin/readsettings_v.php:28
 #, php-format
 msgid "Access this variable as global %s. This variable will be change, up to config in AppTrait."
 msgstr "เข้าถึงตัวแปรนี้โดยใช้ global %s. ตัวแปรนี้จะเปลี่ยนแปลงไปตามการตั้งค่าใน AppTrait."
 
-#: App/Views/admin/readsettings_v.php:30
+#: App/Views/admin/readsettings_v.php:31
 msgid "Now, you can use this variable to access its array key anywhere."
 msgstr "ตอนนี้คุณสามารถใช้ตัวแปรนี้เพื่อเข้าถึงคีย์ของอาร์เรย์ได้ทุกที่."
 
-#: App/Views/admin/readsettings_v.php:38
+#: App/Views/admin/readsettings_v.php:39
 msgid "To see real data before escape, please use view source to see them below this line."
 msgstr "หากจะดูข้อมูลจริงก่อน escape, โปรดดูจาก view source โดยดูใต้บรรทัดนี้."
 
